@@ -27,3 +27,5 @@
 
 # Python 中的进程
 在 Python 中，通过 Python 解释器执行的任何代码，首先本身都是一个进程，比如：
+``` -$ python test.py ```
+
