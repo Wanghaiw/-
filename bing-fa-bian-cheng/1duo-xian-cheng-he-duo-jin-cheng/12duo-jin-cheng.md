@@ -235,3 +235,7 @@ multiprocessing.pool 常用函数解析：
 * map(func, iterable[, chunksize=None])
 Pool类中的map方法，与内置的map函数用法行为基本一致，它会使进程阻塞直到返回结果。 
 注意，虽然第二个参数是一个迭代器，但在实际使用中，必须在整个队列都就绪后，程序才会运行子进程。
+* close()
+关闭进程池（pool），使其不在接受新的任务。
+* join()
+主进程阻塞等待子进程的退出，join方法必须在close或terminate之后使用。
