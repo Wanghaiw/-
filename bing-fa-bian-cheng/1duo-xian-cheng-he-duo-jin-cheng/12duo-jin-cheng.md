@@ -232,3 +232,6 @@ multiprocessing.pool 常用函数解析：
 * apply(func[, args=()[, kwds={}]]) 该函数用于传递不定参数，主进程会被阻塞直到函数执行结束（不建议使用，并且3.x以后不在出现）。
 * apply_async(func[, args=()[, kwds={}[, callback=None]]])
 与apply用法一样，但它是非阻塞且支持结果返回进行回调。
+* map(func, iterable[, chunksize=None])
+Pool类中的map方法，与内置的map函数用法行为基本一致，它会使进程阻塞直到返回结果。 
+注意，虽然第二个参数是一个迭代器，但在实际使用中，必须在整个队列都就绪后，程序才会运行子进程。
