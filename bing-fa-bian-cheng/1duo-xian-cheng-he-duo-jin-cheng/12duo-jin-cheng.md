@@ -181,5 +181,29 @@ print("p1.is_alive=%s"%p1.is_alive())
 ```
 ## 进程的创建-Process子类
 创建新的进程还能够使用类的方式，可以自定义一个类，继承Process类，每次实例化这个类的时候，就等同于实例化一个进程对象，请看下面的实例：
+```
+import multiprocessing
+import time
+class ClockProcess(multiprocessing.Process):
+    def __init__(self, interval):
+        multiprocessing.Process.__init__(self)
+        self.interval = interval
+    def run(self):
+        n = 5
+        while n > 0:
+            print("the time is {0}".format(time.ctime()))
+            time.sleep(self.interval)
+            n -= 1
+if __name__ == '__main__':
+    for i in range(5):
+        p = ClockProcess(3)
+        p.start()
+```
+
+## 进程池
+
+当需要创建的子进程数量不多时，可以直接利用multiprocessing中的Process动态成生多个进程，但如果是上百甚至上千个目标，手动的去创建进程的工作量巨大，此时就可以用到multiprocessing模块提供的Pool方法。
+
+初始化Pool时，可以指定一个最大进程数，当有新的请求提交到Pool中时，如果池还没有满，那么就会创建一个新的进程用来执行该请求；但如果池中的进程数已经达到指定的最大值，那么该请求就会等待，直到池中有进程结束，才会创建新的进程来执行，请看下面的实例：
     
 
