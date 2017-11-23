@@ -97,17 +97,88 @@ Process语法结构如下：
     group：进程所属组，大多数情况下用不到
     
 Process类常用方法：
-
-    is_alive()：判断进程实例是否还在执行；
-    join([timeout])：是否等待进程实例执行结束，或等待多少秒；
-    start()：启动进程实例（创建子进程）；
-    run()：如果没有给定target参数，对这个对象调用start()方法时，就将执行对象中的run()方法；
-    terminate()：不管任务是否完成，立即终止；
+    
+    current_process():获当前线程的名字
+    is_alive()：判断进程实例是否还在执行
+    join([timeout])：是否等待进程实例执行结束，或等待多少秒
+    start()：启动进程实例（创建子进程）
+    run()：如果没有给定target参数，对这个对象调用start()方法时，就将执行对象中的run()方法
+    terminate()：不管任务是否完成，立即终止
 
 Process类常用属性：
 
-name：当前进程实例别名，默认为Process-N，N为从1开始递增的整数；
+    name：当前进程实例别名，默认为Process-N，N为从1开始递增的整数
+    pid：当前进程实例的PID值
+    daemon：置此线程是否被主线程守护回收。默认False不回收，需要在 start 方法前调用；设为True相当于像主线程中注册守护，主线程结束时会将其一并回收
+    exitcode：判断进程的运行状态，进程在运行时为None
+    
 
-pid：当前进程实例的PID值；
+########## demo1
+```
+from multiprocessing import Process
+import os
+from time import sleep
+
+def run_proc(name, age, **kwargs):
+    for i in range(10):
+        print('子进程运行中，name= {},age={} ,pid={}...'.format(name, age,os.getpid()))
+        print(kwargs)
+        sleep(0.5)
+
+if __name__=='__main__':
+    print('父进程{}'.format(os.getpid()))
+    p = Process(target=run_proc, args=('test',18), kwargs={"m":20})
+    print('子进程将要执行')
+    p.start()
+    sleep(1)
+    p.terminate()
+    p.join()
+    print('子进程已结束')
+
+```
+
+######### demo2
+```
+from multiprocessing import Process
+import time
+import os
+
+#两个子进程将会调用的两个方法
+def  worker_1(interval):
+    print("worker_1,父进程(%s),当前进程(%s)"%(os.getppid(),os.getpid()))
+    t_start = time.time()
+    time.sleep(interval) #程序将会被挂起interval秒
+    t_end = time.time()
+    print("worker_1,执行时间为'%0.2f'秒"%(t_end - t_start))
+
+def  worker_2(interval):
+    print("worker_2,父进程(%s),当前进程(%s)"%(os.getppid(),os.getpid()))
+    t_start = time.time()
+    time.sleep(interval)
+    t_end = time.time()
+    print("worker_2,执行时间为'%0.2f'秒"%(t_end - t_start))
+
+#输出当前程序的ID
+print("进程ID：%s"%os.getpid())
+
+#创建两个进程对象，target指向这个进程对象要执行的对象名称，
+#如果不指定name参数，默认的进程对象名称为Process-N，N为一个递增的整数
+p1=Process(target=worker_1,args=(2,))
+p2=Process(target=worker_2,name="dongGe",args=(1,))
+
+p1.start()
+p2.start()
+
+print("p2.is_alive=%s"%p2.is_alive())
+
+print("p1.name=%s"%p1.name)
+print("p1.pid=%s"%p1.pid)
+print("p2.name=%s"%p2.name)
+print("p2.pid=%s"%p2.pid)
+p1.join()
+print("p1.is_alive=%s"%p1.is_alive())
+
+```
+## 进程的创建-Process子类
     
 
