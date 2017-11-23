@@ -65,7 +65,9 @@ else:
 
 #### multiprocessing
 
-multiprocessing包是Python中的多进程管理包。
+multiprocessing包是Python中的多进程管理包。由于Python是跨平台的，自然也应该提供一个跨平台的多进程支持。multiprocessing模块就是跨平台版本的多进程模块。
+
+multiprocessing模块提供了一个Process类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束：
 
 
 
