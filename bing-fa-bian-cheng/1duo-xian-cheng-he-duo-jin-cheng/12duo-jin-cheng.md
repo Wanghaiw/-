@@ -98,15 +98,16 @@ Process语法结构如下：
     
 Process类常用方法：
 
-is_alive()：判断进程实例是否还在执行；
+    is_alive()：判断进程实例是否还在执行；
+    join([timeout])：是否等待进程实例执行结束，或等待多少秒；
+    start()：启动进程实例（创建子进程）；
+    run()：如果没有给定target参数，对这个对象调用start()方法时，就将执行对象中的run()方法；
+    terminate()：不管任务是否完成，立即终止；
 
-join([timeout])：是否等待进程实例执行结束，或等待多少秒；
+Process类常用属性：
 
-start()：启动进程实例（创建子进程）；
+name：当前进程实例别名，默认为Process-N，N为从1开始递增的整数；
 
-run()：如果没有给定target参数，对这个对象调用start()方法时，就将执行对象中的run()方法；
-
-terminate()：不管任务是否完成，立即终止；
-
+pid：当前进程实例的PID值；
     
 
