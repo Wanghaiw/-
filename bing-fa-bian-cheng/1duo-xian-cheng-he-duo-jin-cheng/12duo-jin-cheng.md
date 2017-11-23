@@ -49,6 +49,24 @@ else:
 * 程序执行到`os.fork()`的时，操作系统会创建一个新的进程(子进程)，然后复制父进程的所有信息到子进程。
 * `os.fork()`的返回值有两个，子进程返回0，父进程返回子进程的id，这样做的理由是，一个父进程可以fork()出很多子进程，所以，父进程要记下每个子进程的ID，而子进程只需要调用getppid()就可以拿到父进程的ID。
 
+#### getpid() getppid()
+
+```
+import os
+
+pid = os.fork()
+if pid == 0:
+    print('我是子进程{},我的父进程是{}'.format(os.getpid(),os.getppid()))
+else:
+    print('我是父进程{},我的子进程是{}'.format(os.getpid(),pid))
+```
+
+* 思考： 当出现多次fork时，进程的变化 
+
+#### multiprocessing
+
+multiprocessing包是Python中的多进程管理包。
+
 
 
 
