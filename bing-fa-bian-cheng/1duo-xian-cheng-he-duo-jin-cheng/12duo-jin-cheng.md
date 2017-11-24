@@ -354,6 +354,7 @@ if __name__ == '__main__':
 
 
 
+
 ## 进程间的通信-Queue
 Queue是多进程安全的队列，可以使用multiprocessing 里面的
 Queue实现多进程之间的数据传递。Queue本身是一个消息队列程序。
