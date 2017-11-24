@@ -348,9 +348,25 @@ if __name__ == '__main__':
 ### Semaphore 
 信号量semaphore 
 是一个变量，控制着对公共资源或者临界区的访问。信号量维护着一个计数器，指定可同时访问资源或者进入临界区的线程数。 
-每次有一个线程获得信号量时，计数器-1。若计数器为0，其他线程就停止访问信号量，直到另一个线程释放信号量。 
+每次有一个进程获得信号量时，计数器-1。若计数器为0，其他进程就停止访问信号量，直到另一个进程释放信号量。 
 信号量同步的例子：
-
+```
+import multiprocessing
+import time
+def func(sem, num):
+    sem.acquire()
+    print('%s get semaphores' % num)
+    time.sleep(2)
+    sem.release()
+if __name__ == '__main__':
+    sem = multiprocessing.Semaphore(5)
+    for i in range(1,11):
+        t = multiprocessing.Process(target=func, args=(sem, i,))
+        t.start()
+```
+### Event
+基于事件的同步是指：一个线程发送/传递事件，另外的线程等待事件的触发。 让我们再来看看前面的生产者和消费者的例子，现在我们把它转换成使用事件同步而不是条件同步。 
+首先是生产者类，我们传入一个Event实例给构造器而不是Condition实例。一旦整数被添加进列表，事件(event)被设置和发送去唤醒消费者。注意事件(event)实例默认是被发送的。
 
 
 
