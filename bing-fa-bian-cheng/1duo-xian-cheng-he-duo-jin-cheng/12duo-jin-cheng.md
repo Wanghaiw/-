@@ -268,7 +268,89 @@ print("-----end-----")
 * 自行尝试map方法的作用。
 
 ## 进程间的同步
-Lock
+
+### Lock
+进程之间的数据是不共享的 , 因为每个进程之间是相互独立的 , 但是进程共享一套文件系统 , 所以访问同一个文件 , 是没有问题的 , 但是如果有多个进程对同一文件进行修改 , 就会造成错乱 , 所以我们为了保护文件数据的安全 , 就需要给其进行加锁。
+例子：
+```
+import multiprocessing
+# 假定这是你的银行存款:
+balance = 0
+def change_it(n):
+    # 先存后取，结果应该为0:
+    global balance
+    balance = balance + n
+    balance = balance - n
+# 创建一把锁
+lock = multiprocessing.Lock()
+def run_thread(n):
+    for i in range(100000):
+        # 先要获取锁:
+        lock.acquire()
+        try:
+            # 放心地改吧:
+            change_it(n)
+        finally:
+            # 改完了一定要释放锁:
+            lock.release()
+# 在多线程例子中并没有写这句,但是多进程中使用start()必须加
+if __name__ == '__main__':
+    for j in range(10000):
+        t1 = multiprocessing.Process(target=run_thread, args=(5,))
+        t2 = multiprocessing.Process(target=run_thread, args=(8,))
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+        print(balance)
+        
+```
+
+#### Producer-consumer 生产者和消费者模型
+```
+import time
+import random
+import multiprocessing
+q = multiprocessing.Queue()
+
+def Producer(name, q):
+    count = 1
+    while count < 5:
+        time.sleep(random.randrange(3))
+        q.put(count)
+        print('Producer %s has produced %s bun...' % (name, count))
+        count += 1
+
+def Consumer(name , q):
+    count = 1
+    while count < 20:
+        time.sleep(random.randrange(4))
+        if not q.empty():
+            data = q.get()
+            print(data)
+            print('\033[32;1mConsumer %s has eat %s bun...\033[0m' % (name, data))
+        else:
+            print("No bun anymore...")
+
+
+if __name__ == '__main__':
+    # 进程间的数据是不共享的,注意我们需要把q,即队列对象传入函数中
+    p1 = multiprocessing.Process(target=Producer, args=('Lyon', q,))
+    c1 = multiprocessing.Process(target=Consumer, args=('Kenneth', q,))
+    p1.start()
+    c1.start()
+    p1.join()
+    c1.join()
+    print("End of main process...")
+    
+```
+
+### Semaphore 
+信号量semaphore 
+是一个变量，控制着对公共资源或者临界区的访问。信号量维护着一个计数器，指定可同时访问资源或者进入临界区的线程数。 
+每次有一个线程获得信号量时，计数器-1。若计数器为0，其他线程就停止访问信号量，直到另一个线程释放信号量。 
+信号量同步的例子：
+
 
 
 
@@ -392,14 +474,6 @@ if __name__ == '__main__':
         print(dic)
         
 ```
-
-
-
-
-
-
-
-
 
 
 
