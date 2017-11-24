@@ -267,6 +267,11 @@ print("-----end-----")
 * 尝试把apply改成apply_async 对比运行结果，并说明原因。
 * 自行尝试map方法的作用。
 
+## 进程间的同步
+Lock
+
+
+
 ## 进程间的通信-Queue
 Queue是多进程安全的队列，可以使用multiprocessing 里面的
 Queue实现多进程之间的数据传递。Queue本身是一个消息队列程序。
@@ -328,11 +333,128 @@ if not q.empty():
     
   
 我们以Queue为例，在父进程中创建两个子进程，一个往Queue里写数据，一个从Queue里读数据：
+```
+from multiprocessing import Process, Queue
+import os, time, random
+
+# 写数据进程执行的代码:
+def write(q):
+    for value in range(10):
+        print('Put %s to queue...' % value)
+        q.put(value)
+        time.sleep(random.random())
+
+# 读数据进程执行的代码:
+def read(q):
+    while True:
+        if not q.empty():
+            value = q.get(True)
+            print('Get %s from queue.' % value)
+            time.sleep(random.random())
+
+        else:
+            break
+
+if __name__=='__main__':
+    # 父进程创建Queue，并传给各个子进程：
+    q = Queue(10)
+    pw = Process(target=write, args=(q,))
+    pr = Process(target=read, args=(q,))
+    pw.start()
+    pw.join()
+    pr.start()
+    pr.join()
+    print('所有数据都写入并且读完')
+    
+```
+### Manager 
+进程之间是相互独立的 , 在multiprocessing模块中的Manager可以实现进程间数据共享 , 并且Manager还支持进程中的很多操作 , 比如Condition , Lock , Namespace , Queue , RLock , Semaphore等.
+demo：
+```
+import multiprocessing
+# 既然数据共享了,就需要像多线程那样,防止竞争
+def run(d,lock):
+      # 演示没加锁的实例
+    # lock.acquire()
+    d['count'] -= 1
+    # lock.release()
+if __name__ == '__main__':
+    # lock = multiprocessing.Lock()
+    with multiprocessing.Manager() as m:
+        dic = m.dict({'count' : 100})
+        process_list = []
+        for i in range(100):
+            p = multiprocessing.Process(target=run, args=(dic, lock,))
+            process_list.append(p)
+            p.start()
+        for p in process_list:
+            p.join()
+        print(dic)
+        
+```
 
 
 
 
 
 
+
+
+
+
+
+
+作业：多线程copy文件
+
+```
+from multiprocessing import Pool,Manager
+import os, time
+
+
+def copyFileTask(filename, oldFolderName, newFolderName, queue):
+    with open(oldFolderName+"/"+filename,encoding='utf-8',errors='ignore') as fr:
+        content = fr.read()
+    with open(newFolderName+"/"+filename, 'w',encoding='utf-8') as fw:
+        fw.write(content)
+    queue.put(filename)
+
+def main():
+    oldFolderName = input('输入您要复制的文件夹:')
+    newFolderName = oldFolderName + '复制'
+    not os.path.exists(newFolderName) and os.mkdir(newFolderName)
+    filename = os.listdir(oldFolderName)
+    queue = Manager().Queue()
+
+    pool = Pool(1)
+
+    for name in filename:
+        pool.apply_async(func=copyFileTask, args=(name, oldFolderName, newFolderName, queue))
+
+
+
+    num = 0
+    total = len(filename)
+    print('总文件数是:{}'.format(total))
+    while num < total:
+        queue.get()
+        num += 1
+        print('\r当前复制进度%.2f%%, num是%d'%(((num/total)*100), num),end='')
+
+    #print('已完成拷贝copy......')
+
+
+if __name__ == '__main__':
+    start_time = time.time()
+    main()
+    print('\n')
+    print('完成copy用时{}秒.....'.format(time.time() -start_time))
+    
+```
+
+
+
+
+
+j
 
 
