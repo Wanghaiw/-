@@ -4,4 +4,5 @@
 一条线程指的是进程中一个单一顺序的控制流 , 一个进程中可以并发多个线程 , 每条线程并行执行不同的任务。
 
 ## Threading
-Python通过两个标准库_thread (built-in) 和threading提供对线程的支持 , threading对_thread进行了封装
+Python通过两个标准库_thread (built-in) 和threading提供对线程的支持 , threading对_thread进行了封装。
+threading模块中提供了Thread , Lock , RLock , Semaphore , Event , Condition
