@@ -365,9 +365,31 @@ if __name__ == '__main__':
         t.start()
 ```
 ### Event
-基于事件的同步是指：一个线程发送/传递事件，另外的线程等待事件的触发。 让我们再来看看前面的生产者和消费者的例子，现在我们把它转换成使用事件同步而不是条件同步。 
-首先是生产者类，我们传入一个Event实例给构造器而不是Condition实例。一旦整数被添加进列表，事件(event)被设置和发送去唤醒消费者。注意事件(event)实例默认是被发送的。
+基于事件的同步是指：一个进程发送/传递事件，另外的线程等待事件的触发。 
+```
 
+import multiprocessing
+
+
+def conn_mysql(conn, event):
+    count = 1
+    while not event.is_set():  #返回False
+        if count > 3:
+            # 主动触发超时异常
+            raise TimeoutError('Connection timeout...')
+        print('%s %sth attempt to connect' % (conn, count))
+        event.wait(5)  #等待事件被触发
+        count += 1
+    print('%s connect successfully' % conn)
+
+
+if __name__ == '__main__':
+    event = multiprocessing.Event()
+    for i in range(10):
+        conn = multiprocessing.Process(target=conn_mysql, args=('conn'+str(i), event))
+        conn.start()
+        
+```
 
 
 
@@ -543,9 +565,5 @@ if __name__ == '__main__':
 ```
 
 
-
-
-
-j
 
 
