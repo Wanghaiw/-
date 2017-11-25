@@ -32,6 +32,7 @@ Thread.setName(self,name)	设置线程名称
 Python中使用线程有两种方式 : 函数或者用类来包装线程对象.
 
 函数调用：
+```
 import threading
 import time
 # 定义线程要运行的函数
@@ -53,3 +54,45 @@ if __name__ == '__main__':
     print(t1.getName())
     # 打印线程名
     print(t2.getName())
+```
+类继承调用:
+```
+import threading
+import time
+# 继承threading中的Thread类
+class MyThread(threading.Thread):
+    # 线程中所需要的参数
+    def __init__(self, name):
+        # threading.Thread.__init__(self)
+        super().__init__()
+        self.name = name
+    # 重构run方法,注意这个是表示线程活动的方法,必须有
+    def run(self):
+        print("I am %s" % self.name)
+        time.sleep(2)
+# 防止被导入执行两次
+if __name__ == '__main__':
+    # 创建一个线程实例
+    t1 = MyThread('Lyon')
+    # 创建另一个线程实例
+    t2 = MyThread('Kenneth')
+    # 启动线程,调用了类中的run方法
+    t1.start()
+    # 启动另一个线程
+    t2.start()
+    # 获取线程名
+    print(t1.getName())
+    # 获取线程名
+    print(t2.getName())
+```
+
+threading模块提供的一些方法：
+  * threading.currentThread(): 返回当前的线程变量。
+  * threading.enumerate(): 返回一个包含正在运行的线程的list。正在运行指线程启动后、结束前，不包括启动前和终止后的线程。
+  * threading.activeCount(): 返回正在运行的线程数量，与len(threading.enumerate())有相同的结果。
+  
+  
+ Join & setDaemon 
+
+
+
