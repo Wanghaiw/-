@@ -95,8 +95,28 @@ threading模块提供的一些方法：
  Join & setDaemon 
  
  Join
- 
- 主线程A中，创建了子线程B，并且在主线程A中调用了B.join()，那么，主线程A会在调用的地方等待，直到子线程B完成操作后，才可以接着往下执行，那么在调用这个线程时可以使用被调用线程的join方法。
+ 主线程A中，创建了子线程B，并且在主线程A中调用了B.join()，那么，主线程A会在调用的地方等待，直到子线程B完    成操作后，才可以接着往下执行，那么在调用这个线程时可以使用被调用线程的join方法。
+ ```
+ import threading
+import time
+def run(name):
+    print("I am %s" % name)
+    time.sleep(2)
+    print("When I'm done, I'm going to keep talking...")
+if __name__ == '__main__':
+    lyon = threading.Thread(target=run, args=('Lyon',))
+    kenneth = threading.Thread(target=run, args=('Kenneth',))
+    lyon.start()
+    lyon.join()
+    kenneth.start()
+    kenneth.join()
+    print("I was the main thread, and I ended up executing")
+
+```
+
+setDaemon
+
+主线程A中，创建了子线程B，并且在主线程A中调用了B.setDaemon(),这个的意思是，把主线程A设置为守护线程，这时候，要是主线程A执行结束了，就不管子线程B是否完成,一并和主线程A退出.
  
 
 
