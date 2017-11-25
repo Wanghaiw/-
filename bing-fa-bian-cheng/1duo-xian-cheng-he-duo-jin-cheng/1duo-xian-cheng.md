@@ -117,6 +117,31 @@ if __name__ == '__main__':
 setDaemon
 
 主线程A中，创建了子线程B，并且在主线程A中调用了B.setDaemon(),这个的意思是，把主线程A设置为守护线程，这时候，要是主线程A执行结束了，就不管子线程B是否完成,一并和主线程A退出.
+另外需要注意的是setDaemon方法必须在start方法之前调用。
+```
+import threading
+import time
+def run(name):
+    print("I am %s" % name)
+    time.sleep(2)
+    print("When I'm done, I'm going to keep talking...")
+if __name__ == '__main__':
+    lyon = threading.Thread(target=run, args=('Lyon',))
+    kenneth = threading.Thread(target=run, args=('Kenneth',))
+    # 设置守护线程,必须在启动前设置
+    lyon.setDaemon(True)
+    # 启动线程
+    lyon.start()
+    # 设置守护线程
+    kenneth.setDaemon(True)
+    kenneth.start()
+    print("I was the main thread, and I ended up executing")
+
+```
+
+#### GIL
+ 在CPython解释器中 , 同一个进程下开启的多线程 , 同一时刻只能有一个线程执行 , 无法利用多核优势.
+ GIL本质就是一把互斥锁 , 即会将并发运行变成串行 , 以此来控制同一时间内共享数据只能被一个任务进行修改 , 从而保证数据的安全性
  
 
 
