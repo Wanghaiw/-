@@ -227,9 +227,160 @@ if __name__ == '__main__':
 ```
 
 #### RLOCK
-RLock叫做递归锁
+RLock叫做递归锁，在Python中为了支持在同一线程中多次请求同一资源 , Python提供了可重入锁RLock
+
+这个RLock内部维护着一个Lokc和一个counter变量 , counter记录了acquire的次数 , 从而使得资源可以被多次require . 知道一个线程所有的acquire都被release , 其他的线程才能获得资源。
+对上面lock的例子做如下修改
+```
+# 仅仅只需如下修改
+mutexA = threading.Lock()
+mutexB = threading.Lock()
+# 以上两行修改为
+mutexA = mutexB = threading.RLock()
+# 注意如果仅仅修改后部分,即将Lock() -> RLock()是不行的,那样等于创建了两把递归锁
+
+```
  
- 
+####  Condition
 
+条件同步机制是指：一个线程等待特定条件，而另一个线程发出特定条件满足的信号。 解释条件同步机制的一个很好的例子就是生产者/消费者（producer/consumer）模型。生产者随机的往列表中“生产”一个随机整数，而消费者从列表中“消费”整数
+在producer类中，producer获得锁，生产一个随机整数，通知消费者有了可用的“商品”，并且释放锁。producer无限地向列表中添加整数，同时在两个添加操作中间随机的停顿一会儿。
+```
+class Producer(threading.Thread):
+"""
+向列表中生产随机整数
+"""
+def __init__(self, integers, condition):
+    """
+    构造器
+    @param integers 整数列表
+    @param condition 条件同步对象
+    """
+    threading.Thread.__init__(self)
+    self.integers = integers
+    self.condition = condition
+def run(self):
+    """
+    实现Thread的run方法。在随机时间向列表中添加一个随机整数
+    """
+    while True:
+        integer = random.randint(0, 256)
+        self.condition.acquire()    #获取条件锁
+        print('线程%s,获取了锁' % self.name)
+        self.integers.append(integer)
+        print('%d 添加到了list里面 %s' % (integer, self.name))
+        print('condition notified by %s' % self.name)
+        self.condition.notify() #唤醒消费者线程
+        print(' 线程%s 释放了锁' % self.name)
+        self.condition.release()    #释放条件锁
+        time.sleep(1)       #暂停1秒钟
+        
+```
+下面是消费者（consumer）类。它获取锁，检查列表中是否有整数，如果没有，等待生产者的通知。当消费者获取整数之后，释放锁。 
+注意在wait()方法中会释放锁，这样生产者就能获得资源并且生产“商品”。
+```
+class Consumer(threading.Thread):
+"""
+从列表中消费整数
+"""
+def __init__(self, integers, condition):
+    """
+    构造器
+    @param integers 整数列表
+    @param condition 条件同步对象
+    """
+    threading.Thread.__init__(self)
+    self.integers = integers
+    self.condition = condition
+def run(self):
+    """
+    实现Thread的run()方法，从列表中消费整数
+    """
+    while True:
+        self.condition.acquire()    #获取条件锁
+        print('线程 %s获取了锁' % self.name)
+        while True:
+            if self.integers:   #判断是否有整数
+                integer = self.integers.pop()
+                print('%d 从list里面删除了 %s' % (integer, self.name))
+                break
+        print('释放锁,等待生产者生产数据%s' % self.name)
+        self.condition.wait()   #等待商品，并且释放资源
+        print('线程 %s 释放锁' % self.name)
+        self.condition.release()    #最后释放条件锁
+        
+```
+#### Event
+Event对象中包含一个可由线程设置的信号标志 , 它允许线程等待某些事件的发生 . 在初始情况下 , Event对象中的信号标志被设置为假 ; 如果有线程等待一个Event对象 , 而这个Event对象的标志为假 , 那么这个线程将会被一直阻塞直至该标志为真 . 一个线程如果将一个Event对象的信号标志设置为真 , 它将唤醒所有等待这个Event对象的线程 . 如果一个线程等待一个已经被设置为真的Event对象 , 那么它将忽略这个事件 , 继续执行.
+基于事件的同步是指：一个线程发送/传递事件，另外的线程等待事件的触发。 让我们再来看看前面的生产者和消费者的例子，现在我们把它转换成使用事件同步而不是条件同步。 
+首先是生产者类，我们传入一个Event实例给构造器而不是Condition实例。一旦整数被添加进列表，事件(event)被设置和发送去唤醒消费者。注意事件(event)实例默认是被发送的。
+```
+class Producer(threading.Thread):
+  """
+  向列表中生产随机整数
+  """
+  def __init__(self, integers, event):
+    """
+    构造器
+    @param integers 整数列表
+    @param event 事件同步对象
+    """
+    threading.Thread.__init__(self)
+    self.integers = integers
+    self.event = event
+  def run(self):
+    """
+    实现Thread的run方法。在随机时间向列表中添加一个随机整数
+    """
+    while True:
+      integer = random.randint(0, 256)
+      self.integers.append(integer)
+      print '%d appended to list by %s' % (integer, self.name)
+      print 'event set by %s' % self.name
+      self.event.set()      #设置事件   
+      self.event.clear()    #发送事件
+      print 'event cleared by %s' % self.name
+      time.sleep(1)
+      
+  ```
+  
+ 同样我们传入一个Event实例给消费者的构造器，消费者阻塞在wait()方法，等待事件被触发，即有可供消费的整数。
+ ```
+ class Consumer(threading.Thread):
+  """
+   从列表中消费整数
+  """
+  def __init__(self, integers, event):
+    """
+    构造器
+    @param integers 整数列表
+    @param event 事件同步对象
+    """
+    threading.Thread.__init__(self)
+    self.integers = integers
+    self.event = event
+  def run(self):
+    """
+    实现Thread的run()方法，从列表中消费整数
+    """
+    while True:
+      self.event.wait() #等待事件被触发
+      try:
+        integer = self.integers.pop()
+        print '%d popped from list by %s' % (integer, self.name)
+      except IndexError:
+        # catch pop on empty list
+        time.sleep(1)
+```
+Event的基本方法
+```
+Event.isSet()	返回Event的状态 , isSet == is_set
+Event.wait()	如果Event.isSet() == False将阻塞线程
+Event.set()	设置Event的状态值为True , 所有阻塞池中的线程激活进入就绪状态 , 等待操作系统调度
+Event.clear()	回复Event的状态值为False
+```
+####  Queue(队列)
 
-
+Queue - 一种线程安全的FIFO实现 
+Python的Queue模块提供一种适用于多线程编程的FIFO实现。它可用于在生产者(producer)和消费者(consumer)之间线程安全(thread-safe)地传递消息或其它数据，因此多个线程可以共用同一个Queue实例。Queue的大小（元素的个数）可用来限制内存的使用。
+队列是一个非常好的线程同步机制，使用队列我们不用关心锁，队列会为我们处理锁的问题。 队列(Queue)有以下4个常用的方法：
