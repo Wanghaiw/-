@@ -384,3 +384,152 @@ Event.clear()	回复Event的状态值为False
 Queue - 一种线程安全的FIFO实现 
 Python的Queue模块提供一种适用于多线程编程的FIFO实现。它可用于在生产者(producer)和消费者(consumer)之间线程安全(thread-safe)地传递消息或其它数据，因此多个线程可以共用同一个Queue实例。Queue的大小（元素的个数）可用来限制内存的使用。
 队列是一个非常好的线程同步机制，使用队列我们不用关心锁，队列会为我们处理锁的问题。 队列(Queue)有以下4个常用的方法：
+```
+Queue.Queue(maxsize=0)   FIFO， 如果maxsize小于1就表示队列长度无限
+Queue.LifoQueue(maxsize=0)   LIFO， 如果maxsize小于1就表示队列长度无限
+Queue.qsize()   返回队列的大小 
+Queue.empty()   如果队列为空，返回True,反之False 
+Queue.full()   如果队列满了，返回True,反之False
+Queue.get([block[, timeout]])    读队列，timeout等待时间 
+Queue.put(item, [block[, timeout]])   写队列，timeout等待时间 
+Queue.queue.clear()   清空队列
+Queue.join: 阻塞知道所有的项目都被处理完。
+Queue.task_done: 当某一项任务完成时调用；
+```
+下面我们将上面的生产者/消费者的例子转换成使用队列。 
+首先是生产者类，我们不需要传入一个整数列表，因为我们使用队列就可以存储生成的整数。生产者线程在一个无限循环中生成整数并将生成的整数添加到队列中。
+```
+class Producer(threading.Thread):
+  """
+  向队列中生产随机整数
+  """
+  def __init__(self, queue):
+    """
+    构造器
+    @param integers 整数列表    #译注：不需要这个参数
+    @param queue 队列同步对象
+    """
+    threading.Thread.__init__(self)
+    self.queue = queue
+  def run(self):
+    """
+    实现Thread的run方法。在随机时间向队列中添加一个随机整数
+    """
+    while True:
+      integer = random.randint(0, 256)
+      self.queue.put(integer)   #将生成的整数添加到队列
+      print '%d put to queue by %s' % (integer, self.name)
+      time.sleep(1)
+  ```
+  
+  下面是消费者类。线程从队列中获取整数，并且在任务完成时调用task_done()方法。
+  ```
+  class Consumer(threading.Thread):
+  """
+  从队列中消费整数
+  """
+  def __init__(self, queue):
+    """
+    构造器
+    @param integers 整数列表    #译注：不需要这个参数
+    @param queue 队列同步对象
+    """
+    threading.Thread.__init__(self)
+    self.queue = queue
+  def run(self):
+    """
+    实现Thread的run()方法，从队列中消费整数
+    """
+    while True:
+      integer = self.queue.get()
+      print '%d popped from list by %s' % (integer, self.name)
+      self.queue.task_done()
+  
+  ```
+  队列同步的最大好处就是队列帮我们处理了锁。在python内部队列（Queue）构造器创建一个锁，保护队列元素的添加和删除操作。同时创建了一些条件锁对象处理队列事件，比如队列不空事件（削除get()的阻塞），队列不满事件（削除put()的阻塞）和所有项目都被处理完事件（削除join()的阻塞）。
+  
+  
+  
+ ### 线程池
+ 线程池是预先创建线程的一种技术。线程池在还没有任务到来之前，创建一定数量的线程，放入空闲队列中。这些线程都是处于睡眠状态，即均为启动，不消耗CPU，而只是占用较小的内存空间。当请求到来之后，缓冲池给这次请求分配一个空闲线程，把请求传入此线程中运行，进行处理。当预先创建的线程都处于运行状态，即预制线程不够，线程池可以自由创建一定数量的新线程，用于处理更多的请求。当系统比较闲的时候，也可以通过移除一部分一直处于停用状态的线程。
+一个典型的线程池，应该包括如下几个部分： 
+1、线程池管理器（ThreadPool），用于启动、停用，管理线程池 
+2、工作线程（WorkThread），线程池中的线程 
+3、请求接口（WorkRequest），创建请求对象，以供工作线程调度任务的执行 
+4、请求队列（RequestQueue）,用于存放和提取请求 
+5、结果队列（ResultQueue）,用于存储请求执行后返回的结果
+
+
+##### multiprocessing.dummy
+multiprocessing.dummy 模块与 multiprocessing 模块的区别： dummy 模块是多线程，而 multiprocessing 是多进程， api 都是通用的。 所有可以很方便将代码在多线程和多进程之间切换例子：
+
+例子：
+```
+from multiprocessing.dummy import Pool as ThreadPool
+import time
+import urllib.request
+urls = [
+    'http://www.baidu.com',
+    'http://tieba.baidu.com/',
+    'http://www.qq.com',
+    'http://www.youku.com',
+    'http://www.tudou.com'
+]
+start = time.time()
+result = map(urllib.request.urlopen,urls)
+print('Normal:', time.time() - start)
+start2 = time.time()
+#processes默认是 cpu 的核心数
+pool = ThreadPool(processes=4)
+results2 = pool.map(urllib.request.urlopen, urls)
+pool.close()
+pool.join()
+print('Thread Pool:', time.time() - start2)
+```
+
+
+* 作业 通过使用threading和queue自己写一个线程池。
+
+```
+import time
+import threading
+from random import random
+from queue import Queue
+def double(n):
+    return n * 2
+class Worker(threading.Thread):
+    def __init__(self, queue):
+        super(Worker, self).__init__()
+        self._q = queue
+        self.daemon = True
+        self.start()
+    def run(self):
+        print('启动')
+        while True:
+            f, args, kwargs = self._q.get()
+            try:
+                print('USE: {}'.format(self.name))  # 线程名字
+                print(f(*args, **kwargs))
+                time.sleep(2)
+            except Exception as e:
+                print(e)
+            self._q.task_done()
+class ThreadPool(object):
+    def __init__(self, num_t=10):
+        self._q = Queue(num_t)
+        # Create Worker Thread
+        for _ in range(num_t):
+            Worker(self._q)
+    def add_task(self, f, *args, **kwargs):
+        self._q.put((f, args, kwargs))
+    def wait_complete(self):
+        self._q.join()
+pool = ThreadPool()
+for _ in range(30000):
+    wt = random()
+    pool.add_task(double, wt)
+    #time.sleep(wt)
+pool.wait_complete()
+
+```
+
