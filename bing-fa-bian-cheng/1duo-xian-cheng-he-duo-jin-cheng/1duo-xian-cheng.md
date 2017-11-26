@@ -149,12 +149,85 @@ if __name__ == '__main__':
 
 #### LOCK
 多线程与多进程最大的不同在于 , 多进程中 , 同一个变量 , 各自有一份拷贝存在于每个进程中 , 互不影响 , 但是在多线程中 , 所有变量对于所有线程都是共享的 , 因此 , 线程之间共享数据最大的危险在于多个线程同时修改一个变量 , 那就乱套了 , 所以我们需要GIL一样 , 来锁住数据
-
 上面说了 , 保护不同的数据 , 要加不同的锁 , GIL是为了保护解释器的数据 , 明显我们还需要保护用户数据的锁
+所以为了保证用户数据的安全 , 我们需要另一个锁 , 互斥锁(Mutex)。
 
-所以为了保证用户数据的安全 , 我们需要另一个锁 , 互斥锁(Mutex)
+```
+import threading
+# 假定这是你的银行存款:
+balance = 0
+def change_it(n):
+    # 先存后取，结果应该为0:
+    global balance
+    balance = balance + n
+    balance = balance - n
+# 创建一把锁
+lock = threading.Lock()
+def run_thread(n):
+    for i in range(100000):
+        # 先要获取锁:
+        lock.acquire()
+        try:
+            # 放心地改吧:
+            change_it(n)
+        finally:
+            # 改完了一定要释放锁:
+            lock.release()
+for j in range(10000):
+    t1 = threading.Thread(target=run_thread, args=(5,))
+    t2 = threading.Thread(target=run_thread, args=(8,))
+    t1.start()
+    t2.start()
+    t1.join()
+    
+    t2.join()
+    print(balance)
+    
+```
 
+#### 死锁
+ 所谓死锁 : 是指两个或两个以上的进程或线程在执行过程中 , 因争夺资源而造成的一种互相等待的现象 , 若无外力作用 , 他们都将无法推进下去 . 此时称系统处于死锁状态或系统产生了死锁 , 这些永远在互相等待的进程称为死锁进程 
+ 在线程间共享多个资源的时候，如果两个线程分别占有一部分资源并且同时等待对方的资源，就会造成死锁。
  
+尽管死锁很少发生，但一旦发生就会造成应用的停止响应。下面看一个死锁的例子
+```
+import threading
+import time
+
+class MyThread1(threading.Thread):
+    def run(self):
+        if mutexA.acquire():
+            print(self.name+'----do1---up----')
+            time.sleep(1)
+
+            if mutexB.acquire():
+                print(self.name+'----do1---down----')
+                mutexB.release()
+            mutexA.release()
+
+class MyThread2(threading.Thread):
+    def run(self):
+        if mutexB.acquire():
+            print(self.name+'----do2---up----')
+            time.sleep(1)
+            if mutexA.acquire():
+                print(self.name+'----do2---down----')
+                mutexA.release()
+            mutexB.release()
+
+mutexA = threading.Lock()
+mutexB = threading.Lock()
+
+if __name__ == '__main__':
+    t1 = MyThread1()
+    t2 = MyThread2()
+    t1.start()
+    t2.start()
+    
+```
+
+#### RLOCK
+RLock叫做递归锁
  
  
 
