@@ -90,10 +90,10 @@ threading模块提供的一些方法：
   * threading.currentThread(): 返回当前的线程变量。
   * threading.enumerate(): 返回一个包含正在运行的线程的list。正在运行指线程启动后、结束前，不包括启动前和终止后的线程。
   * threading.activeCount(): 返回正在运行的线程数量，与len(threading.enumerate())有相同的结果。
-  
-  
+
+
  Join & setDaemon 
- 
+
  Join
  主线程A中，创建了子线程B，并且在主线程A中调用了B.join()，那么，主线程A会在调用的地方等待，直到子线程B完    成操作后，才可以接着往下执行，那么在调用这个线程时可以使用被调用线程的join方法。
  ```
@@ -111,8 +111,7 @@ if __name__ == '__main__':
     kenneth.start()
     kenneth.join()
     print("I was the main thread, and I ended up executing")
-
-```
+ ```
 
 setDaemon
 
@@ -136,7 +135,6 @@ if __name__ == '__main__':
     kenneth.setDaemon(True)
     kenneth.start()
     print("I was the main thread, and I ended up executing")
-
 ```
 
 #### GIL
@@ -188,7 +186,7 @@ for j in range(10000):
 #### 死锁
  所谓死锁 : 是指两个或两个以上的进程或线程在执行过程中 , 因争夺资源而造成的一种互相等待的现象 , 若无外力作用 , 他们都将无法推进下去 . 此时称系统处于死锁状态或系统产生了死锁 , 这些永远在互相等待的进程称为死锁进程 
  在线程间共享多个资源的时候，如果两个线程分别占有一部分资源并且同时等待对方的资源，就会造成死锁。
- 
+
 尽管死锁很少发生，但一旦发生就会造成应用的停止响应。下面看一个死锁的例子
 ```
 import threading
@@ -240,12 +238,12 @@ mutexA = mutexB = threading.RLock()
 # 注意如果仅仅修改后部分,即将Lock() -> RLock()是不行的,那样等于创建了两把递归锁
 
 ```
- 
+
 ####  Condition
 
 条件同步机制是指：一个线程等待特定条件，而另一个线程发出特定条件满足的信号。 解释条件同步机制的一个很好的例子就是生产者/消费者（producer/consumer）模型。生产者随机的往列表中“生产”一个随机整数，而消费者从列表中“消费”整数
 在producer类中，producer获得锁，生产一个随机整数，通知消费者有了可用的“商品”，并且释放锁。producer无限地向列表中添加整数，同时在两个添加操作中间随机的停顿一会儿。
-```
+``` 
 class Producer(threading.Thread):
 """
 向列表中生产随机整数
@@ -342,8 +340,8 @@ class Producer(threading.Thread):
       print 'event cleared by %s' % self.name
       time.sleep(1)
       
-  ```
-  
+```
+
  同样我们传入一个Event实例给消费者的构造器，消费者阻塞在wait()方法，等待事件被触发，即有可供消费的整数。
  ```
  class Consumer(threading.Thread):
@@ -371,7 +369,7 @@ class Producer(threading.Thread):
       except IndexError:
         # catch pop on empty list
         time.sleep(1)
-```
+ ```
 Event的基本方法
 ```
 Event.isSet()	返回Event的状态 , isSet == is_set
@@ -420,8 +418,8 @@ class Producer(threading.Thread):
       self.queue.put(integer)   #将生成的整数添加到队列
       print '%d put to queue by %s' % (integer, self.name)
       time.sleep(1)
-  ```
-  
+```
+
   下面是消费者类。线程从队列中获取整数，并且在任务完成时调用task_done()方法。
   ```
   class Consumer(threading.Thread):
@@ -446,10 +444,10 @@ class Producer(threading.Thread):
       self.queue.task_done()
   
   ```
-  队列同步的最大好处就是队列帮我们处理了锁。在python内部队列（Queue）构造器创建一个锁，保护队列元素的添加和删除操作。同时创建了一些条件锁对象处理队列事件，比如队列不空事件（削除get()的阻塞），队列不满事件（削除put()的阻塞）和所有项目都被处理完事件（削除join()的阻塞）。
+ 队列同步的最大好处就是队列帮我们处理了锁。在python内部队列（Queue）构造器创建一个锁，保护队列元素的添加和删除操作。同时创建了一些条件锁对象处理队列事件，比如队列不空事件（削除get()的阻塞），队列不满事件（削除put()的阻塞）和所有项目都被处理完事件（削除join()的阻塞）。
+
   
-  
-  
+
  ### 线程池
  线程池是预先创建线程的一种技术。线程池在还没有任务到来之前，创建一定数量的线程，放入空闲队列中。这些线程都是处于睡眠状态，即均为启动，不消耗CPU，而只是占用较小的内存空间。当请求到来之后，缓冲池给这次请求分配一个空闲线程，把请求传入此线程中运行，进行处理。当预先创建的线程都处于运行状态，即预制线程不够，线程池可以自由创建一定数量的新线程，用于处理更多的请求。当系统比较闲的时候，也可以通过移除一部分一直处于停用状态的线程。
 一个典型的线程池，应该包括如下几个部分： 
@@ -530,6 +528,5 @@ for _ in range(30000):
     pool.add_task(double, wt)
     #time.sleep(wt)
 pool.wait_complete()
-
 ```
 
