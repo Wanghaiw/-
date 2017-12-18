@@ -94,10 +94,38 @@ print(s)
 3.关闭套接字
 ![](/assets/UDP程序.png)
 
+代码如下:
 
+UDP服务端程序
+```
+# 1.导入socket模块
+import socket
+# 2.创建socket对象
+sock = socket.socket(type=socket.SOCK_DGRAM)
+# 3.绑定ip和端口
+sock.bind(('127.0.0.1', 8080))
+# 4.接收请求,返回数据和地址
+data,addr = sock.recvfrom(1024)
+# 5.打印请求
+print(data.decode())
+# 6.关闭套接字
+sock.close()
+```
+UDP客户端程序
+```
+import socket
 
-
-
+# 1.创建套接字
+s = socket.socket(family=socket.AF_INET,type=socket.SOCK_DGRAM)
+# 2.准备接受方的地址
+sendAddr = ('127.0.0.1',8080)
+# 3.输入要发送的数据
+send_data = input('请输入要发送的数据:')
+# 4.发送数据到指定电脑
+s.sendto(send_data.encode(),sendAddr)
+# 5.关闭套接字
+s.close()
+```
 
 
 
