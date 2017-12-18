@@ -126,6 +126,8 @@ s.sendto(send_data.encode(),sendAddr)
 s.close()
 ```
 
+# socket对象常用方法
+
 
 
 
