@@ -87,6 +87,12 @@ s = socket.socket(family=socket.AF_INET,type=socket.SOCK_DGRAM)
 print(s)
 ```
 
+# UDP 网络程序
+创建一个UDP客户端程序,最为简单,具体步骤如下：
+1.创建UDP套接字
+2.发送/接受数据
+3.关闭套接字
+
 
 
 
