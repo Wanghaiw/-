@@ -75,7 +75,11 @@ socket（简称 `套接字`）是进程间通信的一种方式，它与其他�
 * Type:套接字类型,可以是SOCK._STREAM(流式套接字)主要用于TCP协议，或者SOCK_DGRAM(数据报套接字)主要同于UDP协议。
 
 ### 创建一个TCP socket
-
+```
+import socket
+s = socket.socket(family=socket.AF_INET,type=socket.SOCK_STREAM)
+print(s)
+```
 
 
 
