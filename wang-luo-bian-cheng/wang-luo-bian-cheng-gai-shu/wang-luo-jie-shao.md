@@ -71,7 +71,7 @@ socket（简称 `套接字`）是进程间通信的一种方式，它与其他�
 `socket.socket(AddressFamily,type)`
 说明:
 函数socket.socket创建一个socket,返回该socket的描述符,该函数带有两个参数:
-* AddressFamily：可以选择AF_INET(用于internet进程间通信)，或者AF_UNIX(用于一台机器之间的通信)，
+* AddressFamily：可以选择AF_INET(用于internet进程间通信)，或者AF_UNIX(用于一台机器之间的通信)，一般常用的都是AF_INET.
 
 
 
