@@ -67,6 +67,10 @@ UDP（User Data Protocol，用户数据报协议）,UDP是一个非连接的协�
 ## 2.什么是socket
 socket（简称 `套接字`）是进程间通信的一种方式，它与其他进程间通信的一个主要不同是:它能实现不同主机间的进程间通信,我们网络上各种各样的服务大多都是基于Socket来完成通信的。
 ## 3.创建socket
+在python中使用socket模块的函数socket就可以创建一个socket对象。
+`socket.socket(AddressFamily,type)`
+说明:
+函数socket.socket创建一个socket,返回该socket的描述符,该函数带有两个参数:
 
 
 
