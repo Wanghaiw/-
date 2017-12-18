@@ -80,6 +80,14 @@ import socket
 s = socket.socket(family=socket.AF_INET,type=socket.SOCK_STREAM)
 print(s)
 ```
+### 创建一个UDP socket
+```
+import socket
+s = socket.socket(family=socket.AF_INET,type=socket.SOCK_DGRAM)
+print(s)
+```
+
+
 
 
 
