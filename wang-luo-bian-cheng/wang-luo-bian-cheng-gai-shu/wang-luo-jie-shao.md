@@ -114,7 +114,6 @@ sock.close()
 UDP客户端程序
 ```
 import socket
-
 # 1.创建套接字
 s = socket.socket(family=socket.AF_INET,type=socket.SOCK_DGRAM)
 # 2.准备接受方的地址
