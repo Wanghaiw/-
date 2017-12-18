@@ -125,7 +125,7 @@ s.sendto(send_data.encode(),sendAddr)
 # 5.关闭套接字
 s.close()
 ```
-运行结果:
+
 
 
 
