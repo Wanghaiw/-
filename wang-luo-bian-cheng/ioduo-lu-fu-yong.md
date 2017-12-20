@@ -10,4 +10,76 @@ select通过一个select()系统调用来监视多个文件描述符的数组，
 select目前几乎在所有的平台上支持，其良好跨平台支持也是它的一个优点，事实上从现在看来，这也是它所剩不多的优点之一。
 select的一个缺点在于单个进程能够监视的文件描述符的数量存在最大限制，在32位电脑为1024，64位是2048.
 另外，select()所维护的存储大量文件描述符的数据结构，随着文件描述符数量的增大，其复制的开销也线性增长。
+对socket进行扫描是依次扫描，即采用轮询的方法,效率较低。
+
+## 示例
+select 服务端
+```
+import select
+import socket
+
+
+sock = socket.socket()
+print('socket 创建成功')
+sock.bind(('127.0.0.1',8888))
+sock.listen(5)
+
+inputs = [sock,]
+
+while True:
+    print('等待select 监听')
+    readable,writeable,exceptional = select.select(inputs,[],[])
+    for s in readable:
+        if s is sock:
+            conn,addr = sock.accept()
+            print('新的连接建立成功')
+            inputs.append(conn)
+        else:
+            data = s.recv(1024)
+            print('client_message:',data)
+            if data:
+                s.send(data)
+            else:
+                inputs.remove(s)
+                s.close()
+sock.close()
+```
+客户端
+```
+import socket
+import time
+
+
+print("Connect to the server")
+
+server_address = ("127.0.0.1",8888)
+
+#Create a TCP/IP sock
+
+socks = []
+
+for i in range(10):
+    socks.append(socket.socket(socket.AF_INET,socket.SOCK_STREAM))
+
+for s in socks:
+    s.connect(server_address)
+
+counter = 0
+
+for s in socks:
+    counter+=1
+    print("client_send:",counter)
+    s.send(str(counter).encode())
+
+time.sleep(2)
+
+for s in socks:
+    data = s.recv(1024)
+    print("server_message:",data)
+    if not data:
+        print("closing socket ",s.getpeername())
+        s.close()
+```
+
+
 
