@@ -1,1 +1,7 @@
-Python协程：从yield/send到async/await
+# Python协程：从yield/send到async/await
+Python中的协程经历了很长的一段发展历程。其大概经历了如下三个阶段：
+```
+1.最初的生成器变形yield/send
+2.引入@asyncio.coroutine和yield from
+3.在最近的Python3.5版本中引入async/await关键字
+```
