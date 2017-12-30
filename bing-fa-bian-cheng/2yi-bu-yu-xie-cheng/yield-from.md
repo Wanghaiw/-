@@ -1,4 +1,4 @@
-## 	yield和yield from 用法
+##  yield和yield from 用法
 
 ### 迭代器(iterator)
 
