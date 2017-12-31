@@ -128,6 +128,7 @@ requests中有一个内置的JSON解码器,帮助我们处理JSON格式的数据
 
 ### 2.7 重定向
 在requests里面默认会自动处理所用的重定向.
+可以通过`allow_redirects`参数禁止重定向处理。
 ```
 >>> import requests
 >>>  r = requests.get('http://github.com',verify=False)
@@ -135,7 +136,12 @@ requests中有一个内置的JSON解码器,帮助我们处理JSON格式的数据
 https://github.com/
 >>> r.history
 [<Response [301]>]
+>>> r = requests.get('http://github.com',verify=False,allow_redirects=False)
+>>> r.status_code
+301
 ```
+### 2.8 请求超时
+
 
 
 
