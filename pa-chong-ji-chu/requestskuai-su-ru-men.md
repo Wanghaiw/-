@@ -128,6 +128,14 @@ requests中有一个内置的JSON解码器,帮助我们处理JSON格式的数据
 
 ### 2.7 重定向
 在requests里面默认会自动处理所用的重定向.
+```
+>>> import requests
+>>>  r = requests.get('http://github.com',verify=False)
+>>> r.url
+https://github.com/
+>>> r.history
+[<Response [301]>]
+```
 
 
 
