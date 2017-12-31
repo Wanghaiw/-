@@ -19,4 +19,6 @@ r = requests.post("http://httpbin.org/post")
 r = requests.put("http://httpbin.org/put")
 ```
 
+## 2.2 响应内容
+
 
