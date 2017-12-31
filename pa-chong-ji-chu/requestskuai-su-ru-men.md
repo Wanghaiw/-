@@ -20,5 +20,31 @@ r = requests.put("http://httpbin.org/put")
 ```
 
 ## 2.2 响应内容
+### 2.2.1 文本响应
+读取服务器响应的内容.以百度首页为例。
+```
+>>> import requests
+>>> r = requests.get('https://www.baidu.com')
+>>> print(r.text)
+.......
+```
+请求发出后，Requests 会基于 HTTP 头部对响应的编码作出有根据的推测。当你访问 r.text 之时，Requests 会使用其推测的文本编码。
+观察他的响应内容可以发现中文部分是乱码,使用`r.encoding`方法可以查看他的编码。
+```
+>>> print(r.encoding)
+ISO-8859-1
+```
+另外我们也可以使用`r.encoding` 属性来改变他.
+`r.encoding = 'utf-8'`
+这个时候我们在访问`r.text`时,可以发现中文已经能够正常显示.
+
+### 2.2.2 二进制响应内容
+除了text方法之外,我们还可以通过content方法,来访问响应体。
+
+```
+>>> r.content
+```
+
+
 
 
