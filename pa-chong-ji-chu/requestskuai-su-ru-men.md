@@ -141,6 +141,14 @@ https://github.com/
 301
 ```
 ### 2.8 请求超时
+在网络请求中,有时候可能会遇到请求的网站出现问题或者网络波动。为了防止这种情况在生产环境下的代码都应该设置超时操作。
+```
+>>> import requests
+>>> requests.get('https://www.baidu.com',timeout=0.001)
+ ....'Connection to www.baidu.com timed out. (connect timeout=0.01)'))
+```
+另外timeout 仅对连接过程有效，与响应体的下载无关。 timeout 并不是整个下载响应的时间限制，而是如果服务器在 timeout 秒内没有应答，将会引发一个异常。
+
 
 
 
