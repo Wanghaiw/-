@@ -46,3 +46,11 @@ Cache-Control	 告诉浏览器或者其他客户，什么环境可以安全地�
  Server	 服务器名字。Servlet一般不设置这个值，而是由Web服务器自己设置
  Set-Cookie	 设置和页面关联的cookie
  Transfer-Encoding	 数据传输的方式
+
+## HTTPS协议
+HTTP协议传输的数据都是没有加密的，也就是明文的，因此使用HTTP协议传输隐私信息非常的不安全。**为了让这些隐私数据能够加密传输，便设计了SSL协议对HTTP传输的数据进行加密，从而诞生了HTTPS。**而后对SSL进行不断的升级，出现了TLS。但是呢，名字用久了也就产生了感情，所以也一直延续着SSL是HTTPS的代名词的习惯。
+
+作者：公子世无双ss
+链接：https://www.jianshu.com/p/2bace419003f
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
