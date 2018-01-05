@@ -21,10 +21,12 @@ HTTP协议的主要特点可概括如下：
 5、客户端浏览器解析HTML内容 客户端浏览器首先解析状态行，查看表明请求是否成功的状态代码。然后解析每一个响应头，响应头告知以下为若干字节的HTML文档和文档的字符集。客户端浏览器读取响应数据HTML，根据HTML的语法对其进行格式化，并在浏览器窗口中显示。
 
 ## HTTP报头
+公共头部：
  Remote Address	 请求的远程地址
  Request URL	 请求的域名
  Request Method	 页面请求的方式：GET/POST
  Status Code	 请求的返回状态
+请求头：
  Accept	 表示浏览器支持的 MIME 类型
  Accept-Encoding	 浏览器支持的压缩类型
  Accept-Language	 浏览器支持的语言类型，并且优先支持靠前的语言类型
@@ -34,3 +36,13 @@ HTTP协议的主要特点可概括如下：
  Host	 请求的服务器URL
  Referer	 该页面的来源URL
  User-Agent	 用户客户端的一些必要信息
+返回头:
+Cache-Control	 告诉浏览器或者其他客户，什么环境可以安全地缓存文档
+ Connection	 当client和server通信时对于长链接如何进行处理
+ Content-Encoding	 数据在传输过程中所使用的压缩编码方式
+ Content-Type	 数据的类型
+ Date	 数据从服务器发送的时间
+ Expires	 应该在什么时候认为文档已经过期，从而不再缓存它？
+ Server	 服务器名字。Servlet一般不设置这个值，而是由Web服务器自己设置
+ Set-Cookie	 设置和页面关联的cookie
+ Transfer-Encoding	 数据传输的方式
