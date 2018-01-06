@@ -76,4 +76,12 @@ HTTPS加密过程：
 ## 什么是websocket
 WebSocket协议本质上是一个基于TCP的 独立的协议，能够在浏览器和服务器之间建立双向连接，以基于事件的方式，赋予浏览器实时通信能力。就是服务器端和客户端可以同时发送并响应请求，而不再像HTTP的请求和响应。
 
+## websocket和HTTP的联系和区别
+WebSocket 和 HTTP 都是基于 TCP 的协议
+TCP是传输层协议， WebSocket 和 HTTP是应用层协议。
+WebSocket 本质上跟 HTTP 完全不一样，WebSocket 协议和 HTTP 协议是两种不同的东西
+只是为了兼容现有浏览器的握手规范而已，WebSocket 的握手是以 HTTP 的形式发起的，如果服务器或者代理不支持 WebSocket，它们会把这当做一个不认识的 HTTP 请求从而优雅地拒绝掉。
+
+
+
 
