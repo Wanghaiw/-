@@ -28,4 +28,5 @@ MongoDB2.2版本之前不支持Windows XP，本教程使用的版本是最新的
 
 ## 设置MongoDB环境
 MongoDB需要一个目录来保存数据，默认的数据目录是\data\db。在我的机器上使用下面的目录作为数据目录。
-
+`D:\data`
+你可以在启动MongoDB的时候为它指定一个数据目录。例如我们用如下命令启动MongoDB:
