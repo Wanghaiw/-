@@ -33,3 +33,5 @@ MongoDB需要一个目录来保存数据，默认的数据目录是\data\db。�
 `D:\MongoDB\bin\mongod.exe --dbpath D:\data`
 ## 连接MongoDB
 使用mongo.exe命令连接。打开另一个命令行窗口，输入如下命令：
+'D:\MongoDb\bin\mongo.exe'
+
