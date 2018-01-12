@@ -20,4 +20,5 @@
 * [数据库](shu-ju-ku.md)
   * [MongoDB](shu-ju-ku/mongodb.md)
     * [快速入门](shu-ju-ku/mongodb/kuai-su-ru-men.md)
+    * [增删改查](shu-ju-ku/mongodb/zeng-shan-gai-cha.md)
 
