@@ -12,3 +12,4 @@
 { "_id" : ObjectId("5a586eae22dbc47846dd8e20"), "class" : "爬虫1班", "students" : 50 }
 ```
 如果插入的文档不包含_id字段，mongo命令行会自动加上这个字段到文档中，并且这个字段的值是根据ObjectId生成。
+
