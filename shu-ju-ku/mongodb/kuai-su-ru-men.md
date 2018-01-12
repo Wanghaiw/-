@@ -26,3 +26,6 @@ MongoDB在集合中存储文档。集合类似于关系数据库中的表。然�
 # MongoDB安装
 MongoDB2.2版本之前不支持Windows XP，本教程使用的版本是最新的3.4的版本。为了方便操作和理解，所以选择在Windows讲解，生产环境请使用Linux版本。
 
+## 设置MongoDB环境
+MongoDB需要一个目录来保存数据
+
