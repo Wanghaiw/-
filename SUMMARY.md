@@ -17,4 +17,7 @@
 * [网络编程](wang-luo-bian-cheng.md)
   * [1.网络编程概述](wang-luo-bian-cheng/wang-luo-bian-cheng-gai-shu/wang-luo-jie-shao.md)
   * [2.IO多路复用](wang-luo-bian-cheng/ioduo-lu-fu-yong.md)
+* [数据库](shu-ju-ku.md)
+  * [MongoDB](shu-ju-ku/mongodb.md)
+    * [快速入门](shu-ju-ku/mongodb/kuai-su-ru-men.md)
 
