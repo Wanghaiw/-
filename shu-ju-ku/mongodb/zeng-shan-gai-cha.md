@@ -11,5 +11,8 @@
 { "_id" : ObjectId("5a586e8522dbc47846dd8e1f"), "class" : "爬虫1班", "students" : 50 }
 { "_id" : ObjectId("5a586eae22dbc47846dd8e20"), "class" : "爬虫1班", "students" : 50 }
 ```
-如果插入的文档不包含_id字段，mongo命令行会自动加上这个字段到文档中，并且这个字段的值是根据ObjectId生成。
+在插入的文档中，如果不指定_id参数，那么 MongoDB 会为此文档分配一个唯一的ObjectId。
+
+_id为集合中的每个文档唯一的12个字节的十六进制数。 12字节划分如下 -
+
 
