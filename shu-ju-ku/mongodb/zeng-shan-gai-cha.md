@@ -5,6 +5,10 @@
 然后插入一个文档到test集合，如果test集合不存在，这个操作会自己创建test集合。
 例如:
 ```
-db.test.insert({'class':'爬虫1班','students':50})
-db.test.save({'class':'爬虫1班','students':50})
+> db.test.insert({'class':'爬虫1班','students':50})
+> db.test.save({'class':'爬虫1班','students':50})
+> db.test.find()
+{ "_id" : ObjectId("5a586e8522dbc47846dd8e1f"), "class" : "爬虫1班", "students" : 50 }
+{ "_id" : ObjectId("5a586eae22dbc47846dd8e20"), "class" : "爬虫1班", "students" : 50 }
 ```
+如果插入的文档不包含_id字段，mongo命令行会自动加上这个字段到文档中，并且这个字段的值是根据ObjectId生成。
