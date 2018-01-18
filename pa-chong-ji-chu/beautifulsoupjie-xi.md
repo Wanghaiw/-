@@ -59,3 +59,16 @@ print([tag.name for tag in soup.find_all(has_class_but_no_id)])
 # ['p','p','p']
 ```
 
+## css 搜索
+通过tag标签逐层查找:
+soup.select("body a")
+找到某个tag标签下的直接子标签
+soup.select("head > title")
+通过CSS的类名查找:
+soup.select(".sister")
+通过tag的id查找:
+soup.select("#link1")
+通过是否存在某个属性来查找:
+soup.select('a[href]')
+通过属性的值来查找:
+soup.select('a[href="http://example.com/elsie"]')
