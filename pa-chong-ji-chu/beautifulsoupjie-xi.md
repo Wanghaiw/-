@@ -18,3 +18,4 @@ and they lived at the bottom of a well.</p>
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html_doc)
 ```
+使用find_all类似的方法可以查找想要的文档内容。
