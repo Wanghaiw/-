@@ -48,5 +48,8 @@ for tag in soup.find_all(['a','b']):
     print(tag.name)
 # b a a a
 ```
+## 方法
+如果没有合适的过滤器,我们也可以自己定义一个方法，方法只接受一个元素参数。
+```
 
 
