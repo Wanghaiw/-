@@ -38,5 +38,15 @@ for tag in soup.find_all(re.compile('^b')):
 匹配包含t的标签
 for tag in soup.find_all(re.compile('t')):
     print(tag.name)
+# html  title
 ```
+## 列表
+find_all方法也能接受列表参数，BeautifulSoup会将与列表中任一元素匹配的内容返回。
+```
+查找a标签和b标签
+for tag in soup.find_all(['a','b']):
+    print(tag.name)
+# b a a a
+```
+
 
