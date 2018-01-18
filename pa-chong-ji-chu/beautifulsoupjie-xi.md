@@ -18,4 +18,25 @@ and they lived at the bottom of a well.</p>
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html_doc)
 ```
-使用find_all类似的方法可以查找想要的文档内容。
+使用find_all等类似的方法可以查找想要的文档内容。
+在介绍find_all方法之前，先介绍一下过滤器的类型。
+## 字符串
+最简单的过滤器是字符串。在搜索方法中传入一个字符串参数,BeautifulSoup会查找与字符串完整匹配的内容。
+例如:
+```
+查找所有的b标签。
+soup.find_all('b')
+# [<b>The Dormouse's story</b>]
+```
+## 正则表达式
+find_all方法可以接受正则表示式作为参数，BeautifulSoup会通过match方法来匹配内容。
+```
+匹配以b开头的标签
+for tag in soup.find_all(re.compile('^b')):
+    print(tag.name)
+#  body  b
+匹配包含t的标签
+for tag in soup.find_all(re.compile('t')):
+    print(tag.name)
+```
+
