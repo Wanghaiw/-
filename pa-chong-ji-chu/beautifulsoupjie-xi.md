@@ -51,5 +51,11 @@ for tag in soup.find_all(['a','b']):
 ## 方法
 如果没有合适的过滤器,我们也可以自己定义一个方法，方法只接受一个元素参数。
 ```
+匹配包含class属性，但是不包括id属性的标签。
+def has_class_but_no_id(tag):
+    return tag.has_attr('class') and not tag.has_attr('id')
 
+print([tag.name for tag in soup.find_all(has_class_but_no_id)])
+# ['p','p','p']
+```
 
