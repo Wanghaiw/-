@@ -25,7 +25,7 @@ $or 或条件查询
 > db.test.find({$or:[{'students':{$gte:55}},{'title':'python_MongoDB教学'}]})
 ```
 $and 与条件查询
-$
+$not 查询和表达式不匹配的文档
 $
 $
 $
