@@ -26,6 +26,7 @@ update方法用于更新已经存在的文档。
 WriteResult({ "nInserted" : 1 })
 > db.test.update({'title':'MongoDB教学'},{$set:{'title':'tz_MongoDB教学'}})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+```
 
 
 
