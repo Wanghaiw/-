@@ -20,6 +20,9 @@ $nin 不匹配数组中的值
 ## 2.逻辑操作符
 
 $or 或条件查询
+```
+> db.test.find({$or:[{'students':55},{'title':'python_MongoDB教学'}]})
+```
 $
 $
 $
