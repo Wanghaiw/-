@@ -21,7 +21,13 @@ update() 方法。
 ## update方法
 update方法用于更新已经存在的文档。
 ```
-
+> db.test.find()
+{ "_id" : ObjectId("5a586e8522dbc47846dd8e1f"), "class" : "爬虫1班", "students" : 50 }
+{ "_id" : ObjectId("5a586eae22dbc47846dd8e20"), "class" : "爬虫1班", "students" : 50 }
+{ "_id" : ObjectId("5a58704922dbc47846dd8e21"), "class" : "爬虫1班", "students" : 50 }
+{ "_id" : ObjectId("5a58706622dbc47846dd8e22"), "class" : "爬虫1班", "students" : 50 }
+{ "_id" : ObjectId("5a58708d22dbc47846dd8e23"), "class" : "爬虫1班", "students" : 50 }
+{ "_id" : ObjectId("5a58709e22dbc47846dd8e24"), "class" : "爬虫1班", "students" : 50 }
 
 
 
