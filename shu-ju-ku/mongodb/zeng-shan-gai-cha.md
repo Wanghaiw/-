@@ -19,7 +19,7 @@ MongoDB 使用 update() 和 save() 方法来更新集合中的文档。接下来
 update() 方法。
 
 ## update方法
-
+update方法用于更新已经存在的文档，
 
 
 
