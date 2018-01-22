@@ -43,4 +43,11 @@ MongoDB需要一个目录来保存数据，默认的数据目录是\data\db。�
 安装完成之后通过`net start MongoDB`,启动服务
 `net stop MongoDB` 关闭服务
 
+## 创建数据库
+语法
+`use DATABASE_NAME`
+切换到指定数据库，如果不存在，就创建数据库。
+
+
+
 
