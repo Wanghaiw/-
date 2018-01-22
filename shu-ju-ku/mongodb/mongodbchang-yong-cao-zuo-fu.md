@@ -24,7 +24,7 @@ $or 或条件查询
 查询students大于等于55或者title等于python_mongodb教学的文档
 > db.test.find({$or:[{'students':{$gte:55}},{'title':'python_MongoDB教学'}]})
 ```
-$
+$and 与条件查询
 $
 $
 $
