@@ -30,7 +30,7 @@ $nor 查询与任一表达式都不匹配的文档
 ```
 > db.test.find({$nor:[{'students':{$gte:57}},{'title':'python_MongoDB教学'}]})
 ```
-
+## 更新操作符
 $
 $
 $
