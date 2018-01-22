@@ -21,5 +21,6 @@
 * [数据库](shu-ju-ku.md)
   * [MongoDB](shu-ju-ku/mongodb.md)
     * [快速入门](shu-ju-ku/mongodb/kuai-su-ru-men.md)
+    * [MongoDB常用操作符](shu-ju-ku/mongodb/mongodbchang-yong-cao-zuo-fu.md)
     * [增删改查](shu-ju-ku/mongodb/zeng-shan-gai-cha.md)
 
