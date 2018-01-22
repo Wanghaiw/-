@@ -21,7 +21,8 @@ $nin 不匹配数组中的值
 
 $or 或条件查询
 ```
-> db.test.find({$or:[{'students':55},{'title':'python_MongoDB教学'}]})
+查询
+> db.test.find({$or:[{'students':{$gte:55}},{'title':'python_MongoDB教学'}]})
 ```
 $
 $
