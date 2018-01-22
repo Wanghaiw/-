@@ -26,7 +26,11 @@ $or 或条件查询
 ```
 $and 与条件查询
 $not 查询和表达式不匹配的文档
-$
+$nor 查询与任一表达式都不匹配的文档
+```
+> db.test.find({$nor:[{'students':{$gte:57}},{'title':'python_MongoDB教学'}]})
+```
+
 $
 $
 $
