@@ -22,7 +22,8 @@ update() 方法。
 update方法用于更新已经存在的文档。
 ```
 我们先在test里面插入条数据，然后再进行修改。
-
+> db.test.insert({'title':'MongoDB教学'})
+WriteResult({ "nInserted" : 1 })
 
 
 
