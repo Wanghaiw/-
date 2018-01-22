@@ -41,3 +41,4 @@ MongoDB需要一个目录来保存数据，默认的数据目录是\data\db。�
 过执行mongod.exe，使用--install选项来安装服务，使用--config选项来指定之前创建的配置文件。
 `"D:\MongoDB\bin\mongod.exe" --config "D:\MongoDB\mongod.cfg" --install`
 
+
