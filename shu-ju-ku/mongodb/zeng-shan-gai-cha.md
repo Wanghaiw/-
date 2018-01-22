@@ -28,6 +28,7 @@ WriteResult({ "nInserted" : 1 })
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 ```
 然后再查看数据发现数据已经被修改。
+这里set的作用是指更新文档当中的某一个字段，如果不使用set，文档会被直接替换。
 
 
 
