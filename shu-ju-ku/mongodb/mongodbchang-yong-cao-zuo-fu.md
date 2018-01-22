@@ -31,7 +31,7 @@ $nor 查询与任一表达式都不匹配的文档
 > db.test.find({$nor:[{'students':{$gte:57}},{'title':'python_MongoDB教学'}]})
 ```
 ## 更新操作符
-$inc
+$inc 将文档中的某个field对应的value自增/减某个数字amount
 $
 $
 $
