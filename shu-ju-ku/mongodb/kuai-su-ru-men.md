@@ -47,6 +47,17 @@ MongoDB需要一个目录来保存数据，默认的数据目录是\data\db。�
 语法
 `use DATABASE_NAME`
 切换到指定数据库，如果不存在，就创建数据库。
+查看所有的数据库
+`show databases`  databases可以简写成dbs
+## 删除数据库
+语法
+`db.dropDatabase()`
+
+### 删除集合
+`db.collection.drop()`
+
+
+
 
 
 
