@@ -40,5 +40,7 @@ MongoDB需要一个目录来保存数据，默认的数据目录是\data\db。�
 在没有安装服务之前，每次使用都需要先手动打开mongodb服务,才能连接。我们可以直接把MongoDB的服务安装到计算机,启动之后就不用每次手动打开服务了。
 过执行mongod.exe，使用--install选项来安装服务，使用--config选项来指定之前创建的配置文件。
 `"D:\MongoDB\bin\mongod.exe" --config "D:\MongoDB\mongod.cfg" --install`
+安装完成之后通过`net start MongoDB`,启动服务
+`net stop MongoDB` 关闭服务
 
 
