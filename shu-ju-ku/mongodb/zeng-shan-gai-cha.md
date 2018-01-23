@@ -37,6 +37,6 @@ save() 方法通过传入的文档来替换已有文档。
 > db.test.save({'_id':ObjectId("5a586e8522dbc47846dd8e1f"),'class':'爬虫1班','students':56})
 ```
 # 查询数据
-mongo查询数据使用的主要方法就是find
+mongo查询数据使用的主要方法就是find。find方法以分结构化的方式来显示所有文档。
 
 
