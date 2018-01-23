@@ -32,6 +32,7 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 update方法默认只更新一个文档.如果需要更新多个文档，需要指定multi参数
 
 ## save方法
+save() 方法通过传入的文档来替换已有文档。
 
 
 
