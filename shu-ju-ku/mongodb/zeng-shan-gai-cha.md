@@ -59,5 +59,6 @@ or操作符
 ```
 db.test.remove({'class':'爬虫1班'})
 ```
+删除操作也会返回一个WriteResult对象,他包含了操作的状态信息，nremoved字段值,表示被删除的字段数量。
 
 
