@@ -35,8 +35,8 @@ $inc 将文档中的某个field对应的value自增/减某个数字amount
 ```
 > db.test.update({'class':'爬虫2班'},{$inc:{'students':1}}))
 ```
+$mul 将文档中的某个field对应的value做乘法操作，同上。
 
-$
 $
 $
 $
