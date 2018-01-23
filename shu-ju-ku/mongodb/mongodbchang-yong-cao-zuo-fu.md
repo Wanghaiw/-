@@ -39,5 +39,7 @@ $mul 将文档中的某个field对应的value做乘法操作，同上。
 $rename 重名名文档中指定的字段名字
 $set 更新文档中的某一个字段，而不是全部替换
 ```
+> db.test.update({'students':116},{$set:{'students':56}})
+```
 
 $
