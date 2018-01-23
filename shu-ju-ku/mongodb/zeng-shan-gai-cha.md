@@ -60,9 +60,10 @@ or操作符
 删除指定条件匹配的所有文件。
 > db.test.remove({'class':'爬虫1班'},{justOne:true})
 删除匹配条件的一条数据
-> db.test.remove()
+> db.test.remove({})
 删除当前文档
-
+> db.test.drop()
+删除集合
 ```
 删除操作也会返回一个WriteResult对象,他包含了操作的状态信息，nremoved字段值,表示被删除的字段数量。
 
