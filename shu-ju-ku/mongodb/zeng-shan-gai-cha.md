@@ -31,7 +31,7 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 这里set的作用是指更新文档当中的某一个字段，如果不使用set，文档会被直接替换。
 update方法默认只更新一个文档.如果需要更新多个文档，需要指定multi参数
 
-
+## save方法
 
 
 
