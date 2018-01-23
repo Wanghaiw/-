@@ -41,5 +41,3 @@ $set 更新文档中的某一个字段，而不是全部替换
 ```
 > db.test.update({'students':116},{$set:{'students':56}})
 ```
-
-$
