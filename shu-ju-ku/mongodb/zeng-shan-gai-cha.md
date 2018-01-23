@@ -53,6 +53,7 @@ find方法可以传入查询条件来进行数据查询。也可以不传。
 > db.test.find({$or:[{'students':58},{'students':55}]})
 or操作符
 ```
+# 删除数据
 
 
 
