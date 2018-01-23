@@ -33,6 +33,8 @@ $nor 查询与任一表达式都不匹配的文档
 ## 更新操作符
 $inc 将文档中的某个field对应的value自增/减某个数字amount
 ```
+> db.test.update({'class':'爬虫2班'},{$inc:{'students':1}}))
+```
 
 $
 $
