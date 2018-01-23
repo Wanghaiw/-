@@ -36,7 +36,7 @@ save() 方法通过传入的文档来替换已有文档。
 ```
 > db.test.save({'_id':ObjectId("5a586e8522dbc47846dd8e1f"),'class':'爬虫1班','students':56})
 ```
-
+# 修改数据
 
 
 
