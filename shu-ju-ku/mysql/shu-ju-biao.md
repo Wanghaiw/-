@@ -11,3 +11,6 @@ create table if not exists students(
     age int
     ); 
 ```
+# 查看数据表
+语法 `show tables from database`,不加from database 查看当前数据库下面的表，加了之后查看指定的数据库。
+
