@@ -20,9 +20,10 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，�
 ## 创建数据库
 语法 CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name [DEFAULT] CHARACTER SET [=] charset_name
 
-`CREATE DATABASE IF NOT EXISTS tz_mysql CHARACTER SET utf8;`
+`CREATE DATABASE IF NOT EXISTS tz_mysql CHARACTER SET utf8;` 创建tz_mysql数据库，默认编码为latin1。
 
-通过`show CREATE DATABASE tz_mysql;` 可以查看创建数据库的命令。
+`show CREATE DATABASE tz_mysql;` 可以查看创建数据库的命令。
 
-通过`show variables like 'character_set_database';` 查看当前数据库的编码。
+`show variables like 'character_set_database';` 查看当前数据库的编码。
 
+`alter database tz_mysql character set = utf8;` 设置tz_mysql的编码为utf8，。
