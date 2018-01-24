@@ -16,3 +16,6 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，�
 * 7. mysql -u root -p 进入mysql环境，默认没有设置密码。
 
 # 操作数据库
+
+## 创建数据库
+语法 CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name [DEFAULT] CHARACTER SET [=] charset_name
