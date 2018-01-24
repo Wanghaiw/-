@@ -27,3 +27,18 @@ create table if not exists students(
 语法 `SELECT expr,... FROM TABLE_NAME`
 `select * from students` 查看students表所有字段的数据 *可以换成字段名。
 
+# 主键 PRIMARY KEY
+* 主键约束
+* 每张数据表只能存在一个主键
+* 主键保证记录的唯一性
+* 主键自动为NOT NULL
+
+```
+create table cs (
+id int primary key, # 设置id为主键
+name varchar(10) not null # name 字段不能为空
+);
+```
+
+
+
