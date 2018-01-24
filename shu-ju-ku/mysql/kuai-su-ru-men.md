@@ -14,3 +14,4 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，�
 * 5.用管理员身份运行cmd,cd到mysql下面的bin目录,输入mysqld -install。
 * 6. net start mysql 启动服务
 * 7. mysql -u root -p 进入mysql环境，默认没有设置密码。
+
