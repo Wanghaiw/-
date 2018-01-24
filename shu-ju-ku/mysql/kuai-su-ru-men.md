@@ -29,6 +29,6 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，�
 `alter database tz_mysql character set = utf8;` 设置tz_mysql的编码为utf8，。
 
 ## 删除数据库
-语法 DROP {DATABASE | SCHEMA } [IF EXISTS] db_name
+语法 `DROP {DATABASE | SCHEMA } [IF EXISTS] db_name`
 
 `DROP DATABASE IF EXISTS tz_mysql` ,如果tz_mysql存在，就删除。
