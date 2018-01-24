@@ -12,5 +12,9 @@ create table if not exists students(
     ); 
 ```
 # 查看数据表
-语法 `show tables from database`,不加from database 查看当前数据库下面的表，加了之后查看指定的数据库。
+语法 `SHOW TABLES FROM DATABASE`,不加from database 查看当前数据库下面的表，加了之后查看指定的数据库。
 
+## 查看数据表结构
+语法 `SHOW COLUMNS FROM TABLE_NAME`
+
+`show columns from students` 查看刚刚创建的students表结构。
