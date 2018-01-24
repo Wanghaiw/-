@@ -18,3 +18,12 @@ create table if not exists students(
 语法 `SHOW COLUMNS FROM TABLE_NAME`
 
 `show columns from students` 查看刚刚创建的students表结构。
+
+# 插入数据
+语法 `INSERT TABLE_NAME [(col_name,...)] VALUE (val,....)`
+`insert students value('韶辉',25)` 在students数据表插入一条数据。
+
+# 查找数据
+语法 `SELECT expr,... FROM TABLE_NAME`
+`select * from students` 查看students表所有字段的数据 *可以换成字段名。
+
