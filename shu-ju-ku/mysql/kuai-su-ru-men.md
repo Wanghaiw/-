@@ -18,7 +18,7 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，�
 # 操作数据库
 
 ## 创建数据库
-语法 CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name [DEFAULT] CHARACTER SET [=] charset_name
+语法 `CREATE {DATABASE | SCHEMA} [IF NOT EXISTS] db_name [DEFAULT] CHARACTER SET [=] charset_name`
 
 `CREATE DATABASE IF NOT EXISTS tz_mysql CHARACTER SET utf8;`，如果tz_msyql不存在，就创建tz_mysql数据库，默认编码为latin1。
 
