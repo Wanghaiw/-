@@ -8,4 +8,4 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，�
 
 # 安装Mysql
 * 1.下载mysql5.6的zip文件
-* 2.
+* 2.把zip文件解压到D:\mysql-server
