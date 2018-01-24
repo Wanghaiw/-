@@ -24,3 +24,4 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，�
 
 通过`show CREATE DATABASE tz_mysql;` 可以查看创建数据库的命令。
 
+通过`show variables like 'character_set_database';` 查看当前数据库的编码；
