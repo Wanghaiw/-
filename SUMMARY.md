@@ -25,4 +25,6 @@
     * [增删改查](shu-ju-ku/mongodb/zeng-shan-gai-cha.md)
   * [MySQL](shu-ju-ku/mysql.md)
     * [快速入门](shu-ju-ku/mysql/kuai-su-ru-men.md)
+    * [数据类型](shu-ju-ku/mysql/shu-ju-lei-xing-he-biao.md)
+    * [数据表](shu-ju-ku/mysql/shu-ju-biao.md)
 
