@@ -9,4 +9,5 @@
 create table if not exists students(
     name varchar(10),
     age int
-    );
+    ); 
+```
