@@ -6,3 +6,6 @@ MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，�
 * Mysql可以允许于多个系统上，并且支持多种语言。这些编程语言包括C、C++、Python、Java、Perl、PHP、Eiffel、Ruby和Tcl等。
 * MySQL支持大型数据库，支持5000万条记录的数据仓库，32位系统表文件最大可支持4GB，64位系统支持最大的表文件为8TB。
 
+# 安装Mysql
+* 1.下载mysql5.6的zip文件
+* 2.
