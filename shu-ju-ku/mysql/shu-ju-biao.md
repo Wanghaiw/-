@@ -35,6 +35,9 @@ create table if not exists students(
 语法 `SELECT expr,.. FROM TABLE WHERE expr LIKE 条件`
 ` select * from cs where name like '%云';`
 
+# 修改数据
+语法 `UPDATE TABLE SET 字段名='内容' [WHERE '条件']`
+
 
 # 删除数据
 语法 `DELETE FROM TABLE WHERE 条件`
