@@ -37,7 +37,7 @@ create table if not exists students(
 
 # 修改数据
 语法 `UPDATE TABLE SET 字段名='内容' [WHERE '条件']`
-
+update student set sex ='男' where id=2;
 
 # 删除数据
 语法 `DELETE FROM TABLE WHERE 条件`
