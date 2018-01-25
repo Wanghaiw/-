@@ -43,6 +43,7 @@ create table if not exists students(
 
 ## 修改字段名
 语法 `ALTER TABLE 表名 CHANGE 原字段名 新字段名 字段类型 约束条件`
+`alter table student change name username varchar(10);`
 
 # 删除数据
 语法 `DELETE FROM TABLE WHERE 条件`
