@@ -38,7 +38,11 @@ create table if not exists students(
 # 修改数据
 语法 `UPDATE TABLE SET 字段名='内容' [WHERE '条件']`
 `update student set sex ='男' where id=2;`
+## 修改表名
+语法 `ALERT TABLE 旧表名 RENAME 新表名`
 
+## 修改字段名
+语法 `ALTER TABLE 表名 CHANGE 原字段名 新字段名 字段类型 约束条件`
 
 # 删除数据
 语法 `DELETE FROM TABLE WHERE 条件`
