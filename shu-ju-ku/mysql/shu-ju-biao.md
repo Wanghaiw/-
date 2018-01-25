@@ -24,8 +24,13 @@ create table if not exists students(
 `insert students value('韶辉',25)` 在students数据表插入一条数据。
 
 # 查找数据
-语法 `SELECT expr,... FROM TABLE_NAME`
+语法 `SELECT expr,... FROM TABLE_NAME WHERE 条件`
 `select * from students` 查看students表所有字段的数据 *可以换成字段名。
+
+# 删除数据
+语法 `DELETE FROM TABLE WHERE 条件`
+`delete from cs where id =0;`
+删除cs表里面 id为0的数据。
 
 # 主键 PRIMARY KEY
 * 主键约束
