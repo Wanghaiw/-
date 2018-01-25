@@ -26,11 +26,16 @@ create table if not exists students(
 # 查找数据
 语法 `SELECT expr,... FROM TABLE_NAME WHERE 条件`
 `select * from students` 查看students表所有字段的数据 *可以换成字段名。
+### 模糊查询
+语法 `SELECT expr,.. FROM TABLE WHERE expr LIKE 条件`
+` select * from cs where name like '%云';`
+
 
 # 删除数据
 语法 `DELETE FROM TABLE WHERE 条件`
 `delete from cs where id =0;`
 删除cs表里面 id为0的数据。
+
 
 # 主键 PRIMARY KEY
 * 主键约束
