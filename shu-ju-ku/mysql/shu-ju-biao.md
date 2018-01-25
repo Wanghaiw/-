@@ -27,6 +27,8 @@ create table if not exists students(
 语法 `SELECT expr,... FROM TABLE_NAME WHERE 条件`
 `select * from students` 查看students表所有字段的数据 *可以换成字段名。
 ### 模糊查询
+通配符：
+* 1.
 语法 `SELECT expr,.. FROM TABLE WHERE expr LIKE 条件`
 ` select * from cs where name like '%云';`
 
