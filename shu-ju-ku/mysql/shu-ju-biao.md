@@ -22,6 +22,10 @@ create table if not exists students(
 # 插入数据
 语法 `INSERT TABLE_NAME [(col_name,...)] VALUE (val,....)`
 `insert students value('韶辉',25)` 在students数据表插入一条数据。
+## 增加字段 
+语法 `ALERT TABLE 表名 add 字段名 类型`
+`alter table student add price int;`
+
 
 # 查找数据
 语法 `SELECT expr,... FROM TABLE_NAME WHERE 条件`
@@ -50,6 +54,9 @@ create table if not exists students(
 `delete from cs where id =0;`
 删除cs表里面 id为0的数据。
 
+## 删除字段
+语法 `ALTER TABLE 表名 drop column 字段名`
+`alter table student drop column price`
 
 # 主键 PRIMARY KEY
 * 主键约束
