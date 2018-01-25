@@ -29,6 +29,9 @@ create table if not exists students(
 ### 模糊查询
 通配符：
 * 1.% 表示任意字符，课匹配任意类型和长度的字符。
+* 2._ 表示任意单个字符。常用来限制字符长度。
+* 3.[] 表示括号内所列字符中的一个。
+* 4. [^] 表示不在括号内的单个字符。
 语法 `SELECT expr,.. FROM TABLE WHERE expr LIKE 条件`
 ` select * from cs where name like '%云';`
 
