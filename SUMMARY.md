@@ -6,7 +6,6 @@
   * [爬虫协议](pa-chong-ji-chu/pa-chong-xie-yi.md)
   * [爬虫工具\(fiddler\)](pa-chong-ji-chu/pa-chong-gong-517728-fiddler.md)
   * [BeautifulSoup解析](pa-chong-ji-chu/beautifulsoupjie-xi.md)
-* [系统编程](xi-tong-bian-cheng.md)
 * [并发编程](bing-fa-bian-cheng.md)
   * [1.多线程和多进程](bing-fa-bian-cheng/1duo-xian-cheng-he-duo-jin-cheng.md)
     * [1.1.多线程](bing-fa-bian-cheng/1duo-xian-cheng-he-duo-jin-cheng/1duo-xian-cheng.md)
