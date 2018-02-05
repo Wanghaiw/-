@@ -19,4 +19,4 @@ Fiddler 的AutoResponder tab允许你从本地返回文件，而不用将http re
 * 1.打开起点阅读的首页,把它的logo图片保存到本地，并做一些修改。
 * 2.在fiddler的会话列表找到对应的请求,把这个会话移动到AutoResponser Tab里面。
 * 3.选择Enable rules和Unmatched requests passthrough。
-* 4.在下面的Rule Editor 里面选择要替换的图片。
+* 4.在下面的Rule Editor 里面选择要替换的图片。然后再请求。
