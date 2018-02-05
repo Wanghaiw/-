@@ -15,3 +15,5 @@ Fiddler是以代理WEB服务器的形式工作的,浏览器与服务器之间通
 ## HTTPS监听
 ## 断点设置
 ## 创建AutoResponder规则
+Fiddler 的AutoResponder tab允许你从本地返回文件，而不用将http request 发送到服务器上。
+* 1.打开起点阅读的首页,把它的logo
