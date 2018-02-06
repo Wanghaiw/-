@@ -62,3 +62,4 @@ urllib.request.install_opener(opener) # 安装全局的opener 把urlopen也变�
 data = urllib.request.urlopen(url)
 print(data.read().decode())
 ```
+
