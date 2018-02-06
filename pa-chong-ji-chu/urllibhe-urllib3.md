@@ -6,3 +6,4 @@ urllib是一个包含几个模块来处理请求的库。
 * urllib.parse 解析url
 * urllib.robotparser 解析robots.txt 文件
 
+## urllib.request
