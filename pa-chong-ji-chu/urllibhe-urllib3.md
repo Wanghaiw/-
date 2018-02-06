@@ -36,3 +36,29 @@ print(response.info())
 在urllib里面 判断是get请求还是post请求，就是判断是否提交了data参数。
 
 3.Cookie的使用
+```
+import urllib.request
+import http.cookiejar
+
+url = 'https://www.jianshu.com'
+# 创建CookieJar对象
+cookie_jar = http.cookiejar.CookieJar()
+#使用HTTPCookieProcessor创建cookie处理器，并以其为参数构建opener对象
+opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cookie_jar))
+# 安装opener
+urllib.request.install_opener(opener)
+data = urllib.request.urlopen(url)
+print(cookie_jar)
+```
+4.设置代理
+```
+import urllib.request
+
+url = 'http://httpbin.org/ip'
+proxy = {'http':'39.134.108.89:8080','https':'39.134.108.89:8080'}
+proxies = urllib.request.ProxyHandler(proxy) # 创建代理处理器
+opener = urllib.request.build_opener(proxies,urllib.request.HTTPHandler) # 创建特定的opener对象
+urllib.request.install_opener(opener) # 安装全局的opener 把urlopen也变成特定的opener
+data = urllib.request.urlopen(url)
+print(data.read().decode())
+```
