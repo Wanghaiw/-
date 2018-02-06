@@ -33,4 +33,4 @@ request = urllib.request.Request(url,headers=headers)
 response = urllib.request.urlopen(request)
 print(response.info())
 ```
-
+在urllib里面 判断是get请求还是post请求，就是判断是否提交了data参数。
