@@ -8,4 +8,10 @@ urllib是一个包含几个模块来处理请求的库。
 
 ## urllib.request
 urllib当中使用最多的模块,涉及请求，响应，浏览器模拟，代理，cookie等功能。
-得得得
+1. 快速请求
+```
+import urllib.request
+url = 'https://www.jianshu.com'
+print(urllib.request.urlopen(url).read().decode())
+```
+
