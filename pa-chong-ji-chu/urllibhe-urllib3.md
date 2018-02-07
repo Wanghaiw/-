@@ -93,5 +93,6 @@ try:
 except urllib.error.URLError as e:
     print(e)
 ```
-
+### URLError和HTTPError混合使用
+HTTPError需要写在前面，另外也可以使用hasattr方法来判断异常是否存在code属性，来进行判断是URLError还是HTTPError。
 
