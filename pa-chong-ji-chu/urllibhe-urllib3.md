@@ -8,7 +8,7 @@ urllib是一个包含几个模块来处理请求的库。
 
 ## urllib.request
 urllib当中使用最多的模块,涉及请求，响应，浏览器模拟，代理，cookie等功能。
-1. 快速请求
+### 1. 快速请求
 ```
 import urllib.request
 url = 'https://www.jianshu.com'
@@ -20,7 +20,7 @@ info 服务器返回的头信息
 getcode 状态码
 geturl 请求的url
 
-2.模拟浏览器
+### 2.模拟浏览器
 需要添加headers头信息，urlopen不支持，需要使用Request。
 ```
 import urllib.request
@@ -35,7 +35,7 @@ print(response.info())
 ```
 在urllib里面 判断是get请求还是post请求，就是判断是否提交了data参数。
 
-3.Cookie的使用
+### 3.Cookie的使用
 ```
 import urllib.request
 import http.cookiejar
@@ -50,7 +50,7 @@ urllib.request.install_opener(opener)
 data = urllib.request.urlopen(url)
 print(cookie_jar)
 ```
-4.设置代理
+### 4.设置代理
 ```
 import urllib.request
 
@@ -95,4 +95,12 @@ except urllib.error.URLError as e:
 ```
 ### URLError和HTTPError混合使用
 HTTPError需要写在前面，另外也可以使用hasattr方法来判断异常是否存在code属性，来进行判断是URLError还是HTTPError。
+
+## urllib.parse
+urllib.parse.urljoin 拼接url
+urllib.parse.urlencode  字典转字符串
+urllib.parse.quote  url编码
+urllib.parse.unquote url解码
+
+Url的编码格式采用的是ASCII码，而不是Unicode，
 
