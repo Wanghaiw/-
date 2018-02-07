@@ -103,3 +103,6 @@ urllib.parse.quote  url编码
 urllib.parse.unquote url解码
 Url的编码格式采用的是ASCII码，而不是Unicode，
 
+# urllib3
+
+
