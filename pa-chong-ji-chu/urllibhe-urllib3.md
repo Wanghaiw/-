@@ -101,6 +101,5 @@ urllib.parse.urljoin 拼接url
 urllib.parse.urlencode  字典转字符串
 urllib.parse.quote  url编码
 urllib.parse.unquote url解码
-
 Url的编码格式采用的是ASCII码，而不是Unicode，
 
