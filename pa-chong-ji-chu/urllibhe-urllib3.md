@@ -63,5 +63,7 @@ data = urllib.request.urlopen(url)
 print(data.read().decode())
 ```
 ## urllib.error
+ urllib.error可以接收有urllib.request产生的异常。urllib.error中常用的有两个方法，URLError和HTTPError。
+   URLError是OSError的一个子类，HTTPError是URLError的一个子类，服务器上HTTP的响应会返回一个状态码，根据这个HTTP状态码，我们可以知道我们的访问是否成功。
 
 
