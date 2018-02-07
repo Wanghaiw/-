@@ -81,6 +81,17 @@ except urllib.error.URLError as e:
 
 ### HTTPError
 HTTPError是URLError的子类，在你利用URLopen方法发出一个请求时，服务器上都会对应一个应答对象response，其中他包含一个数字“状态码”，例如response是一个重定向，需定位到别的地址获取文档，urllib将对此进行处理。
-
 其他不能处理的，URLopen会产生一个HTTPError，对应相应的状态码，HTTP状态码表示HTTP协议所返回的响应的状态。
+```
+import urllib.request
+import urllib.error
+
+request = urllib.request.Request('https://www.jianshu.com/p/gbndfhgkdjfgsdf')
+
+try:
+    urllib.request.urlopen(request)
+except urllib.error.URLError as e:
+    print(e)
+```
+
 
