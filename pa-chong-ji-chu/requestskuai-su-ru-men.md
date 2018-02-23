@@ -155,7 +155,13 @@ https://github.com/
 ## 3.会话对象
 会话对象让你能够跨请求保持某些参数。它也会在同一个 Session 实例发出的所有请求之间保持 cookie。
 如果你向同一主机发送多个请求，底层的 TCP 连接将会被重用，从而带来显著的性能提升。
-会话对象具有主要的 Requests API 的所有方法
+会话对象具有主要的 Requests API 的所有方法。
+```
+import requests
+s = requests.session()
+s.get('https://www.baidu.com')
+```
+
 
 
 
