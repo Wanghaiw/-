@@ -116,7 +116,7 @@ requests中有一个内置的JSON解码器,帮助我们处理JSON格式的数据
 >>> r.status_code
 200
 ```
-### 2.6 响应头信息
+## 2.6 响应头信息
 和我们前面所讲的请求头信息类似.可以通过headers获取响应头信息。
 ```
 >>> import requests
@@ -128,7 +128,7 @@ requests中有一个内置的JSON解码器,帮助我们处理JSON格式的数据
 ```
 另外HTTP头部是忽略大小的，所以我们在访问的时候也可以不管大小写。
 
-### 2.7 重定向
+## 2.7 重定向
 在requests里面默认会自动处理所用的重定向.
 可以通过`allow_redirects`参数禁止重定向处理。
 ```
@@ -142,7 +142,7 @@ https://github.com/
 >>> r.status_code
 301
 ```
-### 2.8 请求超时
+## 2.8 请求超时
 在网络请求中,有时候可能会遇到请求的网站出现问题或者网络波动。为了防止这种情况在生产环境下的代码都应该设置超时操作。
 ```
 >>> import requests
@@ -160,6 +160,24 @@ https://github.com/
 import requests
 s = requests.session()
 s.get('https://www.baidu.com')
+```
+
+## 3.1 SSL证书验证
+Requests 可以为 HTTPS 请求验证 SSL 证书，就像 web 浏览器一样。SSL 验证默认是开启的，如果证书验证失败，Requests 会抛出 SSLError。
+在requests中我们可以通过改变verify参数等于False，达到忽略ssl证书的效果。默认值为True。
+
+## 3.2 代理
+ 在requests里面使用代理只需要在请求的时候，传入proxies参数就能实现。
+ 如
+ ```
+ import requests
+
+proxies = {
+  "http": "http://10.10.1.10:3128",
+  "https": "http://10.10.1.10:1080",
+}
+
+requests.get("http://httpbin.org/ip", proxies=proxies)
 ```
 
 
