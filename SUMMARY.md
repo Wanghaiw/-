@@ -27,4 +27,6 @@
     * [快速入门](shu-ju-ku/mysql/kuai-su-ru-men.md)
     * [数据类型](shu-ju-ku/mysql/shu-ju-lei-xing-he-biao.md)
     * [数据表](shu-ju-ku/mysql/shu-ju-biao.md)
+* [爬虫进阶](pa-chong-jin-jie.md)
+  * [加密算法](pa-chong-jin-jie/jia-mi-suan-fa.md)
 
