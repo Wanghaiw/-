@@ -19,6 +19,10 @@ print type(soup.p)
 # <class 'bs4.element.Tag'>
 ```
 我们可以利用 soup 加标签名轻松地获取这些标签的内容，这些对象的类型是bs4.element.Tag。
+对于 Tag，它有两个重要的属性，是 name 和 attrs
+
+## NavigableString
+
 
 
 # 搜索文档
