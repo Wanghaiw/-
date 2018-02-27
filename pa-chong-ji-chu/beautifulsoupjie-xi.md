@@ -1,3 +1,17 @@
+# 介绍及安装
+Beautiful Soup 是一个HTML/XML的解析器，主要的功能也是如何解析和提取 HTML/XML 数据。
+BeautifulSoup 用来解析 HTML 比较简单，API非常人性化，支持CSS选择器、Python标准库中的HTML解析器，也支持 lxml 的 XML解析器。
+Beautiful Soup 3 目前已经停止开发，推荐现在的项目使用Beautiful Soup 4。使用 pip 安装即可：`pip install beautifulsoup4`
+
+# 四大对象种类
+Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种:
+* Tag
+* NavigableString
+* BeautifulSoup
+* Comment
+### 1.Tag
+
+
 # 搜索文档
 Beautiful Soup定义了很多搜索方法,这里着重介绍2个: find() 和 find_all() .其它方法的参数和用法类似。
 ```
@@ -59,7 +73,17 @@ print([tag.name for tag in soup.find_all(has_class_but_no_id)])
 # ['p','p','p']
 ```
 
-## css 搜索
+# css选择器
+这就是另一种与 find_all 方法有异曲同工之妙的查找方法.
+
+* 写 CSS 时，标签名不加任何修饰，类名前加.，id名前加#
+
+* 在这里我们也可以利用类似的方法来筛选元素，用到的方法是 soup.select()，返回类型是 list
+
+
+
+
+
 通过tag标签逐层查找:
 soup.select("body a")
 找到某个tag标签下的直接子标签
