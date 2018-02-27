@@ -20,6 +20,7 @@ print type(soup.p)
 ```
 我们可以利用 soup 加标签名轻松地获取这些标签的内容，这些对象的类型是bs4.element.Tag。
 
+
 # 搜索文档
 Beautiful Soup定义了很多搜索方法,这里着重介绍2个: find() 和 find_all() .其它方法的参数和用法类似。
 ```
