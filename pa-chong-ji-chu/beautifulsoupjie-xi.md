@@ -42,8 +42,7 @@ print(soup.p.string)
 # The Dormouse's story
 print(type(soup.p.string))
 #  <class 'bs4.element.NavigableString'>
-
-
+```
 
 
 # 搜索文档
