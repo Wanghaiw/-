@@ -9,8 +9,10 @@ Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节�
 * NavigableString
 * BeautifulSoup
 * Comment
+
 ### 1.Tag
 Tag 通俗点讲就是 HTML 中的一个个标签。
+
 ```
 print(soup.p)
 # <p class="title" name="dromouse"><b>The Dormouse's story</b></p>
@@ -32,8 +34,14 @@ print(soup.p['class'])
 ```
 
 
-
 ## NavigableString
+NavigableString简单来讲就是一个可以遍历的字符串。
+例如:
+```
+print(soup.p.string)
+# The Dormouse's story
+print(type(soup.p.string))
+#  <class 'bs4.element.NavigableString'>
 
 
 
