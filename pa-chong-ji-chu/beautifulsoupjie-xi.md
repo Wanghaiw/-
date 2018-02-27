@@ -81,8 +81,10 @@ print([tag.name for tag in soup.find_all(has_class_but_no_id)])
 * 在这里我们也可以利用类似的方法来筛选元素，用到的方法是 soup.select()，返回类型是 list
 
 ## 1.通过标签名查找
-In [5]: print(soup.select('title'))
-[<title>The Dormouse's story</title>]
+```
+print(soup.select('title'))
+#[<title>The Dormouse's story</title>]
+
 
 
 
