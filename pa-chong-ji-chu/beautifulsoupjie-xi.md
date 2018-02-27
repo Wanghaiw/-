@@ -27,6 +27,9 @@ print(soup.head.name)
 # head 对于其他内部标签，输出的值便为标签本身的名称
 print(soup.p.attrs)
 # {'class': ['title'], 'name': 'dromouse'}
+print(soup.p['class'])
+# ['title']
+```
 
 
 
