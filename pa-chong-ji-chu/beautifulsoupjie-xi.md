@@ -10,7 +10,15 @@ Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节�
 * BeautifulSoup
 * Comment
 ### 1.Tag
+Tag 通俗点讲就是 HTML 中的一个个标签。
+```
+print soup.p
+# <p class="title" name="dromouse"><b>The Dormouse's story</b></p>
 
+print type(soup.p)
+# <class 'bs4.element.Tag'>
+```
+我们可以利用 soup 加标签名轻松地获取这些标签的内容，这些对象的类型是bs4.element.Tag。
 
 # 搜索文档
 Beautiful Soup定义了很多搜索方法,这里着重介绍2个: find() 和 find_all() .其它方法的参数和用法类似。
