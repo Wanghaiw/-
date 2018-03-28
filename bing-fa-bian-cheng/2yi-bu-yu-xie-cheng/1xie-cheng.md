@@ -38,7 +38,7 @@ Gevent的方法:
 ```
 monkey使一些阻塞的模块变得不阻塞，机制：遇到IO操作则自动切换，手动切换可以用gevent.sleep(0)（将爬虫代码换成这个，效果一样可以达到切换上下文）
 gevent.spawn 启动协程，参数为函数名称，参数名称
-gevent.spawn()”方法会创建一个新的greenlet协程对象，并运行它。”gevent.joinall()”方法会等待所有传入的greenlet协程运行结束后再退出，这个方法可以接受一个”timeout”参数来设置超时时间，单位是秒。
+gevent.spawn() 方法会创建一个新的greenlet协程对象，并运行它。”gevent.joinall()”方法会等待所有传入的greenlet协程运行结束后再退出，这个方法可以接受一个”timeout”参数来设置超时时间，单位是秒。
 gevent.joinall 阻塞当前流程，并执行所有给定的greenlet。执行流程只会在所有greenlet执行完后才会继续向下走。
 ```
 
