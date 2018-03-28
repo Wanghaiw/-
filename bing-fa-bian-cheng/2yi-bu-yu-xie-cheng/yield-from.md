@@ -1,7 +1,5 @@
 ##  yield和yield from 用法
 
-
-
 ### 迭代器(iterator)
 
 讲到迭代器，就需要区别几个概念:`iterable`,`iterator`,`itertion`, 看着都差不多，其实不然。下面区分一下。
