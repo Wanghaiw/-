@@ -55,6 +55,7 @@ RSA:
  binascii 模块包含许多在二进制和各种ASCII编码二进制表示之间转换的方法。通常，您不会直接使用这些函数，而是使用包装模块，如 uu，base64 或 binhex。 binascii 模块包含以C编写的低级函数，用于更高的速度，由更高级别的模块使用。
  
 binascii 模块定义以下功能：
+binascii.b2a_hex(data)
 
  
  
