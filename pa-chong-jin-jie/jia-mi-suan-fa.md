@@ -60,6 +60,7 @@ binascii.b2a_hex(data)
 binascii.a2b_hex(hexstr)
 返回由十六进制字符串 hexstr 表示的二进制数据。这个函数是 b2a_hex() 的逆。 hexstr 必须包含偶数个十六进制数字（可以是大写或小写），否则会引发 Error 异常。
 
+
  
  
  
