@@ -64,6 +64,8 @@ binascii.b2a_base64(data, *, newline=True)
 binascii.a2b_base64(string)
 将一个base64数据块转换回二进制并返回二进制数据。一次可以传递多于一行。
 
+
+
  
  
  
