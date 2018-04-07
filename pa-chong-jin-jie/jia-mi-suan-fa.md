@@ -57,6 +57,7 @@ RSA:
 binascii 模块定义以下功能：
 binascii.b2a_hex(data)
 返回二进制 data 的十六进制表示。 data 的每个字节都转换为相应的2位十六进制表示。因此返回的字节对象的长度是 data 的长度的两倍。
+binascii.a2b_hex(hexstr)
 
  
  
