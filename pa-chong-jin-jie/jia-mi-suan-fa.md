@@ -61,7 +61,8 @@ binascii.a2b_hex(hexstr)
 返回由十六进制字符串 hexstr 表示的二进制数据。这个函数是 b2a_hex() 的逆。 hexstr 必须包含偶数个十六进制数字（可以是大写或小写），否则会引发 Error 异常。
 binascii.b2a_base64(data, *, newline=True)
 在base64编码中将二进制数据转换为一行ASCII字符。返回值是转换后的行，如果 newline 为true，则包括换行符。
-
+binascii.a2b_base64(string)
+将一个base64数据块转换回二进制并返回二进制数据。一次可以传递多于一行。
 
  
  
