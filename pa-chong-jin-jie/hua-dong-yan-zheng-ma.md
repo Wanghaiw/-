@@ -71,17 +71,15 @@
 
 ## 3.  根据缺口的位置模拟x轴移动的轨迹
 ```
-track = []
+    track = []
     # 当前位移
     current = 0
-
     # 减速阈值
     mid = distance * 4 / 5
     # 计算间隔
     t = 0.2
     # 初速度
     v = 0
-
     while current < distance:
         if current < mid:
             # 加速度为正2
