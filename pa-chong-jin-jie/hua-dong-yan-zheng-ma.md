@@ -48,3 +48,13 @@
         x_offset += im.size[0]
     ```
 ## 2. 计算缺口的值
+* (1) 对比RGB的值获取缺口的位置
+```
+pixel1=image1.getpixel((x,y))
+    pixel2=image2.getpixel((x,y))
+
+    for i in range(0,3):
+        if abs(pixel1[i]-pixel2[i])>=50:
+            return False
+    return True
+```
