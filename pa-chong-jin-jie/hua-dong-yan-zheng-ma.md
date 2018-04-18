@@ -60,7 +60,7 @@
 ```
 * (2)获取缺口的位置
 ```
-image1.save('1.jpg')
+    image1.save('1.jpg')
     image2.save('2.jpg')
 
     i=0
