@@ -62,7 +62,6 @@
 ```
     image1.save('1.jpg')
     image2.save('2.jpg')
-
     i=0
     for i in range(0,260):
         for j in range(0,116):
