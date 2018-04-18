@@ -104,6 +104,18 @@
 
 ## 开始滑动
 ```
+    print("第一步,点击元素")
+    ActionChains(driver).click_and_hold(on_element=element).perform()
+    time.sleep(0.15)
+    print("第二步，拖动元素")
+    for track in track_list:
+        ActionChains(driver).move_by_offset(xoffset=track, yoffset=0).perform()
+    ActionChains(driver).move_by_offset(xoffset=-1, yoffset=0).perform()
+    time.sleep(1)
+    print("第三步，释放鼠标")
+    ActionChains(driver).release(on_element=element).perform()
+    time.sleep(10)
+```
 
 
 
