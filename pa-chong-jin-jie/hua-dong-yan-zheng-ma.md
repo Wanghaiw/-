@@ -118,7 +118,7 @@
 ```
 
 ## 补充
-click_and_hold
+click_and_hold   点击鼠标左键，按住不放
 
 
 
