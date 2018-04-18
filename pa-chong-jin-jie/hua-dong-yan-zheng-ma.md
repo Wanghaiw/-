@@ -47,4 +47,4 @@
         new_im.paste(im, (x_offset,58))
         x_offset += im.size[0]
     ```
-## 2. 
+## 2. 计算缺口的值
