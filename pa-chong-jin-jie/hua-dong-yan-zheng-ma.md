@@ -68,3 +68,4 @@
             if is_similar(image1,image2,i,j)==False:
                 return  i
 ```
+
