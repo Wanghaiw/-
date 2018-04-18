@@ -12,4 +12,7 @@
 
     `background_images=driver.find_elements_by_xpath(div_path)`
 
-* (2) 
+* (2) 匹配所有图片的偏移坐标以及url
+    ```location['x']=int(re.findall("background-image: url\(\"(.*)\"\); background-position: (.*)px (.*)px;",background_image.get_attribute('style'))[0][1])
+        location['y']=int(re.findall("background-image: url\(\"(.*)\"\); background-position: (.*)px (.*)px;",background_image.get_attribute('style'))[0][2])
+        image_url=re.findall("background-image: url\(\"(.*)\"\); background-position: (.*)px (.*)px;",background_image.get_attribute('style'))[0][0]```
