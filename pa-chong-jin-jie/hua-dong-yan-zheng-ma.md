@@ -11,3 +11,5 @@
 * (1) 获取所有图片所在的div
 
     `background_images=driver.find_elements_by_xpath(div_path)`
+
+* (2) 
