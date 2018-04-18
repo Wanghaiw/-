@@ -21,4 +21,4 @@
     image_url=re.findall("background-image: url\(\"(.*)\"\); background-position: (.*)px (.*)px;",background_image.get_attribute('style'))[0][0]
         ```
         
-* (3) 
+* (3) 根据图片的偏移值对图片进行拼接
