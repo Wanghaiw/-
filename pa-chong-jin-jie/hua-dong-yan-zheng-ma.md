@@ -9,3 +9,4 @@
 ## 1.获取完整的图片及带缺口的图片
 
 * (1) 获取所有图片所在的div
+    background_images=driver.find_elements_by_xpath(div_path)
