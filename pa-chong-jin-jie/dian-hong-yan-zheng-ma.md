@@ -25,13 +25,13 @@
  ```
  
 ## 2.识别需要点击的坐标
+把需要识别的图片和提示一起上传
 ```
  result = self.chaojiying.post_pic(bytes_array.getvalue(), CHAOJIYING_KIND) # 提交图片进行验证
  groups = result.get('pic_str').split('|') # 对返回的数据进行解析  获取x坐标和y坐标
  locations = [[int(number) for number in group.split(',')] for group in groups]
 
 ```
-
 
 ## 3.根据坐标顺序依次点击
 
