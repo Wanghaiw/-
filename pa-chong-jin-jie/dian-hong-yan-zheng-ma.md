@@ -36,10 +36,8 @@
 ## 3.根据坐标顺序依次点击
 ```
 for location in locations:
-            # print(location)
-            ActionChains(self.browser).move_to_element_with_offset(self.get_touclick_element(), location[0],
-                                                                   location[1]).click().perform()
-            time.sleep(1)
+    ActionChains(self.browser).move_to_element_with_offset(self.get_touclick_element(), location[0],location[1]).click().perform()
+    time.sleep(1)
 ```
 
 
