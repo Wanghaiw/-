@@ -8,7 +8,7 @@
 在获取需要的识别的图片时，一般需要讲图片以及文字提示。
 通过selenium的截图方法,获取到所需的信息。
 ```
-        self.browser.save_screenshot('aa.png')
+        self.browser.save_screenshot('aa.png') # 先把整个屏幕截图
         element = self.browser.find_element_by_xpath('/html/body/div[2]/div/div[2]/div[2]/div[3]/div/div[2]/div[3]/div/div')
 
         left = element.location['x']
