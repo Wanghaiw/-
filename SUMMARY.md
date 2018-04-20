@@ -31,4 +31,5 @@
 * [爬虫进阶](pa-chong-jin-jie.md)
   * [加密算法](pa-chong-jin-jie/jia-mi-suan-fa.md)
   * [滑动验证码](pa-chong-jin-jie/hua-dong-yan-zheng-ma.md)
+  * 点触验证码
 
