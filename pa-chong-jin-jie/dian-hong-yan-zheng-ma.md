@@ -27,10 +27,11 @@
 ## 2.识别需要点击的坐标
 ```
  result = self.chaojiying.post_pic(bytes_array.getvalue(), CHAOJIYING_KIND)
+ 
 ```
 
 
 ## 3.根据坐标顺序依次点击
- 
+
 
 ## 
