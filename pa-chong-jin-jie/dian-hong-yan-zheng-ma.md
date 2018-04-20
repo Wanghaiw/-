@@ -8,10 +8,11 @@
 ## 2. 使用方法
 ```
 from chaojiying import Chaojiying
-CHAOJIYING_USERNAME = '908686161'
-CHAOJIYING_PASSWORD = 'admin123'
-CHAOJIYING_SOFT_ID = 894600
-CHAOJIYING_KIND = 9004
+CHAOJIYING_USERNAME = '908686161'  # 账号
+CHAOJIYING_PASSWORD = 'admin123'   # 密码
+CHAOJIYING_SOFT_ID = 894600        # 生成的唯一key
+CHAOJIYING_KIND = 9004             # 题型
+
 
 
 
