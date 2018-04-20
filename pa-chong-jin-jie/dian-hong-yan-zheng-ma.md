@@ -9,7 +9,7 @@
 通过selenium的截图方法,获取到所需的信息。
 ```
         self.browser.save_screenshot('aa.png') # 先把整个屏幕截图
-        element = self.browser.find_element_by_xpath('/html/body/div[2]/div/div[2]/div[2]/div[3]/div/div[2]/div[3]/div/div')
+        element = self.browser.find_element_by_xpath('/html/body/div[2]/div/div[2]/div[2]/div[3]/div/div[2]/div[3]/div/div') # 获取图片所在的div
 
         left = element.location['x']
         top = element.location['y'] - 100
@@ -17,7 +17,7 @@
         bottom = element.location['y'] + element.size['height']
 
         im = Image.open('aa.png')
-        captcha = im.crop((left, top, right, bottom))
+        captcha = im.crop((left, top, right, bottom))  # 根据div的长宽在整个屏幕上面截图
         captcha.save('captcha.png')
  ```
  
