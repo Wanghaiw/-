@@ -26,7 +26,11 @@
  
 ## 2.识别需要点击的坐标
 ```
- result = self.chaojiying.post_pic(bytes_array.getvalue(), CHAOJIYING_KIND)
+ result = self.chaojiying.post_pic(bytes_array.getvalue(), CHAOJIYING_KIND) # 提交图片进行验证
+   groups = captcha_result.get('pic_str').split('|')
+
+        locations = [[int(number) for number in group.split(',')] for group in groups]
+        return locations
  
 ```
 
