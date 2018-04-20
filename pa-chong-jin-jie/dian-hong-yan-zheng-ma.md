@@ -6,7 +6,9 @@
 就是一个打码平台，使用起来非常简单。
 ## 1.下载python的demo文件 
 ## 2. 使用方法
-```from chaojiying import Chaojiying
+```
+from chaojiying import Chaojiying
+
 
 
 
