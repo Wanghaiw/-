@@ -8,7 +8,10 @@
 ## 2. 使用方法
 ```
 from chaojiying import Chaojiying
-
+CHAOJIYING_USERNAME = '908686161'
+CHAOJIYING_PASSWORD = 'admin123'
+CHAOJIYING_SOFT_ID = 894600
+CHAOJIYING_KIND = 9004
 
 
 
