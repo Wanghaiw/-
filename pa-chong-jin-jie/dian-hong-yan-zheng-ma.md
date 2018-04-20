@@ -7,7 +7,20 @@
 ## 1.获取需要识别的图片
 在获取需要的识别的图片时，一般需要讲图片以及文字提示。
 通过selenium的截图方法,获取到所需的信息。
+```
+ self.browser.save_screenshot('aa.png')
+        element = self.browser.find_element_by_xpath('/html/body/div[2]/div/div[2]/div[2]/div[3]/div/div[2]/div[3]/div/div')
 
+        left = element.location['x']
+        top = element.location['y'] - 100
+        right = element.location['x'] + element.size['width']
+        bottom = element.location['y'] + element.size['height']
+
+        im = Image.open('aa.png')
+        captcha = im.crop((left, top, right, bottom))
+        captcha.save('captcha.png')
+ ```
+ 
 
 ## 2.识别需要点击的坐标
 
