@@ -13,7 +13,6 @@ CHAOJIYING_PASSWORD = 'admin123'   # 密码
 CHAOJIYING_SOFT_ID = 894600        # 生成的唯一key
 CHAOJIYING_KIND = 9004             # 题型
 cjy = Chaojiying(CHAOJIYING_USERNAME, CHAOJIYING_PASSWORD, CHAOJIYING_SOFT_ID)  # 创建实例
-
 ```
 # 
 
