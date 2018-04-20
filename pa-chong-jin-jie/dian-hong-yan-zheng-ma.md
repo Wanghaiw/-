@@ -12,11 +12,9 @@ CHAOJIYING_USERNAME = '908686161'  # 账号
 CHAOJIYING_PASSWORD = 'admin123'   # 密码
 CHAOJIYING_SOFT_ID = 894600        # 生成的唯一key
 CHAOJIYING_KIND = 9004             # 题型
-
 self.chaojiying = Chaojiying(CHAOJIYING_USERNAME, CHAOJIYING_PASSWORD, CHAOJIYING_SOFT_ID)
 
-
-
+```
 
 
 # 逻辑实现
