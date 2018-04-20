@@ -3,6 +3,8 @@
 点触验证码是由杭州微触科技有限公司研发的新一代的互联网验证码，使用点击或者拖动的形式完成验证。采用专利的印刷算法以及加密算法，保证每次请求到的验证图具有极高的安全性；点击与拖动的形式，为移动互联网量身定制，在PC端也具有非常好的用户体验，是一种安全，有趣，互动形式的新型验证方法。
 
 # 超级鹰介绍
+就是一个打码平台，使用起来非常简单。
+
 
 
 # 逻辑实现
@@ -30,7 +32,6 @@
  result = self.chaojiying.post_pic(bytes_array.getvalue(), CHAOJIYING_KIND) # 提交图片进行验证
  groups = result.get('pic_str').split('|') # 对返回的数据进行解析  获取x坐标和y坐标
  locations = [[int(number) for number in group.split(',')] for group in groups]
-
 ```
 
 ## 3.根据坐标顺序依次点击
@@ -42,6 +43,3 @@ for location in locations:
     ActionChains(self.browser).move_to_element_with_offset(self.get_touclick_element(), location[0],location[1]).click().perform()
     time.sleep(1)
 ```
-
-
-## 
