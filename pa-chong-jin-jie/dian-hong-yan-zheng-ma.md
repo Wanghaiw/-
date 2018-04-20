@@ -36,7 +36,7 @@
 ## 3.根据坐标顺序依次点击
  根据x和y坐标依次点击图片当中的文字
  self.get_touclick_element() 获取图片的位置
- move_to_element_with_offset  
+ move_to_element_with_offset  将鼠标移动到距某个元素多少距离的位置
 ```
 for location in locations:
     ActionChains(self.browser).move_to_element_with_offset(self.get_touclick_element(), location[0],location[1]).click().perform()
