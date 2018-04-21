@@ -32,4 +32,5 @@
   * [加密算法](pa-chong-jin-jie/jia-mi-suan-fa.md)
   * [滑动验证码](pa-chong-jin-jie/hua-dong-yan-zheng-ma.md)
   * [点触验证码](pa-chong-jin-jie/dian-hong-yan-zheng-ma.md)
+  * [代理池](pa-chong-jin-jie/dai-li-chi.md)
 
