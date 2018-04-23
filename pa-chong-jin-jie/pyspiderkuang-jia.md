@@ -8,4 +8,6 @@
 网络请求使用的是requests包，因此python环境中需要安装有requests
 
 # 安装和运行
-通过pip install pyspider命令进行安装 
+通过pip install pyspider命令进行安装。
+安装完成之后  在命令行输入pyspider启动环境
+启动环境,在浏览器打开localhost:5000 进入pyspider的web页面。
