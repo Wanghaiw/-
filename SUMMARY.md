@@ -33,5 +33,5 @@
   * [滑动验证码](pa-chong-jin-jie/hua-dong-yan-zheng-ma.md)
   * [点触验证码](pa-chong-jin-jie/dian-hong-yan-zheng-ma.md)
   * [代理池](pa-chong-jin-jie/dai-li-chi.md)
-  * pyspider框架
+  * [pyspider框架](pa-chong-jin-jie/pyspiderkuang-jia.md)
 
