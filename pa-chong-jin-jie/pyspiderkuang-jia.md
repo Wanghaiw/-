@@ -49,8 +49,8 @@ burst-设置并发数量
 例如:
 ```
 def on_result(self, result):
-        sql = 'insert into v2ex(url, title) values(%s, %s )'
-        insert(sql, (result['url'], result['title']))
+    sql = 'insert into v2ex(url, title) values(%s, %s )'
+    insert(sql, (result['url'], result['title']))
 ```
 
 
