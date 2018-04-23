@@ -13,4 +13,4 @@
 启动环境,在浏览器打开localhost:5000 进入pyspider的web页面。
 
 # 创建项目
-
+在web控制台点create按钮新建任务，项目名自定义。本例项目名为test。
