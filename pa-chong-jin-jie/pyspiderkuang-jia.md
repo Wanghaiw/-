@@ -45,6 +45,16 @@ burst-设置并发数量
 
 # 使用Phantomjs
 对于一些复杂的页面,无论是分析 API 请求的地址，还是渲染时进行了加密，让直接抓取请求非常麻烦。这时候我们可以使用Phantomjs.
+使用起来也非常的简单.在调用crawl方法时,添加参数fetch_type=js参数.就可以开启phantomjs.
+除了使用浏览页面之外,也可以在页面上执行js脚本.
+```
+def on_start(self):
+    self.crawl('http://movie.douban.com/explore#more',
+               fetch_type='js', js_script="""
+               function() {
+                 setTimeout("$('.more').click()", 1000);
+               }""", callback=self.index_page)
+
 
 # 数据存储
 默认情况下,pyspider会把数据保存到当前路径的sqlit数据库.
