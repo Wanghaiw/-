@@ -39,3 +39,4 @@ burst-设置并发数量
 1.on_star 方法是入口代码。当在web控制台点击run按钮时会执行此方法。
 2.crawl 这个方法是调用API生成一个新的爬取任务，这个任务被添加到待抓取队列。
 3.index_page 这个方法获取一个Response对象。 response.doc是pyquery对象的一个扩展方法。pyquery是一个类似于jQuery的对象选择器。
+4. detail_page
