@@ -7,3 +7,4 @@
 中文文档：http://www.pyspider.cn
 网络请求使用的是requests包，因此python环境中需要安装有requests
 
+# 安装
