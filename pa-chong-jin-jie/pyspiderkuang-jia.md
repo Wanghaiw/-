@@ -40,4 +40,5 @@ burst-设置并发数量
 2.crawl 这个方法是调用API生成一个新的爬取任务，这个任务被添加到待抓取队列。
 3.index_page 这个方法获取一个Response对象。 response.doc是pyquery对象的一个扩展方法。pyquery是一个类似于jQuery的对象选择器。
 4. detail_page 返回一个结果集对象。这个结果默认会被添加到resultdb数据库（如果启动时没有指定数据库默认调用sqlite数据库）。你也可以重写on_result(self,result)方法来指定保存位置
+5.@every
 
