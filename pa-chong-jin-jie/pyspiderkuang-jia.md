@@ -43,6 +43,9 @@ burst-设置并发数量
 5.@every(minutes=24*60, seconds=0) 这个设置是告诉scheduler（调度器）on_start方法每天执行一次。
 6.@config(age=10 * 24 * 60 * 60) 这个设置告诉scheduler（调度器）这个request（请求）过期时间是10天，10天内再遇到这个请求直接忽略。这个参数也可以在self.crawl(url, age=10*24*60*60) 和 crawl_config中设置。
 
+# 使用Phantomjs
+对于一些复杂的页面,无论是分析 API 请求的地址，还是渲染时进行了加密，让直接抓取请求非常麻烦。这时候我们可以使用
+
 # 数据存储
 默认情况下,pyspider会把数据保存到当前路径的sqlit数据库.
 当需要对数据存储进行修改时,可以重写on_result 方法,对数据进行自定义保存。
@@ -52,6 +55,7 @@ def on_result(self, result):
     sql = 'insert into v2ex(url, title) values(%s, %s )'
     insert(sql, (result['url'], result['title']))
 ```
+
 
 
 
