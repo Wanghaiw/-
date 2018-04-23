@@ -8,3 +8,4 @@
 网络请求使用的是requests包，因此python环境中需要安装有requests
 
 # 安装
+通过pip install pyspider命令进行安装 
