@@ -43,3 +43,4 @@ burst-设置并发数量
 5.@every(minutes=24*60, seconds=0) 这个设置是告诉scheduler（调度器）on_start方法每天执行一次。
 6.@config(age=10 * 24 * 60 * 60) 这个设置告诉scheduler（调度器）这个request（请求）过期时间是10天，10天内再遇到这个请求直接忽略。这个参数也可以在self.crawl(url, age=10*24*60*60) 和 crawl_config中设置。
 
+
