@@ -11,9 +11,6 @@
 class MongoHelper(object):
     def __init__(self):
         self.client = pymongo.MongoClient(DB_CONFIG['DB_CONNECT_STRING'])
-        self.init_db()
-
-    def init_db(self):
         self.db = self.client.proxy
         self.proxys = self.db.proxys
 
