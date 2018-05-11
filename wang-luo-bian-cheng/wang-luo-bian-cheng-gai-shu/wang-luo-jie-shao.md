@@ -160,6 +160,26 @@ s.setblocking(flag)	如果flag为0，则将套接字设为非阻塞模式，否�
 s.makefile()	创建一个与该套接字相关连的文件
 ```
 
+TCP编程的服务器端一般步骤是： 
+　　1、创建一个socket，用函数socket()； 
+　　2、设置socket属性，用函数setsockopt(); * 可选 
+　　3、绑定IP地址、端口等信息到socket上，用函数bind(); 
+　　4、开启监听，用函数listen()； 
+　　5、接收客户端上来的连接，用函数accept()； 
+　　6、收发数据，用函数send()和recv()，或者read()和write(); 
+　　7、关闭网络连接； 
+　　8、关闭监听； 
+
+TCP编程的客户端一般步骤是： 
+　　1、创建一个socket，用函数socket()； 
+　　2、设置socket属性，用函数setsockopt();* 可选 
+　　3、绑定IP地址、端口等信息到socket上，用函数bind();* 可选 
+　　4、设置要连接的对方的IP地址和端口等属性； 
+　　5、连接服务器，用函数connect()； 
+　　6、收发数据，用函数send()和recv()，或者read()和write(); 
+　　7、关闭网络连接；
+
+
 
 
 
