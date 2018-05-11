@@ -36,4 +36,6 @@
   * [代理池](pa-chong-jin-jie/dai-li-chi.md)
   * [pyspider框架](pa-chong-jin-jie/pyspiderkuang-jia.md)
   * [cookie处理](pa-chong-jin-jie/cookiechu-li.md)
+* [培训](pei-xun.md)
+  * [一个优秀的负责人应该具有什么特点](pei-xun/yi-ge-you-xiu-de-fu-ze-ren-ying-gai-ju-you-shi-yao-te-dian.md)
 
