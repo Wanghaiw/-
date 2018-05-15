@@ -187,7 +187,8 @@ ET模式：当epoll检测到描述符事件发生并将此事件通知应用程�
 # epoll
 
 ## 什么是epoll
-epoll是一种I/O事件通知机制，
+
+epoll是一种I/O事件通知机制
 
 
 
