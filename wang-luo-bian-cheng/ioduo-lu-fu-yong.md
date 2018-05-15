@@ -187,6 +187,7 @@ ET模式：当epoll检测到描述符事件发生并将此事件通知应用程�
 # epoll
 
 ## 什么是epoll
+epoll是Linux内核为处理大批量文件描述符而作了改进的poll，是Linux下多路复用IO接口select/poll的增强版本，它能显著提高程序在大量并发连接中只有少量活跃的情况下的系统CPU利用率。
 
 epoll是一种I/O事件通知机制
 
