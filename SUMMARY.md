@@ -39,5 +39,5 @@
 * [培训](pei-xun.md)
   * [一个优秀的负责人应该具有什么特点](pei-xun/yi-ge-you-xiu-de-fu-ze-ren-ying-gai-ju-you-shi-yao-te-dian.md)
 * [git实用指南](gitshi-yong-zhi-nan.md)
-  * 什么是版本控制系统
+  * [什么是版本控制系统](gitshi-yong-zhi-nan/shi-yao-shi-ban-ben-kong-zhi-xi-tong.md)
 
