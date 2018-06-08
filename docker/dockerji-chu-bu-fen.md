@@ -32,4 +32,4 @@ Docker 将应用程序与该程序的依赖，打包在一个文件里面。运�
 
 在ubuntu下面执行 `wget -qO- https://get.docker.com/ | sh` 命令安装Docker。
 
-安装完成后使用 `sudo service docker start`
+安装完成后使用 `sudo service docker start` 启动docker的后台进程。
