@@ -34,7 +34,7 @@ Docker 将应用程序与该程序的依赖，打包在一个文件里面。运�
 
 安装完成后使用 `sudo docker run hello-world` 来测试是否安装成功。
 
-### 2.获取镜像
+### 2.获取镜像及运行
 
 Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下怎么获取这些镜像并运行。
 `docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]`
