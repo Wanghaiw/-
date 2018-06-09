@@ -45,7 +45,7 @@ Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下
 例如：`docker pull ubuntu:16.04`
 就是获取官方仓库当中library/ubuntu 仓库中标签为 16.04 的镜像。
 
-
+当获取完镜像之后可以通过`docker run`命令来运行。
 
 
 
