@@ -47,6 +47,8 @@ Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下
 
 当获取完镜像之后可以通过`docker run`命令来运行。
 
+`docker run -it --rm ubuntu:16.04`
+
 
 
 
