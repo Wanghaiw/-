@@ -11,8 +11,6 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-
-
 # class Download_Image(object):
 #
 #     def __init__(self):
