@@ -67,7 +67,8 @@ Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下
 
 #### 启动容器（后台模式）
 
-`docker run -d -p 80:80 nginx`
+`docker run -d -p 80:80 nginx`  在后台运行nginx,把容器的80端口映射到宿主机
+
 
 
 
