@@ -85,6 +85,7 @@ Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下
 这里我们以原先的nginx镜像为基础,使用Dockerfile重新定制一下，
 * 1.建立一个Dockerfile文件
 * 2.在Dockerfile中编写 `FROM nginx` `RUN echo '<h1>Hello DockerFile!</h1>' > /usr/share/nginx/html/index.html`
+* 3.然后在执行`docker build -t wangxian/nginx .`
 
 
 
