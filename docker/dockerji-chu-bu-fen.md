@@ -69,6 +69,7 @@ Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下
 
 `docker run -d -p 80:80 nginx`  在后台运行nginx,把容器的80端口映射到宿主机
 运行之后可以通过`docker ps`命令 查看正在运行的容器
+也可以通过 `docker logs 容器id` 查看容器的标准输出
 
 
 
