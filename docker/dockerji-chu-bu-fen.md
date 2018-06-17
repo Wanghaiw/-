@@ -74,6 +74,8 @@ Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下
 ### 删除容器
 在删掉一个容器之前需要保证当前容器没有在运行,如果在运行的话需要在删除之前,通过`docker stop 容器id` 来停止运行,然后通过`docker rm 容器id` 来删除容器.
 
+`docker rm $(docker ps -a -q)` 删除所有的容器
+
 ### 删除镜像
 和删除容器基本类似,在删除镜像之前要保证没有容器在使用当前镜像,然后在通过`docker rmi image id` 来删除镜像。
 
@@ -86,6 +88,7 @@ Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下
 * 1.建立一个Dockerfile文件
 * 2.在Dockerfile中编写 `FROM nginx` `RUN echo '<h1>Hello DockerFile!</h1>' > /usr/share/nginx/html/index.html`
 * 3.然后在执行`docker build -t wangxian/nginx .`
+
 
 
 
