@@ -91,6 +91,13 @@ Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下
 * 2.在Dockerfile中编写 `FROM nginx` `RUN echo '<h1>Hello DockerFile!</h1>' > /usr/share/nginx/html/index.html`
 * 3.然后在执行`docker build -t wangxian/nginx .`
 
+这样我们就生成了一个新的镜像。这个Dockerfile比较简单 其中涉及到两个指令`FROM`和`RUN`。
+在定制镜像的时候，一般是以一些基础镜像为基础,在这之上进行定制。
+这里的`FROM nginx` 就是在`nginx`镜像的基础上进行的定制。
+而`RUN` 指执行命令 类似于在shell中执行。
+
+
+
 
 
 
