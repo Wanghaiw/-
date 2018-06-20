@@ -1,4 +1,4 @@
-### 仓库
+## 仓库
 
 仓库（Repository）就是集中存放镜像的地方。
 
@@ -41,15 +41,15 @@ jrcs/letsencrypt-nginx-proxy-companion                 LetsEncrypt container to 
 另外`wangxianii` 换成自己用户名。
 
 
-### 私有仓库 
+## 私有仓库 
 刚刚我们上面所讲到的是基于Docker Hub的公共仓库,对于不想公开的镜像我们可以创建本地仓库使用。
 
 ###  docker-registry
 
 docker-registry 是官方提供的工具，可以用于构建私有的镜像仓库。
 
-#### 安装docker-registry 
 
+这将使用官方的 registry 镜像来启动私有仓库。默认情况下，仓库会被创建在容器的 /var/lib/registry 目录下。你可以通过 -v 参数来将镜像文件存放在本地的指定路径。例如下面的例子将上传的镜像放到本地的 /opt/data/registry 目录。
 
 
 
