@@ -38,6 +38,6 @@ jrcs/letsencrypt-nginx-proxy-companion                 LetsEncrypt container to 
 这里需要注意的是在进行镜像提交之前需要进行设置用户,然后再进行提交。
 `docker push wangxianii/hello_docker:1.0` 
 提交完成之后,可以在网页当中打开仓库进行查看。
-另外`wangxianii` 换成自己用户名
+另外`wangxianii` 换成自己用户名。
 
 
