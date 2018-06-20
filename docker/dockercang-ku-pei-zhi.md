@@ -17,5 +17,8 @@ Docker Hub是官方维护的一个公共仓库，其中包含了大部分的镜�
 
 * 3.拉取镜像
 
+首先通过`docker search image_name`来进行搜索,然后通过`docker pull` 命令下载到本地.
+例如:
+```
 
 
