@@ -44,7 +44,9 @@ jrcs/letsencrypt-nginx-proxy-companion                 LetsEncrypt container to 
 ### 私有仓库 
 刚刚我们上面所讲到的是基于Docker Hub的公共仓库,对于不想公开的镜像我们可以创建本地仓库使用。
 
+###  docker-registry
 
+docker-registry 是官方提供的工具，可以用于构建私有的镜像仓库
 
 
 
