@@ -8,4 +8,8 @@ Docker Hub是官方维护的一个公共仓库，其中包含了大部分的镜�
 
 ### 仓库的基本操作
 
-* 1.注册Docker账号  在` https://cloud.docker.com `
+* 1.注册  
+
+在` https://cloud.docker.com `免费注册Docker账号。
+* 2.在命令行通过`docker login`命令进行登录。
+* 3.
