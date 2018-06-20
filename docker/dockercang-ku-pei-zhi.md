@@ -20,5 +20,13 @@ Docker Hub是官方维护的一个公共仓库，其中包含了大部分的镜�
 首先通过`docker search image_name`来进行搜索,然后通过`docker pull` 命令下载到本地.
 例如:
 ```
+wangxian@wangxian-VirtualBox:~$ docker search nginx
+NAME                                                   DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
+nginx                                                  Official build of Nginx.                        8834                [OK]                
+jwilder/nginx-proxy                                    Automated Nginx reverse proxy for docker con…   1348                                    [OK]
+richarvey/nginx-php-fpm                                Container running Nginx + PHP-FPM capable of…   579                                     [OK]
+jrcs/letsencrypt-nginx-proxy-companion                 LetsEncrypt container to use with nginx as p…   380                                     [OK]
+```
+可以看到返回了很多包含关键字的镜像，其中包括镜像名字、描述、收藏数（表示该镜像的受关注程度）、是否官方创建、是否自动创建。
 
 
