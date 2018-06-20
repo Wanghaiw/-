@@ -46,7 +46,10 @@ jrcs/letsencrypt-nginx-proxy-companion                 LetsEncrypt container to 
 
 ###  docker-registry
 
-docker-registry 是官方提供的工具，可以用于构建私有的镜像仓库
+docker-registry 是官方提供的工具，可以用于构建私有的镜像仓库。
+
+#### 安装docker-registry 
+
 
 
 
