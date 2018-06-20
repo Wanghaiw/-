@@ -41,3 +41,9 @@ jrcs/letsencrypt-nginx-proxy-companion                 LetsEncrypt container to 
 另外`wangxianii` 换成自己用户名。
 
 
+### 私有仓库 
+刚刚我们上面所讲到的是基于Docker Hub的公共仓库,对于不想公开的镜像我们可以创建本地仓库使用。
+
+
+
+
