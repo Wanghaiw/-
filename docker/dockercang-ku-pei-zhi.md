@@ -28,5 +28,10 @@ richarvey/nginx-php-fpm                                Container running Nginx +
 jrcs/letsencrypt-nginx-proxy-companion                 LetsEncrypt container to use with nginx as p…   380                                     [OK]
 ```
 可以看到返回了很多包含关键字的镜像，其中包括镜像名字、描述、收藏数（表示该镜像的受关注程度）、是否官方创建、是否自动创建。
+然后通过`docker pull nginx` 进行下载。
+
+* 4.推送镜像
+在登录用户之后,可以通过`docker push`命令,将自己的镜像推送到Docker Hub。
+
 
 
