@@ -43,4 +43,5 @@
   * [什么是版本控制系统](gitshi-yong-zhi-nan/shi-yao-shi-ban-ben-kong-zhi-xi-tong.md)
 * [Docker](docker.md)
   * [Docker基础部分](docker/dockerji-chu-bu-fen.md)
+  * [Docker仓库配置](docker/dockercang-ku-pei-zhi.md)
 
