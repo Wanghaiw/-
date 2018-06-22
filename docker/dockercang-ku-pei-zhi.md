@@ -55,7 +55,11 @@ docker-registry 是官方提供的工具，可以用于构建私有的镜像仓�
 
 ### 在私有仓库进行镜像的上传、下载
 通过上面的命令创建好仓库之后,通过Tag命令来标记一个镜像,然后把镜像推送到仓库。
-`docker tag hello_world 127.0.0.1:5000/ubuntu:latest`
+`docker tag hello-world:latest 127.0.0.1:8888/hello-world`
+
+标记完目录之后通过`docker push` 命令对镜像进行上传。
+
+
 
 
 
