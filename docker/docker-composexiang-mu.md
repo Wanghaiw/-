@@ -11,7 +11,7 @@ Compose 可以通过 Python 的包管理工具 pip 进行安装，也可以直�
 
 
 ## 使用 
-接下来我们通过docker-compose来实现一个简单的web服务。
+接下来我们通过docker-compose来配置并运行一个Flask/redis应用。
 在开始工作之前，我们需要编辑好必要的3个文件。
 第一步，因为应用将要运行在一个满足所有环境依赖的 Docker 容器里面，那么我们可以通过编辑 `Dockerfile` 文件来指定 Docker 容器要安装内容。内容如下：
 ```
