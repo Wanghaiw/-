@@ -22,6 +22,7 @@ RUN pip install redis flask
 CMD ["python", "app.py"]
 ```
 首先导入python的基础镜像,然后 指定工作目录,在运行pip命令 安装环境。
-第二步通过`docker-compose.yml`文件吧所有的东西关联起来，它描述了应用的构成（一个 web 服务和一个数据库）、使用的 Docker 镜像
+第二步通过`docker-compose.yml`文件吧所有的东西关联起来，它描述了应用的构成（一个 web 服务和一个数据库）、使用的 Docker 镜像。
+
 
 
