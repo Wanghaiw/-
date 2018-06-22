@@ -30,7 +30,7 @@ services:
   web:
     build: .
     ports:
-     - "8888:5000"
+     - "8000:5000"
 
   redis:
     image: "redis:alpine"
