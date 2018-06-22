@@ -53,6 +53,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
 ```
 
+最后在工作目录下面运行`docker-compose up`
 
 
 
