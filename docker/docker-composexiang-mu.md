@@ -36,5 +36,9 @@ services:
     image: "redis:alpine"
 ```
 
+第三步编写`app.py`文件 
+```
+
+```
 
 
