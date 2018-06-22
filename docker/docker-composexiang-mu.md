@@ -46,7 +46,7 @@ redis = Redis(host='redis', port=6379)
 
 @app.route('/')
 def hello():
-    count = redis.incr('hits')
+    count = redis.incr('count')
     return 'Hello World! 该页面已被访问 {} 次。\n'.format(count)
 
 if __name__ == "__main__":
