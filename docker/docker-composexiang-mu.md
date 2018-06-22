@@ -21,6 +21,7 @@ WORKDIR /code
 RUN pip install redis flask
 CMD ["python", "app.py"]
 ```
+首先导入python的基础镜像,然后 指定工作目录,在运行pip命令 安装环境。
 
 
 
