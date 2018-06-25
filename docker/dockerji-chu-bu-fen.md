@@ -44,7 +44,11 @@ Docker 将应用程序与该程序的依赖，打包在一个文件里面。运�
 
 ### 添加镜像加速
 在国内拉取Docker Hub镜像时,速度会比较慢，此时一般需要配置镜像加速器。
-编辑/etc/default/docker`文件，在里面添加`DOCKER_OPTS="--registry-mirror=https://registry.docker-cn.com"`
+编辑/etc/default/docker`文件，在里面添加`DOCKER_OPTS="--registry-mirror=https://registry.docker-cn.com"`.
+然后重启docker服务
+`sudo service docker restart`
+
+
 
 
 ### 2.docker的基本概念
