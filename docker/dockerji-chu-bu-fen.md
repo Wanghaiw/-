@@ -42,6 +42,9 @@ Docker 将应用程序与该程序的依赖，打包在一个文件里面。运�
 `sudo usermod -aG docker $USER`
 执行之后 重启服务
 
+### 添加镜像加速
+
+
 
 ### 2.docker的基本概念
 * 1.镜像
