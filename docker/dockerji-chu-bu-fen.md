@@ -99,6 +99,8 @@ Deleted: sha256:644879075e24394efef8a7dddefbc133aad42002df6223cacf98bd1e3d5ddde2
 
 另外也可以配合 `dokcer image ls -q`来使用.
 `docker image rm $(docker image ls -q)`
+删除所有的镜像
+
 
 
 
