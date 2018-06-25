@@ -51,7 +51,6 @@ Docker 将应用程序与该程序的依赖，打包在一个文件里面。运�
 在文件中写入```{
   "registry-mirrors": ["https://xxxxxxx.mirror.aliyuncs.com"]
 }```
-
 最后重启服务。
 
 
