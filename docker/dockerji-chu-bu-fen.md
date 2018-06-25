@@ -86,6 +86,20 @@ Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下
 wangxian@wangxian:~$ docker image ls
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ubuntu              16.04               5e8b97a2a082        2 weeks ago         114MB
+wangxian@wangxian:~$ docker image rm 5e8b97a2a082      
+Untagged: ubuntu:16.04
+Untagged: ubuntu@sha256:b050c1822d37a4463c01ceda24d0fc4c679b0dd3c43e742730e2884d3c582e3a
+Deleted: sha256:5e8b97a2a0820b10338bd91674249a94679e4568fd1183ea46acff63b9883e9c
+Deleted: sha256:ef572e1ba2ecca900f0ec3db00e997de12dd380ce3e360b5813fd75920232359
+Deleted: sha256:98fc4d5421178c7be7d5718d2d44abba8053dc5c712e51658fe5b872675b4f7a
+Deleted: sha256:7b2cc05dfd889e28234f8831c80ac20cf299d5bbebbbac013f8f7d2b7abc0d65
+Deleted: sha256:6b0187d1cdff63eb5966ac72bf4ccd96150586c1409eb858bb98783f02018ee7
+Deleted: sha256:644879075e24394efef8a7dddefbc133aad42002df6223cacf98bd1e3d5ddde2
+
+
+
+```
+
 
 
 
