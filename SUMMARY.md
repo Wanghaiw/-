@@ -48,6 +48,7 @@
   * [Docker 常用命令](docker/docker-chang-yong-ming-ling.md)
   * [Docker定制镜像](docker/dockerding-zhi-jing-xiang.md)
   * [第二节课 Docker操作容器及定制镜像](docker/di-er-jie-ke-docker-cao-zuo-rong-qi-ji-ding-zhi-jing-xiang.md)
+  * [遇到的坑](docker/yu-dao-de-keng.md)
 * [Docker备课](dockerbei-ke.md)
   * [第一节 docker的介绍安装与镜像](dockerbei-ke/di-yi-jiedocker-de-jie-shao-an-zhuang-yu-jing-xiang.md)
 
