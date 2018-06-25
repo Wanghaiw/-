@@ -82,6 +82,11 @@ Docker Hub 上有大量的高质量的镜像可以用，这里我们就说一下
 `docker image rm [选项] <镜像1><镜像2>`
 其中<镜像>可以是镜像的短ID,也可以是镜像名字.
 在删除之前通过`docker image ls`获取本地环境的所有镜像.
+```
+wangxian@wangxian:~$ docker image ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              16.04               5e8b97a2a082        2 weeks ago         114MB
+
 
 
 
