@@ -9,6 +9,7 @@
 ### 新建并启动
 
 通过`docker run`命令可以创建并运行一个容器。例如:
+
 ```
 wangxian@wangxian:~$ docker run ubuntu:latest echo 'Welcome to ubuntu!'
 Welcome to ubuntu!
