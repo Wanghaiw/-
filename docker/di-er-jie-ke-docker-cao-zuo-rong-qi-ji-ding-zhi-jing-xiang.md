@@ -99,6 +99,18 @@ Removing intermediate container 4d51e06eccd5
  ---> 9c8135c4b40e
 Successfully built 9c8135c4b40e
 Successfully tagged my_nginx:v1
+wangxian@wangxian:~/wangxian/Docker_test/code1$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+my_nginx            v1                  9c8135c4b40e        5 seconds ago       109MB
+ubuntu              latest              113a43faa138        2 weeks ago         81.2MB
+nginx               latest              cd5239a0906a        2 weeks ago         109MB
+```
+在这里我们指定了最终镜像的名称 -t my_nginx:v1，构建成功后，我们可以像之前运行nginx那样来运行这个镜像.
+```
+wangxian@wangxian:~/wangxian/Docker_test/code1$ docker run -d -p 80:80 my_nginx:v1 
+f30c9abd13de09e783f8b7db11833f31180becdb1bc5abc2243dd28f178e8592
+```
+
 
 
 
