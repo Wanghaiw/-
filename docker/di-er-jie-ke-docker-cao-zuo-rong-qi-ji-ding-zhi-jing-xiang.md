@@ -117,6 +117,14 @@ f30c9abd13de09e783f8b7db11833f31180becdb1bc5abc2243dd28f178e8592
 
 * 1. COPY 复制文件
 COPY 指令将从构建上下文目录中<源路径>的文件复制到新的一层的镜像内的<目标路径>位置。
+```
+FROM nginx 
+RUN mkdir app
+COPY ./index.html ./app
+```
+
+
+
 
 
 
