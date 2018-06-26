@@ -111,9 +111,12 @@ wangxian@wangxian:~/wangxian/Docker_test/code1$ docker run -d -p 80:80 my_nginx:
 f30c9abd13de09e783f8b7db11833f31180becdb1bc5abc2243dd28f178e8592
 ```
 
+### Dockerfile常用指令
 
+在定制镜像时,除了上面所讲到的FROM和RUN之外,还有一些其他的常用的指令。
 
-
+* 1. COPY 复制文件
+COPY 指令将从构建上下文目录中<源路径>的文件复制到新的一层的镜像内的<目标路径>位置。
 
 
 
