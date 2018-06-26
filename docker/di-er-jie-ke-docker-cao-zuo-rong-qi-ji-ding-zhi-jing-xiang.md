@@ -15,6 +15,16 @@ wangxian@wangxian:~$ docker run ubuntu:latest echo 'Welcome to ubuntu!'
 Welcome to ubuntu!
 ```
 这个和本地执行`echo 'Welcome to ubuntu!'`基本是一样的。
+另外在启动容器的时候也可以添加一些其他的参数，
+```
+wangxian@wangxian:~$ docker run -it ubuntu
+root@3eed37779ffd:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@3eed37779ffd:/# exit
+exit
+wangxian@wangxian:~$ 
+```
+
 
 
 
