@@ -68,7 +68,6 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 这里我们以原先的nginx镜像为基础,使用Dockerfile重新定制一下，
 * 1.建立一个Dockerfile文件
 * 2.在Dockerfile中编写 `FROM nginx` `RUN echo '<h1>Hello DockerFile!</h1>' > /usr/share/nginx/html/index.html`
-* 3.然后在执行`docker build -t wangxian/nginx .`
 这个 Dockerfile 很简单，一共就两行。涉及到了两条指令，FROM 和 RUN。
 
 ### FROM 指定基础镜像
@@ -76,7 +75,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 而 FROM 就是指定基础镜像，因此一个 Dockerfile 中 FROM 是必备的指令，并且必须是第一条指令。
 
 ### RUN 执行指令
-RUN 指令是用来执行命令行命令的。由于命令行的强大能力，RUN 指令在定制镜像时是最常用的指令之一
+RUN 指令是用来执行命令行命令的。由于命令行的强大能力，RUN 指令在定制镜像时是最常用的指令之一。
 
 这样我们就生成了一个新的镜像。这个Dockerfile比较简单 其中涉及到两个指令`FROM`和`RUN`。
 在定制镜像的时候，一般是以一些基础镜像为基础,在这之上进行定制。
@@ -85,6 +84,22 @@ RUN 指令是用来执行命令行命令的。由于命令行的强大能力，R
 里我们使用了 docker build 命令进行镜像构建。其格式为：
 `docker build [选项] <上下文路径/URL/->`
 需要注意的是这里的上下文路径 不是生成镜像存放的位置，而是在生成镜像发送给docker引擎的路径。
+
+### 构建镜像 
+
+Dockerfile文件完成之后，通过`Docker build`命令进行构建镜像。
+```
+wangxian@wangxian:~/wangxian/Docker_test/code1$ docker build -t my_nginx:v1 .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM nginx
+ ---> cd5239a0906a
+Step 2/2 : RUN echo '<h1>Welcome to Docker!!<h1>' > /usr/share/nginx/html/index.html
+ ---> Running in 4d51e06eccd5
+Removing intermediate container 4d51e06eccd5
+ ---> 9c8135c4b40e
+Successfully built 9c8135c4b40e
+Successfully tagged my_nginx:v1
+
 
 
 
