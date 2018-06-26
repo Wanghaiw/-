@@ -62,8 +62,6 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 # 定制镜像 
 
-
-
 除了使用定制好的镜像外，我们也可以通过定制实现符合自己环境的镜像。
 在docker里面通过build方法来生成镜像,在生成镜像之前，我们需要一个Dockerfile脚本，脚本中包含的是一条一条的指令,用来的表示镜像的构建。
 
@@ -75,7 +73,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### FROM 指定基础镜像
 所谓定制镜像，那一定是以一个镜像为基础，在其上进行定制。
-
+而 FROM 就是指定基础镜像，因此一个 Dockerfile 中 FROM 是必备的指令，并且必须是第一条指令。
 这样我们就生成了一个新的镜像。这个Dockerfile比较简单 其中涉及到两个指令`FROM`和`RUN`。
 在定制镜像的时候，一般是以一些基础镜像为基础,在这之上进行定制。
 这里的`FROM nginx` 就是在`nginx`镜像的基础上进行的定制。
