@@ -14,6 +14,8 @@
 wangxian@wangxian:~$ docker run ubuntu:latest echo 'Welcome to ubuntu!'
 Welcome to ubuntu!
 ```
+这个和本地执行`echo 'Welcome to ubuntu!'`基本是一样的。
+
 
 
 
