@@ -110,6 +110,8 @@ nginx               latest              cd5239a0906a        2 weeks ago         
 wangxian@wangxian:~/wangxian/Docker_test/code1$ docker run -d -p 80:80 my_nginx:v1 
 f30c9abd13de09e783f8b7db11833f31180becdb1bc5abc2243dd28f178e8592
 ```
+###上下文环境
+
 
 ### Dockerfile常用指令
 
@@ -123,8 +125,7 @@ RUN mkdir app
 COPY ./index.html ./app
 ```
 
-
-
+* 2.CMD容器启动命令
 
 
 
