@@ -132,6 +132,37 @@ CMD 指令的格式有两种
 ```
 shell 格式：CMD <命令>
 exec 格式：CMD ["可执行文件", "参数1", "参数2"...]
+
+第一种
+FROM ubuntu
+CMD echo 'Hello CMD!!'
+wangxian@wangxian:~/wangxian/Docker_test/code2$ docker run e8c9913f85b4
+Hello CMD!
+运行之后,会执行语句。但是不支持添加参数
+
+第二种
+FROM ubuntu
+CMD ["/bin/bash", "-c", "echo 'hello cmd!'"]
+
+wangxian@wangxian:~/wangxian/Docker_test/code2$ docker run cc:v1 
+Hello CMD!!
+wangxian@wangxian:~/wangxian/Docker_test/code2$ docker run cc:v1 echo hhhh
+hhhh
+```
+从结果可以发现 使用第二种方式 支持在运行容器是 添加参数 但是会覆盖掉CMD本身的命令。
+
+* 3.ENTRYPOINT 入口命令
+ENTRYPOINT 的目的和 CMD 一样，都是在指定容器启动程序及参数。不同的是当指定了 ENTRYPOINT 后，CMD 的含义就发生了改变，不再是直接的运行其命令，而是将 CMD 的内容作为参数传给 ENTRYPOINT 指令，换句话说实际执行时，将变为`ENTRYPOINT  CMD`.
+
+```
+FROM ubuntu
+CMD ["Hello CMD!!"]
+ENTRYPOINT ["echo"]
+
+wangxian@wangxian:~/wangxian/Docker_test/code2$ docker run cc:v2 
+Hello CMD!!
+wangxian@wangxian:~/wangxian/Docker_test/code2$ docker run cc:v2 aaaa
+aaaa
 ```
 
 
