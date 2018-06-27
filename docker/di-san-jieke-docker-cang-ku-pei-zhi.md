@@ -52,12 +52,14 @@ docker-registry 是官方提供的工具，可以用于构建私有的镜像仓�
 `docker run -d -p 8888:5000 --restart=always --name registry registry`
 
 这将使用官方的 registry 镜像来启动私有仓库。默认情况下，仓库会被创建在容器的`/var/lib/registry` 目录下。你可以通过 -v 参数来将镜像文件存放在本地的指定路径。
-
+  
 ### 在私有仓库进行镜像的上传、下载
 通过上面的命令创建好仓库之后,通过Tag命令来标记一个镜像,然后把镜像推送到仓库。
 `docker tag hello-world:latest 127.0.0.1:8888/hello-world`
 
 标记完目录之后通过`docker push` 命令对镜像进行上传。
+上传完成之后可以通过`curl 127.0.0.1:8888/v2/_catalog`命令进行查看。
+
 
 
 

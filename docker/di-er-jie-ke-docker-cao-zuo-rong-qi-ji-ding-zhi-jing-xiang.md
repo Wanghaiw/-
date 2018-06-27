@@ -72,6 +72,9 @@ wangxian@wangxian:~$ docker run -d -p 80:80 nginx:latest
 如果需要获取容器的输出信息可以通过`docker logs contraner id`来获取。
 ```
 
+## 进入容器
+
+
 
 
 # 定制镜像 
