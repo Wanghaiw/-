@@ -62,6 +62,17 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ## 后台运行
 更多的时候，需要让 Docker 在后台运行而不是直接把执行命令的结果输出在当前宿主机下。此时，可以通过添加 -d 参数来实现。
+```
+wangxian@wangxian:~$ docker run -p 80:80 nginx:latest 
+172.16.80.131 - - [27/Jun/2018:07:42:16 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36" "-"
+在没有使用-d参数时,容器会把结果输出到宿主机上。
+wangxian@wangxian:~$ docker run -d -p 80:80 nginx:latest 
+497e84dfa5cd9420c11a568302bf27dd6fe740b005b6c804e0361491cf4f659d
+加了-d参数之后，容器会在后台运行。
+如果需要获取容器的输出信息可以通过`docker logs contraner id`来获取。
+```
+
+
 
 # 定制镜像 
 
