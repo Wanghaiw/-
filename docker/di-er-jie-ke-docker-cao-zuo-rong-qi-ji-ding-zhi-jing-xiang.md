@@ -76,7 +76,6 @@ wangxian@wangxian:~$ docker run -d -p 80:80 nginx:latest
 
 
 
-
 # 定制镜像 
 
 除了使用定制好的镜像外，我们也可以通过定制实现符合自己环境的镜像。
