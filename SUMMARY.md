@@ -50,6 +50,7 @@
   * [第一节课 Docker基础部分](docker/dockerji-chu-bu-fen.md)
   * [第二节课 Docker操作容器及定制镜像](docker/di-er-jie-ke-docker-cao-zuo-rong-qi-ji-ding-zhi-jing-xiang.md)
   * [第三节课 Docker仓库配置](docker/di-san-jieke-docker-cang-ku-pei-zhi.md)
+  * [第四节课Docker-Compose的使用](docker/di-si-jie-ke.md)
 * [Docker备课](dockerbei-ke.md)
   * [第一节 docker的介绍安装与镜像](dockerbei-ke/di-yi-jiedocker-de-jie-shao-an-zhuang-yu-jing-xiang.md)
 
