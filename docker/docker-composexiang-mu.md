@@ -57,5 +57,10 @@ if __name__ == "__main__":
 
 就可以看到程序的运行。
 
+## Compose 模板文件
+
+默认的模板文件名称为 docker-compose.yml，格式为 YAML 格式。
+
+
 
 
