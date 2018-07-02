@@ -116,7 +116,7 @@ Deleted: sha256:644879075e24394efef8a7dddefbc133aad42002df6223cacf98bd1e3d5ddde2
 
 #### 启动容器（后台模式）
 
-`docker run -d -p 80:80 nginx`  在后台运行nginx,把容器的80端口映射到宿主机
+`docker run -d -p 80:80 nginx`  在后台运行nginx,把容器的80端口映射到宿主机 
 运行之后可以通过`docker ps`命令 查看正在运行的容器
 也可以通过 `docker logs 容器id` 查看容器的标准输出
 
