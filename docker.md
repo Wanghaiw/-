@@ -17,6 +17,8 @@ Dockerfile文件
 镜像的定制
 
 第三节课 Docker仓库配置
+Docker Hub
+私有仓库
 
 第四节课Docker-Compose的使用
 
