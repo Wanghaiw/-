@@ -5,8 +5,12 @@
 3.Docker的仓库
  *1.公共仓库
  *2.私有仓库 
- *1.常用指令
-5.Docker-compose项目
- * 1.Flask+redis应用
- 
- 
+
+
+第一节课 Docker基础部分
+
+第二节课 Docker操作容器及定制镜像
+
+第三节课 Docker仓库配置
+
+第四节课Docker-Compose的使用
