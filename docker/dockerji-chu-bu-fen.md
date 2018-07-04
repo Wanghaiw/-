@@ -49,7 +49,7 @@ Docker 将应用程序与该程序的依赖，打包在一个文件里面。运�
 打开 开发者平台(https://dev.aliyun.com/search.html) – 管理中心 – 加速器 。可以看到"您的专属加速器地址"`https://xxxxxxx.mirror.aliyuncs.com`
 然后打开`/etc/docker/daemon.json`文件(没有时新建该文件)
 在文件中写入
-```
+```/
 {
   "registry-mirrors": ["https://xxxxxxx.mirror.aliyuncs.com"]
 }
