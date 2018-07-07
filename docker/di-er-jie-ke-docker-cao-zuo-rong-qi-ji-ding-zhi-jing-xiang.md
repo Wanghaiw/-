@@ -139,6 +139,9 @@ COPY 指令将从构建上下文目录中<源路径>的文件复制到新的一�
 FROM nginx 
 RUN mkdir app
 COPY ./index.html ./app
+
+FROM ubuntu:16.04
+COPY ./code.txt /home/
 ```
 
 * 2.CMD容器启动命令
