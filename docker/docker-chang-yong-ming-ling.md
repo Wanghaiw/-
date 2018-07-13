@@ -39,34 +39,22 @@ volume：管理 Docker volume，包括查看、创建、删除等；
 wait：阻塞直到一个容器终止，然后输出它的退出符。
 
 
-
-Docker 
-
-把应用程序和依赖打包成一个文件  在运行文件的时候生成一个虚拟容器 
+Docker 把应用程序和依赖打包成一个文件  在运行文件的时候生成一个虚拟容器 
 
 Docker 安装
 sudo apt-get install docker.io 
 
 添加当前用户到Docker用户组 
 sudo usermod docker $USER 
-
 添加镜像仓库  
-
 etc/docker/daemon.json  
-
 镜像和容器  
-
 获取镜像  
 docker pull  
-
 启动容器 
-
 docker run -i -t -d -p 
-
 查看容器的输出信息 
-
 docker logs container id 
-
 
 定制镜像 
 Dockerfile文件  
@@ -77,28 +65,17 @@ COPY  复制内容
 CMD   运行容器默认执行的命令 
 ENIRYPOINT  指定容器启动的参数 
 WORKDIR      指定一个工作目录
-
 ENIRYPOINT + CMD 
-
 
 仓库 
 Docker Hub 官方仓库 
-
-
-
 上传镜像 需要登录 
-
 私有仓库  
-
 安装 docker-registry 
-
 启动registry
 docker run -d -p 8888:5000 --restart=always --name registry registry
-
-
 修改tag标签
 docker tag hello-world:latest 127.0.0.1:8888/hello-world
-
 上传镜像
 docker push 127.0.0.0:8888/hello-world  
 
