@@ -71,6 +71,9 @@ if __name__ == '__main__':
     pp.start()
     time.sleep(5)
     print('main_task end:',time.asctime(time.localtime(time.time())))
+    
+## Process 进程对象  
+## 创建子进程时，只需要传入一个执行函数和函数的参数，创建一个Process实例，用start()方法启动。
 ```
 
 
