@@ -20,4 +20,59 @@ I/O事件
 以上两点结合起来理解
 epoll是一种当文件描述符的内核缓冲区非空的时候，发出可读信号进行通知，当写缓冲区不满的时候，发出可写信号通知的机制
 
-线程
+# 进程
+
+## 定义
+进程，是执行中的计算机程序。也就是说，每个代码在执行的时候，首先本身即是一个进程。
+
+
+## python模拟耗时任务
+
+```
+import time
+
+print('main_task start:',time.asctime(time.localtime(time.time())))
+
+
+def func():
+    print('sub_task start:',time.asctime(time.localtime(time.time())))
+    time.sleep(5)
+    print('sub_task end:',time.asctime(time.localtime(time.time())))
+
+
+func()
+time.sleep(5)
+print('main_task end:',time.asctime(time.localtime(time.time())))
+
+## asctime() 函数接受时间元组并返回一个可读的形式为"Tue Dec 11 18:07:14 2008" 的字符串
+## localtime 格式化时间戳为本地的时间
+## time      返回当前的时间戳
+
+```
+
+## 使用进程执行耗时任务
+
+```
+import time
+from multiprocessing import Process
+
+
+print('main_task start:',time.asctime(time.localtime(time.time())))
+
+def func():
+    print('sub_task start:',time.asctime(time.localtime(time.time())))
+    time.sleep(5)
+    print('sub_task end:',time.asctime(time.localtime(time.time())))
+
+
+if __name__ == '__main__':
+
+    pp = Process(target=func)
+    pp.start()
+    time.sleep(5)
+    print('main_task end:',time.asctime(time.localtime(time.time())))
+```
+
+
+
+
