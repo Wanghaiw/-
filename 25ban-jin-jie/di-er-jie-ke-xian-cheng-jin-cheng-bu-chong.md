@@ -40,4 +40,7 @@ def func():
 if __name__ == '__main__':
     p = multiprocessing.Process(target=func)
     p.start()
+    
+### current_process() 获取当前的进程对象
+
 ```
