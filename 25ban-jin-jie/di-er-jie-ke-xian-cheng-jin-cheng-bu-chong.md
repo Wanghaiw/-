@@ -27,3 +27,17 @@ exitcode(进程在运行时为None、如果为–N，表示被信号N结束）�
 name：进程名字。
 pid：进程号。
 ```
+
+### 当前进程与线程
+```
+import multiprocessing
+
+print(multiprocessing.current_process())
+
+def func():
+    print(multiprocessing.current_process())
+
+if __name__ == '__main__':
+    p = multiprocessing.Process(target=func)
+    p.start()
+```
