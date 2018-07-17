@@ -17,7 +17,7 @@ args/kwargs: 要传入方法的参数。
 is_alive()：返回进程是否在运行。
 join([timeout])：阻塞当前上下文环境的进程程，直到调用此方法的进程终止或到达指定的timeout（可选参数）。
 start()：进程准备就绪，等待CPU调度。
-run()：strat()调用run方法，如果实例进程时未制定传入target，这时start执行默认run()方法。
+run()：strat()调用run方法，如果实例进程时未制定传入target，这时start执行默认的run()方法。
 terminate()：不管任务是否完成，立即停止工作进程。
 
 属性：
