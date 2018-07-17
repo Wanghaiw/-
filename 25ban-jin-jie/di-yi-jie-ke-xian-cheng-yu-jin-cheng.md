@@ -83,6 +83,38 @@ if __name__ == '__main__':
 ## 
 ```
 
+## 并发模型
+
+```
+import time
+from multiprocessing import Process
+import socket
+
+
+
+
+def worker(conn):
+    while True:
+        recv_data = conn.recv(1024)
+        if recv_data:
+            print(recv_data)
+            conn.send(recv_data)
+        else:
+            conn.close()
+            break
+
+if __name__ == '__main__':
+    server = socket.socket()
+    server.bind(('', 8080))
+    server.listen(5)
+
+    while True:
+        conn,addr = server.accept()
+        p = Process(target=worker,args=(conn,))
+        p.start()
+
+```
+
 
 
 
