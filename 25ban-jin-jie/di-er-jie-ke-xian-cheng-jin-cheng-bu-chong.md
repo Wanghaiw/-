@@ -156,3 +156,53 @@ if __name__ == '__main__':
 
 ```
 
+作业:
+```
+from multiprocessing import Pool,Manager
+import os, time
+
+
+def copyFileTask(filename, oldFolderName, newFolderName, queue):
+    with open(oldFolderName+"/"+filename,encoding='utf-8',errors='ignore') as fr:
+        content = fr.read()
+    with open(newFolderName+"/"+filename, 'w',encoding='utf-8') as fw:
+        fw.write(content)
+    queue.put(filename)
+
+def main():
+    oldFolderName = input('输入您要复制的文件夹:')
+    newFolderName = oldFolderName + '复制'
+    not os.path.exists(newFolderName) and os.mkdir(newFolderName)
+    filename = os.listdir(oldFolderName)
+    queue = Manager().Queue()
+
+    pool = Pool(1)
+
+    for name in filename:
+        pool.apply_async(func=copyFileTask, args=(name, oldFolderName, newFolderName, queue))
+
+
+
+    num = 0
+    total = len(filename)
+    print('总文件数是:{}'.format(total))
+    while num < total:
+        queue.get()
+        num += 1
+        print('\r当前复制进度%.2f%%, num是%d'%(((num/total)*100), num),end='')
+
+    #print('已完成拷贝copy......')
+
+
+if __name__ == '__main__':
+    start_time = time.time()
+    main()
+    print('\n')
+    print('完成copy用时{}秒.....'.format(time.time() -start_time))
+    
+```
+
+
+
+
+
