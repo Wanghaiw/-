@@ -10,3 +10,26 @@
 非阻塞的存在是因为阻塞存在，正因为某个操作阻塞导致的耗时与效率低下，我们才要把它变成非阻塞的。
 
 # 并发
+
+
+
+
+# 子进程不支持input的解决方法
+
+```
+from multiprocessing import Process
+import sys
+import os
+
+def func():
+    sys.stdin = os.fdopen(0)
+    d = input('>>')
+    print(d)
+
+if __name__ == '__main__':
+
+    p = Process(target=func)
+    p.start()
+
+    print('start......') 
+```
