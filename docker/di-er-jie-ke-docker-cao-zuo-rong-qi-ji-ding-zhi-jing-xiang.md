@@ -7,6 +7,10 @@
 因为 Docker 的容器实在太轻量级了，很多时候都是随时删除和新创建容器。
 
 ### 新建并启动
+```
+语法： docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
+
 
 通过`docker run`命令可以创建并运行一个容器。例如:
 
