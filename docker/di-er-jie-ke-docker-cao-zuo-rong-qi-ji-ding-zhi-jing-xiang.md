@@ -48,6 +48,11 @@ OPTIONS 常用：
 -q 只显示容器ID 可以和其他参数一起使用
 ```
 
+### 退出容器
+两种退出方式：
+1.exit 容器停止并退出  
+2.ctrl+p+q 容器不停止退出
+
 
 ### 启动终止的容器
 
@@ -92,7 +97,17 @@ wangxian@wangxian:~$ docker run -d -p 80:80 nginx:latest
 如果需要获取容器的输出信息可以通过`docker logs contraner id`来获取。
 ```
 
-## 进入容器
+### 补充
+```
+进入正在运行的容器
+docker exec -it 容器ID /bash/sh
+
+```
+
+
+
+
+
 
 
 
