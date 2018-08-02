@@ -9,6 +9,8 @@
 ### 新建并启动
 ```
 语法： docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+OPTIONS说明(常用):有一些是减号,有些是两个减号
+--name="容器名字"
 
 
 ```
