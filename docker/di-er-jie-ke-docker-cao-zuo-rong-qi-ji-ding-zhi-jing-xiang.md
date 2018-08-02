@@ -17,12 +17,9 @@ OPTIONS说明(常用):有一些是减号,有些是两个减号
 -t -t 选项让Docker分配一个伪终端（pseudo-tty）并绑定到容器的标准输入上，通常与-i一起使用。
 -P: 随机端口映射
 -p：指定端口映射 
-
 ```
 
-
 通过`docker run`命令可以创建并运行一个容器。例如:
-
 ```
 wangxian@wangxian:~$ docker run ubuntu:latest echo 'Welcome to ubuntu!'
 Welcome to ubuntu!
@@ -40,6 +37,16 @@ wangxian@wangxian:~$
 这里我们可可以看到在启动容器的时候，我们添加了`-it`这个参数,进入到交互终端。
 其中，-t 选项让Docker分配一个伪终端（pseudo-tty）并绑定到容器的标准输入上， -i 则让容器的标准输入保持打开。
 在交互模式下，用户可以通过所创建的终端来输入命令。
+
+### 列出正在运行的容器
+```
+语法：
+OPTIONS 常用：
+-a 列出所有的容器,包含之前运行过的容器。
+-l 列出最近创建的容器。
+-n 列出最近创建的n个容器，例如 docker ps -n 2
+-q 只显示容器ID 可以和其他参数一起使用
+
 
 
 ### 启动终止的容器
