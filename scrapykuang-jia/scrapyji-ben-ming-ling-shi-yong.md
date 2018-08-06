@@ -24,6 +24,6 @@ wangxian@wangxian-VirtualBox:~/wangxian/scrapy_demo/my_spider$ scrapy list
 qsbk
 4.scrapy crawl <spider_name>
 启动scrapy项目
-
+wangxian@wangxian-VirtualBox:~/wangxian/scrapy_demo/my_spider$ scrapy crawl qsbk
 
 ```
