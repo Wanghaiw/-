@@ -26,4 +26,7 @@ qsbk
 启动scrapy项目
 wangxian@wangxian-VirtualBox:~/wangxian/scrapy_demo/my_spider$ scrapy crawl qsbk
 
+5.scrapy shell <url>
+Scrapy终端是一个交互终端，我们可以在未启动spider的情况下尝试及调试代码，也可以用来测试XPath或CSS表达式，查看他们的工作方式，方便我们爬取的网页中提取的数据。
+
 ```
