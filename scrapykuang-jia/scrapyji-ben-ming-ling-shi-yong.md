@@ -4,7 +4,15 @@ Scrapy提供了两种类型的命令。一种必须在Scrapy项目中运行(针�
 ```
 1. scrapy startproject <project_name>
 创建scrapy项目的命令,会在当前目录创建一个名为project_name的scrapy的项目。
-$ scrapy startproject my_spider
+wangxian@wangxian-VirtualBox:~/wangxian/scrapy_demo$ scrapy startproject my_spider
+New Scrapy project 'my_spider', using template directory '/usr/local/lib/python3.5/dist-packages/scrapy/templates/project', created in:
+    /home/wangxian/wangxian/scrapy_demo/my_spider
+
+You can start your first spider with:
+    cd my_spider
+    scrapy genspider example example.com
 
 2.scrapy genspider [-t template] <name> <domain>
+在当前项目创建spider文件,该方法获使用默认的模板来生成spider。
+
 ```
