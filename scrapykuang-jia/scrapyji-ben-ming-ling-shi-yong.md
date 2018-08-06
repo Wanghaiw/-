@@ -14,5 +14,9 @@ You can start your first spider with:
 
 2.scrapy genspider [-t template] <name> <domain>
 在当前项目创建spider文件,该方法获使用默认的模板来生成spider。
+wangxian@wangxian-VirtualBox:~/wangxian/scrapy_demo/my_spider$ scrapy genspider qsbk qiushibaike.com
+ Created spider 'qsbk' using template 'basic' in module:
+  my_spider.spiders.qsbk
+
 
 ```
