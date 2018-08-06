@@ -17,6 +17,9 @@ You can start your first spider with:
 wangxian@wangxian-VirtualBox:~/wangxian/scrapy_demo/my_spider$ scrapy genspider qsbk qiushibaike.com
  Created spider 'qsbk' using template 'basic' in module:
   my_spider.spiders.qsbk
+  
+3.scrapy crawl <spier_name>
+启动scrapy项目
 
 
 ```
