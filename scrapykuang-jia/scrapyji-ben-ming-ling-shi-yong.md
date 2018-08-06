@@ -19,7 +19,10 @@ wangxian@wangxian-VirtualBox:~/wangxian/scrapy_demo/my_spider$ scrapy genspider 
   my_spider.spiders.qsbk
   
 3.scrapy list
-列出当前项目中所有可用的spider
+列出当前项目中所有可用的spider。
+wangxian@wangxian-VirtualBox:~/wangxian/scrapy_demo/my_spider$ scrapy list
+qsbk
+4.scrapy crawl <spider_name>
 启动scrapy项目
 
 
