@@ -18,7 +18,8 @@ wangxian@wangxian-VirtualBox:~/wangxian/scrapy_demo/my_spider$ scrapy genspider 
  Created spider 'qsbk' using template 'basic' in module:
   my_spider.spiders.qsbk
   
-3.scrapy crawl <spier_name>
+3.scrapy list
+列出当前项目中所有可用的spider
 启动scrapy项目
 
 
