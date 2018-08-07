@@ -50,8 +50,10 @@
   * [第一节课 线程与进程](25ban-jin-jie/di-yi-jie-ke-xian-cheng-yu-jin-cheng.md)
   * [第二节课 线程进程补充](25ban-jin-jie/di-er-jie-ke-xian-cheng-jin-cheng-bu-chong.md)
 * [爬虫高级](pa-chong-gao-ji.md)
-  * [scrapy\_redis](pa-chong-gao-ji/scrapy.md)
-    * 分布式爬虫的优点
+  * [分布式爬虫](pa-chong-gao-ji/fen-bu-shi-pa-chong.md)
+    * [介绍](pa-chong-gao-ji/scrapy/jie-shao.md)
+    * [分布式爬虫的优点](pa-chong-gao-ji/scrapy/fen-bu-shi-pa-chong-de-you-dian.md)
+    * [scrapy\_redis](pa-chong-gao-ji/scrapy.md)
   * [scrapy框架](scrapykuang-jia.md)
     * [scrapy基本命令使用](scrapykuang-jia/scrapyji-ben-ming-ling-shi-yong.md)
 
