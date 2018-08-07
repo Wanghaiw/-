@@ -49,6 +49,9 @@
 * [25班进阶](25ban-jin-jie.md)
   * [第一节课 线程与进程](25ban-jin-jie/di-yi-jie-ke-xian-cheng-yu-jin-cheng.md)
   * [第二节课 线程进程补充](25ban-jin-jie/di-er-jie-ke-xian-cheng-jin-cheng-bu-chong.md)
-* [scrapy框架](scrapykuang-jia.md)
-  * [scrapy基本命令使用](scrapykuang-jia/scrapyji-ben-ming-ling-shi-yong.md)
+* [爬虫高级](pa-chong-gao-ji.md)
+  * [scrapy\_redis](pa-chong-gao-ji/scrapy.md)
+    * 分布式爬虫的优点
+  * [scrapy框架](scrapykuang-jia.md)
+    * [scrapy基本命令使用](scrapykuang-jia/scrapyji-ben-ming-ling-shi-yong.md)
 
