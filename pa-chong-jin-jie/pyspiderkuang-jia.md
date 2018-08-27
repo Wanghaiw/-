@@ -55,12 +55,10 @@ def on_start(self):
                  setTimeout("$('.more').click()", 1000);
                }""", callback=self.index_page)
 
-
 # 数据存储
 默认情况下,pyspider会把数据保存到当前路径的sqlit数据库.
 当需要对数据存储进行修改时,可以重写on_result 方法,对数据进行自定义保存。
 例如:
-```
 def on_result(self, result):
     sql = 'insert into v2ex(url, title) values(%s, %s )'
     insert(sql, (result['url'], result['title']))
