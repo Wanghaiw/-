@@ -56,4 +56,6 @@
     * [scrapy\_redis](pa-chong-gao-ji/scrapy.md)
   * [scrapy框架](scrapykuang-jia.md)
     * [scrapy基本命令使用](scrapykuang-jia/scrapyji-ben-ming-ling-shi-yong.md)
+* [Pygame](pygame.md)
+  * [常用方法](pygame/chang-yong-fang-fa.md)
 
