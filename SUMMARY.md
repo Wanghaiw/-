@@ -58,4 +58,9 @@
     * [scrapy基本命令使用](scrapykuang-jia/scrapyji-ben-ming-ling-shi-yong.md)
 * [Pygame](pygame.md)
   * [常用方法](pygame/chang-yong-fang-fa.md)
+* [爬虫入门初级篇](pa-chong-ru-men-chu-ji-pian.md)
+  * [爬虫的基本原理](pa-chong-ru-men-chu-ji-pian/pa-chong-de-ji-ben-yuan-li.md)
+  * 爬虫的工作流程
+  * HTTP协议介绍
+  * TCP三次握手，四次挥手的过程
 
