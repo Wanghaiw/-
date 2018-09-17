@@ -12,7 +12,16 @@ import requests
 response = request.get('https://www.baidu.com')
 print(response.status_code)
 print(response.text)
+```
 
+#### POST 请求
+```
+import requests
+data = {'key1':'value1'}
+response = request.post('https://www.baidu.com')
+print(response.status_code)
+print(response.text)
+```
 
 
 
