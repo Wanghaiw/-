@@ -10,6 +10,8 @@
 ```
 import requests
 response = request.get('https://www.baidu.com')
+print(response.status_code)
+print(response.text)
 
 
 
