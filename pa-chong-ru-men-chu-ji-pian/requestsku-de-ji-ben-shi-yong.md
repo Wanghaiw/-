@@ -18,7 +18,7 @@ print(response.text)
 ```
 import requests
 data = {'key1':'value1'}
-response = request.post('https://www.baidu.com')
+response = request.post('https://www.baidu.com',data=data)
 print(response.status_code)
 print(response.text)
 ```
