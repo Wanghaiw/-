@@ -61,6 +61,7 @@
 * [爬虫入门初级篇](pa-chong-ru-men-chu-ji-pian.md)
   * [爬虫的基本原理](pa-chong-ru-men-chu-ji-pian/pa-chong-de-ji-ben-yuan-li.md)
   * [爬虫的工作流程](pa-chong-ru-men-chu-ji-pian/pa-chong-de-gong-zuo-liu-cheng.md)
-  * HTTP协议介绍
+  * [HTTP协议介绍](pa-chong-ru-men-chu-ji-pian/httpxie-yi-jie-shao.md)
   * TCP三次握手，四次挥手的过程
+  * [requests库的基本使用](pa-chong-ru-men-chu-ji-pian/requestsku-de-ji-ben-shi-yong.md)
 
