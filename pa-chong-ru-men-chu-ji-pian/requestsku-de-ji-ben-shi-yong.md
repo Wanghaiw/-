@@ -6,6 +6,8 @@
 
 **requests 官方文档 `http://docs.python-requests.org` **
 
+#### GET 请求
+
 
 
 
