@@ -64,4 +64,7 @@
   * [HTTP协议介绍](pa-chong-ru-men-chu-ji-pian/httpxie-yi-jie-shao.md)
   * [TCP三次握手，四次挥手的过程](pa-chong-ru-men-chu-ji-pian/tcpsan-ci-wo-shou-ff0c-si-ci-hui-shou-de-guo-cheng.md)
   * [requests库的基本使用](pa-chong-ru-men-chu-ji-pian/requestsku-de-ji-ben-shi-yong.md)
+* [编程基础](ji-suan-ji-zu-cheng-yuan-li.md)
+  * [计算机软硬件基础](ji-suan-ji-zu-cheng-yuan-li/cao-zuo-xi-tong-de-zuo-yong.md)
+  * [认识操作系统](ji-suan-ji-zu-cheng-yuan-li/ren-shi-cao-zuo-xi-tong.md)
 
