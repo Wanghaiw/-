@@ -27,4 +27,4 @@
 
 计算机软件构成：
 系统软件： 操作系统软件, 如Windows, Linux等； 程序开发语言, 如低级语言、高级语言、编译程序、解释程序； 服务程序,如机器监控、故障检查和诊断程序、杀毒程序等； 数据库管理系统,如SQL Sever、Oracle、Informix、MySQL等；
-应用软件： 绘图如Photoshop; 文字处理：WPS， OFFICE 其他专有软件：比如气象相关的，卫星姿态模拟STK套件，电磁环境仿真CST;
+应用软件： 绘图如Photoshop; 文字处理：WPS， OFFICE 其他软件：qqdeng 。
