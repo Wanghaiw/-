@@ -21,6 +21,6 @@
 * 数据库管理系统,如SQL Sever、redis、MongoDB、MySQL等。
 
 **应用软件**
-* 绘图如Photoshop; 文字处理：WPS， OFFICE 其他软件：qq等。
+* 如Photoshop; 文字处理：WPS， OFFICE 其他软件：qq，浏览器等。
 
 
