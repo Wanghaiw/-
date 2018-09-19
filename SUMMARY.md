@@ -73,4 +73,6 @@
   * [编程语言](ji-suan-ji-zu-cheng-yuan-li/ren-shi-cao-zuo-xi-tong.md)
   * [计算机软硬件基础](ji-suan-ji-zu-cheng-yuan-li/cao-zuo-xi-tong-de-zuo-yong.md)
 * [python 爬虫面试题](python-pa-chong-mian-shi-ti.md)
+* [考试内容](kao-shi-nei-rong.md)
+  * [进阶班](kao-shi-nei-rong/jin-jie-ban.md)
 
