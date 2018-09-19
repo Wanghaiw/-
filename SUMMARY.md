@@ -66,6 +66,7 @@
   * [requests库的基本使用](pa-chong-ru-men-chu-ji-pian/requestsku-de-ji-ben-shi-yong.md)
 * [编程基础](ji-suan-ji-zu-cheng-yuan-li.md)
   * [计算机软硬件基础](ji-suan-ji-zu-cheng-yuan-li/cao-zuo-xi-tong-de-zuo-yong.md)
-  * [认识操作系统及操作系统的作用](ji-suan-ji-zu-cheng-yuan-li/ren-shi-cao-zuo-xi-tong-ji-cao-zuo-xi-tong-de-zuo-yong.md)
+  * [操作系统的功能和使用](ji-suan-ji-zu-cheng-yuan-li/ren-shi-cao-zuo-xi-tong-ji-cao-zuo-xi-tong-de-zuo-yong.md)
+    * [计算机软硬件的组成](ji-suan-ji-zu-cheng-yuan-li/ren-shi-cao-zuo-xi-tong-ji-cao-zuo-xi-tong-de-zuo-yong/ji-suan-ji-ruan-ying-jian-de-zu-cheng.md)
   * [编程语言](ji-suan-ji-zu-cheng-yuan-li/ren-shi-cao-zuo-xi-tong.md)
 
