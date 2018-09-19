@@ -18,5 +18,5 @@
 * 操作系统：windows linux unix mac等。
 * 语言处理系统：如低级语言、高级语言、编译程序、解释程序
 * 系统辅助程序：如机器监控、故障检查和诊断程序、杀毒程序等
-* 数据库管理系统,如SQL Sever、Oracle、Informix、MySQL等；**
+* 数据库管理系统,如SQL Sever、Oracle、MongoDB、MySQL等；**
 
