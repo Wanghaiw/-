@@ -57,6 +57,8 @@
     * [分布式爬虫开发与设计](pa-chong-gao-ji/scrapy/fen-bu-shi-pa-chong-kai-fa-yu-she-ji.md)
   * [scrapy框架](scrapykuang-jia.md)
     * [scrapy基本命令使用](scrapykuang-jia/scrapyji-ben-ming-ling-shi-yong.md)
+  * [app数据抓取](pa-chong-gao-ji/appium.md)
+    * [环境配置](pa-chong-gao-ji/appium/huan-jing-pei-zhi.md)
 * [Pygame](pygame.md)
   * [常用方法](pygame/chang-yong-fang-fa.md)
 * [爬虫入门初级篇](pa-chong-ru-men-chu-ji-pian.md)
