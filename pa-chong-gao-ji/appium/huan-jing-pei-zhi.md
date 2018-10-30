@@ -13,10 +13,12 @@
 #### mitmproxy抓包工具的安装和介绍
 
 #### 安装
+```
 安装环境：
 1. 基于python环境
 2.在windows操作系统需要安装Microsoft Visual C++ V14.0 以上
 3.linux操作系统可以直接基于python安装
+```
 
 #### 介绍
 ```
