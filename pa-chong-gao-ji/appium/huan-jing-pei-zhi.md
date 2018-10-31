@@ -49,7 +49,7 @@
 
 SDK：（software development kit）软件开发工具包。是软件开发工程师用于为特定的软件包、软件框架、硬件平台、操作系统等建立应用软件的开发工具的集合。
 
-
+Android SDK 指的是Android专属的软件开发工具包。
 
 
 
