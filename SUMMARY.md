@@ -59,7 +59,7 @@
     * [scrapy基本命令使用](scrapykuang-jia/scrapyji-ben-ming-ling-shi-yong.md)
   * [app数据抓取](pa-chong-gao-ji/appium.md)
     * [环境配置](pa-chong-gao-ji/appium/huan-jing-pei-zhi.md)
-    * [豆果美食抓取案例](pa-chong-gao-ji/appium/dou-guo-mei-shi-zhua-qu-an-li.md)
+    * [下厨房抓取案例](pa-chong-gao-ji/appium/dou-guo-mei-shi-zhua-qu-an-li.md)
 * [Pygame](pygame.md)
   * [常用方法](pygame/chang-yong-fang-fa.md)
 * [爬虫入门初级篇](pa-chong-ru-men-chu-ji-pian.md)
