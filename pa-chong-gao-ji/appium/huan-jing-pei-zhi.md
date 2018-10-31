@@ -53,7 +53,7 @@ Android SDK 指的是Android专属的软件开发工具包。
 
 #### 配置jdk环境
 
-
+下载地址：https://www.oracle.com/technetwork/cn/java/javase/downloads/jdk8-downloads-2133151-zhs.html
 
 
 
