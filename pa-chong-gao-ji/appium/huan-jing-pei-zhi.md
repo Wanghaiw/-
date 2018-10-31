@@ -41,5 +41,6 @@
 ```
 
 #### 安装
-下载页面地址： http://appium.io/
+下载页面地址： `http://appium.io/`
+
 
