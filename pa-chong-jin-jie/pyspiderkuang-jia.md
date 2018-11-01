@@ -34,6 +34,9 @@ burst-设置并发数量
 直接点击项目状态status那栏，把状态由TODO改成running。
 最后点击项目最右边那个RUN按钮启动项目。
 
+# ssl异常
+在crawl方法中添加validate_cert =False 参数
+
 
 ## 默认代码结构分析
 1.on_star 方法是入口代码。当在web控制台点击run按钮时会执行此方法。
@@ -63,6 +66,8 @@ def on_result(self, result):
     sql = 'insert into v2ex(url, title) values(%s, %s )'
     insert(sql, (result['url'], result['title']))
 ```
+
+
 
 
 
