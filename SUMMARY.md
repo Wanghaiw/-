@@ -57,6 +57,7 @@
     * [分布式爬虫开发与设计](pa-chong-gao-ji/scrapy/fen-bu-shi-pa-chong-kai-fa-yu-she-ji.md)
   * [scrapy框架](scrapykuang-jia.md)
     * [scrapy基本命令使用](scrapykuang-jia/scrapyji-ben-ming-ling-shi-yong.md)
+    * [图片下载器ImagePipeline](scrapykuang-jia/tu-pian-xia-zai-qi-imagepipeline.md)
   * [app数据抓取](pa-chong-gao-ji/appium.md)
     * [环境配置](pa-chong-gao-ji/appium/huan-jing-pei-zhi.md)
     * [下厨房抓取案例](pa-chong-gao-ji/appium/dou-guo-mei-shi-zhua-qu-an-li.md)
