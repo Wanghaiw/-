@@ -58,6 +58,7 @@
   * [scrapy框架](scrapykuang-jia.md)
     * [scrapy基本命令使用](scrapykuang-jia/scrapyji-ben-ming-ling-shi-yong.md)
     * [图片下载器ImagePipeline](scrapykuang-jia/tu-pian-xia-zai-qi-imagepipeline.md)
+    * [scrapy对接selenium](scrapykuang-jia/scrapydui-jie-selenium.md)
   * [app数据抓取](pa-chong-gao-ji/appium.md)
     * [环境配置](pa-chong-gao-ji/appium/huan-jing-pei-zhi.md)
     * [下厨房抓取案例](pa-chong-gao-ji/appium/dou-guo-mei-shi-zhua-qu-an-li.md)
