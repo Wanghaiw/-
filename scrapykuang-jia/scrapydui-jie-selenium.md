@@ -28,3 +28,5 @@ class Downloadmiddleware(object):
 
         return response
 ```
+
+需要注意的是 在spider关闭的时候默认是不会关闭 driver的,所以通过信号检测 手动进行关闭。
