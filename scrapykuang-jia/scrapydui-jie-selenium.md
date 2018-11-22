@@ -27,3 +27,4 @@ class Downloadmiddleware(object):
         dispatcher.connect(self.spider_close,signals.spider_closed)
 
         return response
+```
