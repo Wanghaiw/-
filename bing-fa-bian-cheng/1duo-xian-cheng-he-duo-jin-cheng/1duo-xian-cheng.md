@@ -28,6 +28,7 @@ Thread.setDaemon(self,daemonic)	将子线程设置为守护线程 , daemonic = d
 Thread.getName(self,name)	获取线程名称
 Thread.setName(self,name)	设置线程名称
 ```
+
 #### 创建线程
 Python中使用线程有两种方式 : 函数或者用类来包装线程对象.
 
