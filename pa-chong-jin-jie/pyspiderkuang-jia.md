@@ -13,8 +13,10 @@
 启动环境,在浏览器打开localhost:5000 进入pyspider的web页面。
 
 # phantomjs 安装
-
 sudo apt-get install phantomjs  
+
+# 常见问题 
+
 
 # 创建项目
 在web控制台点create按钮新建任务，项目名自定义。本例项目名为tz_spider。
@@ -60,7 +62,7 @@ def on_start(self):
                fetch_type='js', js_script="""
                function() {
                  setTimeout("$('.more').click()", 1000);
-               }""", callback=self.index_page)
+               }""", callback=self.index_page) 
 
 # 数据存储
 
