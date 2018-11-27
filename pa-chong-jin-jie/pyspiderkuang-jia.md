@@ -12,6 +12,10 @@
 安装完成之后  在命令行输入pyspider启动环境
 启动环境,在浏览器打开localhost:5000 进入pyspider的web页面。
 
+# phantomjs 安装
+
+sudo apt-get install phantomjs  
+
 # 创建项目
 在web控制台点create按钮新建任务，项目名自定义。本例项目名为tz_spider。
 然后点击tz_spider进入到代码编辑页面.
