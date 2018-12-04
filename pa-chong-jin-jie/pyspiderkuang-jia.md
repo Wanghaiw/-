@@ -1,5 +1,9 @@
-# 介绍
+# pyspider框架总结 
 
+
+
+
+# 介绍
 这个框架是一个国人编写的强大的网络爬虫系统并带有强大的WebUI。
 采用Python语言编写，分布式架构，支持多种数据库后端，
 强大的WebUI支持脚本编辑器，任务监视器，项目管理器以及结果查看器。
@@ -14,9 +18,6 @@
 
 # phantomjs 安装
 sudo apt-get install phantomjs  
-
-# 常见问题 
-
 
 # 创建项目
 在web控制台点create按钮新建任务，项目名自定义。本例项目名为tz_spider。
