@@ -7,6 +7,15 @@
 ## 抓包工具
 
 #### fiddler的安装和介绍
+下载地址:`https://www.telerik.com/download/fiddler`
+
+介绍
+Fiddler是强大的抓包工具，它的原理是以web代理服务器的形式进行工作的，使用的代理地址是：127.0.0.1，端口默认为8888，我们也可以通过设置进行修改。
+
+https证书安装
+默认情况Fiddler只能抓取HTTP请求，需要安装证书之后才能抓取HTTPS请求。
+打开Fiddler,     Tools-> Fiddler Options 
+
 
 
 
