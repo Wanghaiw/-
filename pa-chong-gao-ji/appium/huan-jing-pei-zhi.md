@@ -14,10 +14,16 @@ Fiddler是强大的抓包工具，它的原理是以web代理服务器的形式�
 
 https证书安装
 默认情况Fiddler只能抓取HTTP请求，需要安装证书之后才能抓取HTTPS请求。
-打开Fiddler,     Tools-> Fiddler Options 
+打开Fiddler, Tools-> Fiddler Options 
+选中"Decrpt HTTPS traffic",    Fiddler就可以截获HTTPS请求
+选中"Allow remote computers to connect".  是允许别的机器把HTTP/HTTPS请求发送到Fiddler上来
+配置完后记得要重启Fiddler。
 
-
-
+模拟器抓包
+首先在安装fiddler的机器上面获取IP地址。如在windows系统通过ipconfig获取ip地址。
+然后在模拟器的网络wifi设置中打开代理设置。
+另外把第一步获取的ip地址写入代理服务器主机名，fiddler开启的端口写入代理服务器端口。
+最后使用模拟器的浏览器打开:`http://192.168.1.96:8888` 点"FiddlerRoot certificate" 然后安装证书。
 
 #### mitmproxy抓包工具的安装和介绍
 
@@ -35,8 +41,6 @@ https证书安装
 2. 拦截请求，修改请求,拦截返回,修改返回
 3. 可以载入自定义python脚本
 ```
-
-#### Packet Capture
 
 
 
@@ -63,6 +67,8 @@ Android SDK 指的是Android专属的软件开发工具包。
 #### 配置jdk环境
 
 下载地址：`https://www.oracle.com/technetwork/cn/java/javase/downloads/jdk8-downloads-2133151-zhs.html`
+
+
 
 
 
