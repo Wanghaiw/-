@@ -6,5 +6,6 @@
 1.docker镜像的打包与加载
 `docker save alpine | gzip > alpine-latest.tar.gz` 对镜像打包
 `docker load -i alpine-latest.tar.gz` 加载镜像
+
 2.
 
