@@ -2,9 +2,11 @@
 
 2. scrapy-redis基本介绍
 
+
 3. scrapy-redis提供的项目案例
 
 4. 重构之前的项目案例
 
-5. scrapy-redis队列为空之后如何结束
+5. scrapy-redis队列为空之后如何结束  
+解决方案：`https://blog.csdn.net/mr_hui_/article/details/81432952`
 
