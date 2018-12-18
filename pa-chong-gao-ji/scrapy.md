@@ -72,4 +72,11 @@ srandmember key member  随机获取member个值
 smember key   获取全部的元素
 ```
 
-#### 可排序结合
+#### 可排序集合
+```
+zadd myset 0 ‘project1’ [1 ‘project2’]   添加集合元素；中括号是没有的，在这里是便于理解  
+
+zrangebyscore myset 0 100   选取分数在0~100的元素
+
+zcount key min max   选取分数在min~max的元素的个数
+```
