@@ -41,4 +41,35 @@ hvals muhash   查看values
 
 #### 列表
 
+```
+lpush/rpush mylist "cnblogs"  左添加/右添加值
 
+lrange mylist 0 10   查看列表0~10的值
+
+blpop/brpop key1[key2] timeout   左删除/右删除一个，timeout是如果没有key，等待设置的时间后结束。
+
+lpop/rpop key   左删除/右删除，没有等待时间。
+
+llen key  获得长度
+
+lindex key index    取第index元素，index是从0开始的
+```
+
+#### 集合
+```
+sadd myset "cnblogs"   添加内容，返回1表示不存在，0表示存在
+
+scard key  查看set中的值
+
+sdiff key1 [key2]   2个set做减法，其实就是减去了交际部分
+
+sinter key1 [key2]    2个set做加法，其实就是留下了两者的交集
+
+spop key   随机删除值
+
+srandmember key member  随机获取member个值
+
+smember key   获取全部的元素
+```
+
+#### 可排序结合
