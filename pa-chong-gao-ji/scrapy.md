@@ -1,8 +1,24 @@
 ## redis基础知识
 
-Redis的数据类型
-字符串
-散列/哈希
-列表
-集合
-可排序集合
+### Redis的数据类型
+* 字符串
+* 散列/哈希
+* 列表
+* 集合
+* 可排序集合
+
+
+#### 字符串命令
+```
+set mykey ''cnblogs''   创建变量
+
+get mykey   查看变量
+
+getrange mykey start end   获取字符串，如:get name 2 5 #获取name2~5的字符串
+
+strlen mykey   获取长度
+
+incr/decr mykey    加一减一，类型是int
+
+append mykey ''com''   添加字符串，添加到末尾
+```
