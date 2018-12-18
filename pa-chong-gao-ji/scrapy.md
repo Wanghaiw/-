@@ -85,7 +85,7 @@ zcount key min max   选取分数在min~max的元素的个数
 
 
 2. scrapy-redis基本介绍
-
+`https://piaosanlang.gitbooks.io/spiders/07day/section7.1.html`
 
 3. scrapy-redis提供的项目案例
 
