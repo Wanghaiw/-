@@ -54,6 +54,7 @@
     * [分布式爬虫的优点](pa-chong-gao-ji/scrapy/fen-bu-shi-pa-chong-de-you-dian.md)
     * [scrapy\_redis](pa-chong-gao-ji/scrapy.md)
     * [分布式爬虫开发与设计](pa-chong-gao-ji/scrapy/fen-bu-shi-pa-chong-kai-fa-yu-she-ji.md)
+    * [redis基本命令](pa-chong-gao-ji/scrapy/redis.md)
   * [scrapy框架](scrapykuang-jia.md)
     * [scrapy基本命令使用](scrapykuang-jia/scrapyji-ben-ming-ling-shi-yong.md)
     * [图片下载器ImagePipeline](scrapykuang-jia/tu-pian-xia-zai-qi-imagepipeline.md)
