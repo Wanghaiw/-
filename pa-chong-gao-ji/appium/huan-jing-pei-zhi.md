@@ -65,6 +65,11 @@ Android SDK 指的是Android专属的软件开发工具包。
 
 下载地址：`https://www.oracle.com/technetwork/cn/java/javase/downloads/jdk8-downloads-2133151-zhs.html`
 
+根据自己的版本选择对应的64或者32位的安装包。下载完成之后，手动创建一个java目录，在java目录下面分别创建jdk和jre两个子目录。在进行exe安装的时候，安装路径选择java目录下面的jdk目录。
+安装完成之后配置jdk的环境环境变量。
+
+
+
 
 
 
